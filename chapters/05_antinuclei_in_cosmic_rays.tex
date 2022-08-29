@@ -1,0 +1,215 @@
+\section{Antinuclei in the cosmos}
+The goal of this section is to discuss possible exotic sources of antinuclei in our galaxy: i) WIMP dark matter and ii) extragalactic WIMP dark matter. These are compared to antinuclei produced in high energy cosmic ray collisions, which is a process we know to occur. In order to study these sources and their effect on a signal near earth, we employ the GALPROP framework. This framework propagates particles through our galaxy, simulating various effects such as diffusion, convection and also includes annihilation effect. The resulting fluxes near earth are then presented for both antideuterons and \ahe, for different dark matter masses and profiles. Finally, current and planned experiments for detecting antinuclei in cosmic rays are discussed. 
+\subsection{Sources of antinuclei in the cosmos}
+Antinuclei are some of the rarest particles in our galaxy, since very few abundantly occurring processes will produce them in any non-negligible amount\cite{}. A large amount of the light matter nulcei (up to Lithium) were produced during Big Bang Nucleosynthesis (BBN)\cite{}, while all heavier nuclei are produced during stellar nucleosynthesis\cite{}. However, due to the asymmetry of matter and antimatter in our galaxy, neither of these methods is thought to be a dominant source for antinuclei. Antimatter produced during BBN is likely to have annihilated propagating through the galaxy from the Big Bang until today, and since we have no evidence that anti-stars exist\cite{}, it is unlikely that antinuclei could be produced through stellar nucleisynthesis. \\
+We therefore have to look to other processes which could produce antinuclei. Due to baryon number conservation, all such processes are likely to produce at least an equal amount of light nuclei as well, however, since nuclei are far more abundant than antinuclei, these processes will only contribute a negligible amount to the total antinuclei flux in our galaxy. This extremely high expected signal to background ratio is the reason why antinuclei are considered such a promising probe into new physics.
+
+\subsubsection{High energy cosmic ray collisions}
+The most well known source for antinuclei in cosmic rays -- and the only one which does not require new physics or as of yet undiscovered objects -- are collisions of high energy cosmic rays with the interstellar medium. Such collisions, akin to collisions at particle accelerators, will produce antinuclei by converting the available mass-energy from the collision into nucleons which then coalesce. Given the collisions systems which dominate such reactions (combinations of protons and Helium nuclei both in the projectile and the target), and the need to conserve the baryon number, it is necessary to produce at least 4 (6) new particles in order to produce antideuterons (\ahe). This fact -- combined with the highly boosted frame of these collisions which results in significantly less available energy -- means that the cross sections of these events are small, and the conditions are difficult to reproduce at accelerators with sufficient statistics to fully constrain the production. So while the energy threshold for these reactions can be calculated exactly, the shape and normalization of the production spectrum is not completely constrained, leading to uncertainties of about an order of magnitude.\\
+
+The production of antinuclei in these high energy cosmic ray collisions also suffers from the challenge that the range of energies of the projectiles is by definition huge, since effectively the entire spectrum of cosmic rays needs to be taken into account. Therefore, the differential production cross section at each projectile energy needs to be folded with the amount of cosmic rays at this energy. This is usually done by employing event generators, which take the centre of mass energy as input and produce nucleons in the centre of mass frame. The coalescence model (as discussed in section \ref{sec:IntroProductionAntinuclei}) is then used in order to obtain the antinuclei spectrum from these produced nucleons. In order for this to occur, the nucleons produced by the event generator need to be close enough in phase space in order to meet the coalescence condition. If only very few nucleons are produced, this is obviously a very rare situation, and thus the production cross-section decreases. Another way to say this is that the coalescence parameter scales as a function of multiplicity \cite{}. As a result of the rarity of this process at lower energies (PLACEHOLDER, GET A NUMBER), drastic amounts of Monte Carlo simulations are needed in order to obtain an estimate for the production cross section at even a single point of the spectrum, and even more so for the entire spectrum. This is only exacerbated for each additional nucleon added. This yields the second uncertainty for the production in high energy cosmic rays, which is the statistical uncertainty on the estimates for the production cross section.\\
+
+\subsubsection{Weakly interacting massive particles (WIMPs) - dark matter}\label{sec:WIMPS}
+Some WIMP dark matter theories predict that WIMP annihilations can produce a significant amount of antinuclei \cite{}. This can be understood simply from the available energy in such a process. A cold dark matter particle pair annihilating would have \Vs\ = $2\mathrm{m}_\chi$. The net baryon number would be 0 in such a process, resulting in no further penalty for the production of multiple antinucleons. Per definition, WIMPs would interact only weakly, and thus their initial annihilation channel would go through a weak channel. Since the weak bosons couple to all other standard model particles, this enables a decay into standard model particles. \\
+
+The spectrum and yield of antinuclei produced in these annihilations has to be estimated based on known standard model processes. To this end, Monte Carlo event generators are employed\cite{}, in which the initial state is the first state of standard model particles (such as W$^+$W$^-$ or b$\overline{\mathrm{b}}$) which is assumed to occur in the annihilation process, with a COM energy equal to twice the dark matter mass \dmm\. Since event generators do not produce (anti)nuclei -- but only the individual nucleons -- the (anti)nuclei yields and spectra have to be calculated using the coalescence model\footnote{See Appendix \ref{App:statHadronModel} for an explaination of why the statistical hadronization model cannot be used to calculate (anti)nuclei yields from dark matter annihilations}.  \\ 
+
+The WIMP dark matter is assumed to be cold. As such, the COM frame is assumed to be the same as the galactic frame, and no boost from the initial velocities are necessary. This is convenient, since one can therefore simply take the spectrum of produced antinuclei per dark matter annihilation -- which is obtained from applying a coalescence afterburner to the output of a Monte Carlo event generator -- and multiply it by the local annihilation rate of dark matter. Thus, one can write the source term $q(\vec{r}, E)$ for WIMP dark matter as is written in equation \ref{eq:DM_source_term}. 
+
+\begin{equation}\label{eq:DM_source_term}
+    q(\vec{r}, E) = \frac{1}{2} \left( \frac{\rho_{\chi}(\vec{r})}{m_\chi}\right)^2 <\sigma v > \frac{dN}{dE}
+\end{equation}
+
+where the factor $1/2$ comes from symmetry considerations for majorana dark matter\footnote{See section \ref{sec:IntroMajoranaDiracDM} for a discussion on the difference between Majorana and Dirac dark matter.}, the term $\left( \frac{\rho_{\chi}(\vec{r})}{m_\chi}\right)^2$ is the square of the number density of the WIMP dark matter, which is then multiplied by the velocity averaged dark matter annihilation cross section $<\sigma v>$, giving the rate of dark matter annihilations for a given point in space. The final term of equation \ref{eq:DM_source_term} is the spectrum of produced antinuclei normalised to a single dark matter annihilation. \\
+
+The dark matter density profile $\rho_\chi(\vec{r})$ affects both the total amount of antinuclei produced as well as their initial distribution. This parameter can be constrained from measurements of the milky way's rotational curve, similarly to how it is done for other galaxies. However, measuring the rotation curve of the Milky Way involves extra challenges, given that we are measuring from within. For other galaxies, the rotational velocities of the stars can be measured from their red/blue shift, and their position in respect to the galactic center is easily estimated by their angular displacement. For stars in our own galaxy, we cannot purely rely on the angular position of a star in the sky in order find the displacement of the star in respect to the galactic center, as the star could be anywhere in the galactic plane within this line of sight. This is illustrated on the right of figure \ref{fig:measuringDarkMatterProfiles}. It is therefore necessary to determine not only position in the sky, but also the distance to the star in question. Similarly, the rotational velocity of the stars has to take into account that we can only measure the velocity component normal to our position. The consequence of these difficulties is that the uncertainty on both the position and rotational velocity of stars increases the further away from us the star is. Such a measurement of our galaxy's rotation curve has been reported in \cite{}, and is shown in figure \ref{fig:MilkyWayRotationCurve}. \\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{}
+    \includegraphics[width=0.45\textwidth]{}
+    \caption{Left: This shows the method for measuring the rotation curves for galaxies other than the milky way. The displacement from the center of the galaxy is measured by measuring angular displacement. The rotational velocity can be extracted by measuring the red/blue shift of the star\cite{}. Right: This diagram shows the method for measuring the rotational velocity and position of stars within our galaxy.}
+    \label{fig:measuringDarkMatterProfiles}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45*\textwidth]{}
+    \caption{Rotation curve of stars in the Milky Way, as a function of distance from the galactic center.}
+    \label{fig:MilkyWayRotationCurve}
+\end{figure}
+
+In order to fit such rotation curves, our galaxy is conventionally split into individual parts, each of which can be assumed to have a simpler shape. The usual breakdown of these parts is shown in table \ref{tab:MilkyWayBreakdown}, and further details can be found in \cite{Sofue_2016}. The gravitational potentials of these parts can then be summed up linearly, and the rotational velocities caused by each such potential can be added in quadrature. In order to fit the contribution from dark matter, the shape of the dark matter distribution has to be chosen a priori, such that the exact parameters and normalization can then be obtained from the fit. This is an important point, since the total normalization of the dark matter profile is not well constrained. Rather, the relatively well constrained rotation curve in the proximity of the solar system results in the fact that the local dark matter density $\rho_\chi(\vec{r}=r_\odot) := \rho_\chi^\odot$ is much better constrained than the total normalization of the dark matter profile. Thus, the different dark matter profiles are constrained to their value at $r_\odot = 8.5$kpc. \\
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Part & Shape & Extent & Total Mass \\
+        \hline
+        Central black hole & Point mass & $<$ 0.1pc & 3.6\times 10$^6$ M$\odot$ \\
+        \hline
+        Buldge(s) & Spherical exponential & $<$1kpc & 10$^11$ M$\odot$ \\
+        \hline
+        Flat disk & Constant flat disk & $<15$kpc & xx M$\odot$ \\
+        \hline
+        Dark matter halo & vaires & 100s of kpc & 10$^12$ M$\odot$ \\
+        \hline
+    \end{tabular}
+    \label{tab:MilkyWayBreakdown}
+    \caption{Individual axissymmetric parts of the Mikly Way used for fitting rotation curves. The distinction is made in order to simplify the fit, rather than a hard distinction within the actual galaxy. Non-axissymmetric components are neglected for rotation curves, based on the assumption that any effects would cancel out when averaged over the full rotation. The values for the total mass were taken from \cite{Sofue_2016}. The extent column is approximate and given in order to help the reader visualise the distributions. Due to the distributions being exponential, they don't really go to 0.}
+
+\end{table}
+
+There are several profiles on the market, which achieve similar goodness-of-fit when fit to account for the dark matter component in the rotation curve\cite{}, while also achieving the required normalisation at $r_\odot$. The ones used in this work are the Navarro-Frenk-White(NFW) profile\cite{}, shown in equation \ref{eq:NFW}, 
+
+\begin{equation}\label{eq:NFW}
+    \rho_\chi^{NFW}(\vec{r}) = \frac{\rho_0}{(r/r_s)[1+(r/r_s)]^2}
+\end{equation}
+with scale radius $r_s=$24.42kpc. The Einasto profile\cite{}, shown in equation \ref{eq:Einasto}, 
+
+\begin{equation}\label{eq:Einasto}
+    \rho_\chi^{Einasto}(\vec{r}) = \rho_0 \mahtrm{exp} \left\{ -\frac{2}{\alpha}\left[ \left( \frac{r}{r_s}^\alpha -1\right) \right] \right\}
+\end{equation}
+with $\alpha$=0.17 and $r_s$=28.44kpc, and the much shallower isothermal profile \cite{} and the isothermal profile, shown in equation \ref{eq:isothermal}
+\begin{equation}\label{eq:isothermal}
+    \rho_\chi^{isothermal}(\vec{r}) = \frac{\rho_0}{r^2+r_s^2}
+\end{equation}
+with $r_s$=4.38kpc. The profiles are plotted in figure \ref{fig:DMProfiles}, using best fit values taken from \cite{Ibarra}. It can be seen that the isothermal profile has a very shallow rise towards the galactic center, while the Einasto profile rises very steeply. The NFW profile lies between the two, and is often used preferentially \cite{}. These three profiles cover most of the available parameter space for the dark matter profile. \\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/DMProfiles_distributions_log.png}
+    \caption{Dark matter density profiles used in this work, as a function of the distance to the galactic centre. The best fit values for each profile are taken from \ref{Ibarra, IbarraSources}}
+    \label{fig:DMProfiles}
+\end{figure}
+
+It is important to ask why the stark differences towards the center of the galaxy play such a reduced role that all three of these profiles are able to fit the data, and if such differences would therefore make any interpretation of an antinuclei flux from dark matter impossible. The answer to the first part of the question is twofold. Firstly, it is very challenging to measure the rotation curve of our own galaxy with high precision at positions far from the solar system. Secondly, the gravitational effect of the dark matter halo contributed mainly at larger distances from the galactic center, where the presence of extra mass at the centre of our galaxy (from a steeper profile) is not as strongly felt. The second question also has a fortunate answer: the effect of different profiles on the local fluxes of antinuclei from a potential dark matter source is rather small, as is discussed in section \ref{sec:ResDMProfiles}. 
+\\ \\
+The dark matter mass is a free parameter, with possible dark matter masses ranging from very light dark matter\footnote{A popular light dark matter model is the axion dark matter model \cite{}.} in the eV range all the way to the WIMP dark matter discussed in this work, with plausible mass ranges from 10s of GeV to the TeV range. As discussed in section \ref{sec:IntroWIMPs}, the appeal of WIMP dark matter is that the expected weak cross section of such a particle in the very early universe would yield a population today of the same magnitude as we observe. It would also explain the lack of evidence for the production of dark matter at accelerators, since we might at this point not yet have reached the energies required to even produce these particles\footnote{Additionally, some supersymmetric partners could have exactly these required properties, which would make them suitable dark matter candidates\cite{}. However, the lack of evidence for supersymmetry makes this argument somewhat weaker than it was during the inception of WIMPs \cite{}}. Since the exact nature of dark matter remains a mystery, any mass within this WIMP range which is not excluded by other measurements can be assumed. The chosen mass has a direct effect on all three remaining terms of equation \ref{eq:DM_source_term}: i) $\frac{1}{m_\chi^2}$, ii) $<\sigma v>$ and iii) $\frac{dN_{\mathrm{\bar{p}, \bar{d}, {^3\overline{He}}}}}{dE}$. The effect on i) is trivial, and reduces the overall normalization of the antinuclei source term for higher \dmm. The mass' effect on iii) is based on the amount of energy available for the production of (anti)nuclei, as well as for their kinetic energy. For higher masses, the antinuclei yields increase non-trivially, but less fast then the inverse square reduction from the first term. Additionally, the extra energy available for higher masses translates into a spectrum peaked at higher momenta. The effect on ii) is mostly experimental, since $<\sigma v>$ is constrained from antiproton measurements. Any dark matter annihilation process which can result into antideuterons must of course also produce antiprotons. However, contrary to heavier antinuclei, antiprotons are also copiously produced in other processes, resulting in a significant and well constrained antiproton flux, which has been measured by the AMS collaboration \cite{}. Thus, any model we choose must not produce a dark matter component for antiprotons which is incompatible with those measurements. These limits are expressed in terms on $<\sigma v>$ as a function of \dmm. This representation is chosen since $\rho_\chi$ can be measured independently, and iii) varies much more slowly with \dmm\ than the other terms. The limits -- which have been extracted by several groups \cite{} and compiled by \cite{}-- are shown in figure \ref{fig:DMSigmaVLimits}. Indicated in the figure is the maximum limit on $<\sigma v>$, as extracted by several research groups, as well as the "thermal value", which is the value expected for a WIMP particle with the current abundance of dark matter in the universe. Also indicated in this figure is the region in which a possible excess of antiprotons was observed, which could hint at a dark matter particle within this mass range of 50-100GeV/$c^2$. It can be seen from the left hand side of the figure that for low dark matter masses, the limits lie significantly below the thermal value for this cross section. Thus, \dmm\ affects the constraints on  $<\sigma v>$, particularly for low masses. It is also worth noting that these limits have to be extracted for a given dark matter density profile, and thus when exploring the maximum allowed antinuclei flux given the antiproton constraints, the choice of profile is degenerate with the limits on $<\sigma v>$ set by AMS antiproton limits.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/PbarLimitsAMS.png}
+    \caption{Limits on  $<\sigma v>$ based on AMS antiproton data. Figure by \cite{} and reproduced here for easy of access.}
+    \label{fig:DMSigmaVLimits}
+\end{figure}
+
+To summarise: WIMP dark matter models predict that dark matter can annihilate into antinuclei. The resulting antinuclei source term depends on 4 things: i) the dark matter density profile, ii) the dark matter mass, iii) the dark matter self-annihilation cross-section and iv) the produced spectrum of antinuclei, normalised to dark matter decays. i) is constrained by looking at the rotation curve of our galaxy, ii) is a free parameter, iii) is constrained by antiproton measurements as a function of \dmm\ and iv) is calculated based on coalescence models, which depend on the total available energy and thus \dmm. Thus, there are a few notable degeneracies between the different terms of this source function. However, current constraints on these parameters are not stringent and leave open a large, reasonable parameter space in which an antinuclei flux from dark matter could be found, affirming antinuclei studies as a great tool for the indirect search for dark matter.
+
+
+
+\subsubsection{Extragalactic dark matter}
+Dark matter is not exclusively bound within galaxies, but is also present in larger cosmological structures, such as galaxy groups. However, the profiles commonly used in order to fit the distribution of dark matter within our galaxy only take into account galactic dark matter, which can be inferred from the fact that such profiles go to 0 at large distances from the galactic centre. This is because to first order, the extragalactic component will vary over length scales bigger than our galaxy, so the gravitational potential caused by the extragalactic dark matter will be roughly constant within our galaxy, thus causing no active force which could be measured. However, such an additional flux of dark matter could indeed annihilate within our galaxy, thus providing an additional source for antinuclei. In this section the difference of this source to the galactic WIMP dark matter source will be qualitatively discussed. \\ 
+
+In order to determine weather the antinuclei flux caused by extragalactic dark matter follows the same assumptions as the galactic component, it is necessary to examine the differences between galactic and extragalactic dark matter. The first difference would be their velocity. Since the galactic component is bound and the extragalactic is not, the extragalactic component's velocity must exceed the escape velocity of the Milky way, which lies at about 600km/s. This change in velocity may affect 2 terms in equation \ref{eq:DM_source_term}: the self annihilation cross section and the spectrum of produced antinuclei due to the boosted frame in which the collision takes place. \\
+Starting with the change on the self annihilation cross section, this might be due to the momentum dependence of the s-wave and p-wave contributions CHECK DETAILS AND REFERENCE. The s-wave is velocity independent, while the p-wave contribution has a square dependence on the velocity. However, the speeds of 600km/s still only equate to a beta of 0.002, thus the contribution of the s-wave still dominates at these speeds, resulting in no change in regards to galactic dark matter. In a similar fashion it can be shown that the effect of the increased speed on the produced antinuclei spectrum is negligible. \\
+
+The effect which remains is that of the overall normalisation, which is influenced by the extragalactic component to $\rho_\chi$. This extra component would have little to no effect on the rotation curve of our galaxy, and therefore causes a positive offset in comparison to the purely galactic case. The exact nature of this offset should to first order be roughly constant over our galaxy, however, the interaction of the extragalactic dark matter with our galaxy's gravitational pull would cause an increase in the local extragalactic dark matter density in comparison to another point within the local group. Thus, the main difference between the extragalactic dark matter and the galactic dark matter is the consideration of where the majority of annihilations would occur. Finally, we can conclude that since the overall normalisation for antinuclei fluxes from dark matter annihilations is constrained by the maximal allowed flux from antiprotons -- as discussed in section \ref{sec:WIMPS} -- the increase in flux due to an additional extragalactic dark matter component does not significantly impact expectations. \\
+
+Previous work on the topic expects the extragalactic dark matter component to make up about 12\% of the local dark matter abundance close to our solar system\cite{}. From this, it can be estimated that the extragalactic dark matter is responsible for no more than $\approx20$\% of the antinuclei flux near earth. 
+
+\subsection{Constraining the propagation through the galaxy}\label{sec:Propagation}
+In the process of propagating thorough our galaxy, particles undergo several different effects. They get produced at various points in both space and time, for example most heavy nuclei are produced in supernovae. As they then propagate from their source towards their eventual detection point near earth, they undergo diffusion effects, as they get mainly elastically scattered by the magnetic fields of the galaxy and individual celestial objects. They are also under the effect of bulk motion via convection effects. Finally, there are various effects which might cause a particle to disappear, mainly inelastic interactions with the interstellar medium, or breakup for unstable particles. All of these processes are characterised by the transport equation \cite{}, which is reproduced in equation \ref{eq:TransportEquation}
+\begin{equation}
+    \label{eq:TransportEquation}
+    \frac{\partial\psi}{dt} = q(\textbf{r},p) + \mathrm{\textbf{div}}(D_{xx}\mathrm{\textbf{grad}}\psi - \textbf{V}\psi) + \frac{\partial}{\partial p}p^2D_{pp} \frac{\partial}{\partial p}\frac{\psi}{p^2} - \frac{\partial}{\partial p} \left[ \psi \frac{dp}{d t}   -\frac{p}{3} (\mathrm{\textbf{div}}\cdot  \mathrm{\textbf{V}} )\psi              \right] - \frac{\psi}{\tau_f}-\frac{\psi}{\tau_r}
+\end{equation}
+, where $\psi$ is the time and space dependent flux of a given cosmic ray species, $q(\textbf{r},p)$ is the source term as a function of position and momentum, $D_{xx}$and $D_{pp}$ are diffusion and convection parameters, $V$ is the potential felt by the particles CHECK THIS, and $\tau_f$ and $\tau_r$ are parameters characterising the annihilation and fragmentation rates, respectively. This equation can be solved for a given set of parameters both analytically or numerically. Several tools exits in order to solve this equation, with the most well known being GALPROP\cite{}, Dragon \cite{} and XXX. In this work, GALPROP was used, as will be explained in section \ref{sec:GALPROP}. \\
+
+It is important to note that only the first and final term of equation \ref{eq:TransportEquation} -- i.e. the source and loss terms -- depend on the species of particle which is being considered. The other terms, which cover the actual propagation through the galaxy, depend solely on parameters which are common to all particle species. This can be understood as the same magnetic fields and bulk motion affecting all particles. Thus, these parameters can be constrained by fitting abundant cosmic ray species which are sensitive to a particular parameter, in order to constrain the propagation for all species. This is particularly important for the propagation of antinuclei, which are extremely rare. These propagation parameters have been investigated and reported by Boscini\cite{} and Cuoco \cite{}. The effectiveness of these fits can be seen by comparing predicted spectra of protons, antiprotons and heaver cosmic ray nuclei with the measurements done by AMS-02, which are shown in figure \ref{fig:BosciniFits}. It can be seen that the predictions work very well for large energies, and there is a smooth response at low energies, which is well understood based on the effects of the heliosphere. This shows that the propagation is well under control.\\
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/}
+    \caption{Fluxes of several cosmic ray nuclei, as measured by AMS-02, compared to the predictions of the best-fit values obtained by fitting several key species\cite{}. Reproduced here for clarity.}
+    \label{fig:BosciniFits}
+\end{figure}
+
+The effect at low energies is due to the effect of the heliosphere, which is not included in codes such as GALPROP. These codes can only simulate large scale effects, and as such they output the particle fluxes outside of our solar system. Within our solar system, the solar magnetic field will affect incoming charged particles, and this needs to be accounted for. There are tools which treat this in great detail, such as Helmod \cite{}, but there are currently no such tools on the market which are able to treat antinuclei. Thus, a simple force field model has been commonly used for this purpose in the literature \cite{}. The advantage of this model is its broad applicability, while its disadvantage is mainly a large uncertainty induced for low momentum particles\cite{}. \\
+
+One important note is that some of the propagation parameters which are degenerate for one source are not necessarily so for another. In particular, the source from dark matter is strongly dependent on the height of the galaxy considered (since this increases the total amount of dark matter considered), rather than the ratio of the diffusion and the height, $D_xx/z_h$, which is the common factor for antinuclei from high energy cosmic rays. This degeneracy for secondaries can be seen in table \ref{tab:GalpropParameters}, where the aforementioned  ratio is shown to be consistent between the two paramterizations. Since propagation parameters are constrained by nuclei following roughly the same source distribution as secondaries, this difference in sensitivity causes a much larger uncertainty in the possible fluxes for antinuclei from dark matter than for antinuclei fluxes from high energy cosmic rays. \cite{}. This is also shown in figure \ref{fig:ComparisonPropagation}, where it can be seen that for a wide energy range, both different propagation parameterization used in this work give near identical antideuteron fluxes, while for dark matter the the difference is drastic. For antideuterins from high energy cosmic rays the discrepancies between the two different parameterizations only become non-negligible at very low energies, where the propagation is less well constrained and complicated by the need to disentangle solar modulation effects. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/ComparisonPropagationBoschini.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/ComparisonPropagationBoschiniDM.pdf}
+    \caption{Comparison between the different GALPROP propagation parameters used in this work, for antideuterons from high energy cosmic ray collisions (left) and from dark matter annihilations (right).}
+    \label{fig:ComparisonPropagation}
+\end{figure}
+
+\subsection{The Galprop framework}\label{sec:GALPROP}
+THIS ENTIRE SECTION NEEDS SOME CHECKING TO BE SURE WHAT IM WRITING IS CORRECT!
+As already discussed in section \ref{sec:Propagation}, the Galprop framework functions by solving the transport equation (equation \ref{eq:TransportEquation}). It does so by finding a steady state solution, iterating in smaller and smaller timesteps until a stable solution is found. During each timestep, it iterates over a position and momentum grid, the former of which can either be expressed in 2 dimensions (r and z) or 3 (x, y, z). Since we assume axial symmetry, the two are mathematically equivalent, so for the purpose of this work, the 2 dimensional solution was chosen. \\
+
+Galprop is configured by passing a set of parameters from an external text file. The important parameters are shown in table \ref{tab:GalpropParameters}. Of particular note are the Galaxy half height z$_h$, and the diffusion parameter D$_SomethinSomethin$, since the predominant way of constraining these two parameters (the B/C raio? CHECK THIS) is degenerate. The actual parameter which is being fixed is the ratio of the two. \\
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Parameter & Purpose & Best fit value from Boscini & Best Fit value from Cuoco \\
+        z$_h$ & Half the height of the galactic disk & 4.2kpc & 6.2kpc \\
+        \hline
+    \end{tabular}
+    \caption{Parameters for the tuning of Galprop. These are equivalent to the configuration of the galaxy and the propagation parameters in equation \ref{eq:TransportEquation}.}
+    \label{tab:GalpropParameters}
+\end{table}
+
+It is important to note that the main parameter which a lot of propagation is the so called grammage, which is the amount of matter of the interstellar medium which particles have to traverse. This is obviously a product of the density of the interstellar medium and the path length of the particles. \\
+
+Antinuclei are not by default includuded in Galprop, so in order for them to be propagated they had to be inserted into the framework. Fortunately, the framework is capable of handling negative nuclei with antiprotons, therefore the extension was done by providing the mass of the antideuteron/antihelium, their inelastic cross sections on the interstellar medium, and their source functions. Seperate entries were used for the secondary production from high energy cosmic rays and from dark matter annihilations. The inelastic cross section had to be provided on a proton and helium target, which are significantly lighter than the average detector materials probed in the measurements shown in section \ref{sec:ResHe3SigmaInel}, therefore the results had to be extrapolated to these lighter targets. The exact methods of the extrapolations are explained in section \ref{sec:ResAnnInOurGalaxy}.\\
+
+The source functions for antinuclei from either high energy cosmic ray collisions or from dark matter annihilations were included in the GALPROP as a function of the disance from the galactic centre. For the dark matter part, this can be done simply by evaluating the equation described above for a specific radius and kinetic energy. However, for antinuclei from high energy cosmic rays this is not possible, since the spectrum of cosmic rays at a given point enters into the equation. Therefore, PLEACEHOLDER FOR TEXT EXPLAINING THE IMPLMENTATION OF THE SECONDARIES.
+
+\subsection{Annihilations within our galaxy}\label{sec:ResAnnInOurGalaxy}
+As antinuclei travel through our galaxy, they will interact with matter in the interstellar medium and might interact inelastically. This can either be in the form of inelastic scattering or annihilation, although of the two the latter is expected to be dominant \cite{}. The result of these interaction is thus mostly the disappearance of the antinuclei. The produced particles are mostly pions, and thus not stable enough to detect them and maybe extract a signal from them. Some high energy photons could also be produced, and such gamma rays are the target of specific sky surveys looking for large areas of antimatter, which when coming into contact with matter should produce a detectable signal. However, a single annihilation would be undetectable at any significant distance. We can therefore conclude that the relevant result of annihilation is the disappearance of the antinucleus in question. \\
+
+This process was implemented in galprop by implementing an inelastic cross section. As antinuclei are propagated throughout our galaxy, the total amount of matter they interact with is calculated for each momentum step. In order to do so, both the distribution and the makeup of the interstellar is required. The makeup is known to a relatively high accuracy \cite{}, and is dominated by hydrogen, which makes up $\approx$90\% of the total mass in the interstellar medium. The remainder is mainly helium, making up $\approx 9\%$ of the total mass. During each calculation step, the inelastic cross sections on the dominant species of the interstellar medium (hydrogen and helium) are used to calculate how many antinuclei are lost in each momentum bin. Therefore, it is necessary to evaluate the cross sections on these very light targets, rather than the heavy targets on which they were measured.\\
+
+In order to extrapolate, the general shape of the antinucleus-proton cross section in Geant4 was modified by the measured deviation from the antinucleus-target cross section reported in sections \ref{sec:ResHe3SigmaInel}, \ref{sec:ResTritonSigmaInel} and in \cite{}. This assumes that the relative scaling is the same regardless of the target nucleus, although an additional 8\% uncertainty is assigned to allow for any deviation from this assumption. For values outside the range of the measurements detailed in sections \ref{sec:ResHe3SigmaInel}, the scaling factor at the last available momentum was used.
+The resulting cross sections are shown for both antideuterons and \ahe\ in figure \ref{fig:ScaledXS_ahe_adeut}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled_with_paramterisation.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled_with_paramterisation.pdf}
+    \caption{Scaled inelastic cross sections of antideuterons (left) and \ahe\ (right) on proton targets. The band shows the experimental uncertainty from the ALICE measurements \cite{}, plus an additional 8\% uncertainty associated with the scaling from heavier targets (C, O, Al) to protons (H). }
+    \label{fig:ScaledXS_ahe_adeut}
+\end{figure}
+
+
+\subsection{Results for antideuterons}
+Presented in this section are the results for the effect of different dark matter profiles and masses on the expected antideuteron fluxes from dark matter. They are also compared to secondary antideuterons produced in high energy cosmic ray collisions with the interstellar medium. 
+
+\subsubsection{Results for different dark matter masses}
+In this section the effects of different dark matter masses on the antinuclei fluxes will be discussed, both for \ahe\ and for antideuterons. The fluxes can be found in figure \ref{fig:antinuclei_fluxes_DMmassComparison}, where they are compared to a prediction for secondary antinuclei from high energy cosmic ray collisions with the interstellar medium . 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.48\textwidth]{}
+    \caption{Expected antideuteron (left) and \ahe\ (right) fluxes for different dark matter masses.}
+    \label{fig:dbar_fluxes_DMmassComparison}
+\end{figure}
+\subsubsection{Results for different dark matter profiles}
+\subsection{Results for \ahe}
+\subsubsection{Results for different dark matter masses}
+\subsubsection{Results for different dark matter profiles}\label{sec:ResDMProfiles}
+\subsection{Experiments to detect antinuclei in the cosmos}
+Given their rarity, antinuclei in cosmic rays are difficult to detect. The experiment which currently has the best sensitivity for detecting antinuclei is AMS-02, which is a magnetic spectrometer on the international space station. As a magnetic spectrometer, AMS-02 is more sensitive to charge differences, and therefore more sensitive to \ahe\ nuclei than to antideuterons, since the latter need to be distinguished from the significalty more abundant antiprotons. However, it is still a big surprise that AMS has reported signals consistent with multiple \ahe\ nuclei, given that none of the currently available models predict a flux within the sensitivity of AMS, much less an order of magnitude above. These reports have cause a large amount of effort from both experimental and theoretical communities to come up with theories which might explain this signal, while also taking into account the lack of evidence for an antideuteron signal. It is currently unclear which process would produce such a large \ahe\ flux without boosting the antideuteron flux in a similar amount, with some suggested options being a boost to \ahe\ production via $\Lambda_b$ decays\cite{}. \\
+
+There are also searched specifically designed to look for antideuterons
+\subsubsection{Baloon and space bourne experiments}
+AMS-02
+\begin{itemize}
+    \item AMS overview
+    \item \ahe\ measurement and lack of dbar measurements
+    \item goal for future experiments AMS-100?
+\end{itemize}
+GAPS overview
+\begin{itemize}
+    \item GAPS
+    \item design and measuring annihilations
+    \item Other baloon 
+\end{itemize}
+\subsubsection{Developing a cubesat for detecting antiprotons}

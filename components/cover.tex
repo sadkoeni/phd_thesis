@@ -1,0 +1,108 @@
+% The front cover for the TUM report document.
+% Included by MAIN.TEX
+
+
+%--------------------------------------------------
+% The Front Cover
+%--------------------------------------------------
+
+% The front cover for the TUM document.
+% Included by MAIN.TEX
+
+
+%--------------------------------------------------
+% The Front Cover
+%--------------------------------------------------
+
+% correct BCOR - undo at the end !!!
+% \def\bcorcor{0.15cm}
+% \addtolength{\hoffset}{\bcorcor}
+
+\thispagestyle{empty}
+\newgeometry{%
+  top=1in,%
+  bottom=1in,%
+  left=1.0in,%
+  right=1.0in,%
+  hmarginratio=2:1%
+}
+\begin{center}
+  \includegraphics[width=0.3\textwidth]{style/TUMLogo_oZ_Outline_blau_CMYK}
+  
+  \vspace{3mm}
+  \huge FAKULT\"AT F\"UR PHYSIK
+  \vspace{3mm}  
+  
+\end{center}
+
+{% Create the command for including the title page in the document
+  \centering % Center all text
+  \vspace*{\baselineskip} % White space at the top of the page
+  
+  % Thick+thin horizontal line
+  \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+  \rule{\textwidth}{0.4pt}\\[\baselineskip]
+  
+  % Title
+%   {\Huge \textbf{\MakeUppercase{Pion Beam detector}} 
+%     \\[0.3\baselineskip] %
+%     \textbf{\MakeUppercase{for}} \\[0.3\baselineskip]
+%     \textbf{\MakeUppercase{the HADES Experiment}} \\[0.5\baselineskip] }
+
+	{\Large First measurement of the absorption of \ahe\ and \atrit\ nuclei in  \\[0.3\baselineskip] %
+		{matter and impact on \ahe\ propagation in the galaxy} \\[0.3\baselineskip]
+	}
+
+  % Thin horizontal line
+  \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+  \rule{\textwidth}{2pt}\\[\baselineskip] % Thick horizontal line
+  
+  \scshape % Small caps
+  
+  % SubTitle
+  {\Huge Stephan Koenigstorfer }
+  
+  \vspace*{2\baselineskip} % Whitespace between location/year and editors
+  
+  % Edited by \\[\baselineskip]
+  % 
+  % \begin{minipage}{0.8\textwidth}
+  % % \Large
+  % \makeatletter
+  % \@author
+  % \makeatother
+  % \end{minipage}
+  
+%   \vspace{15pt} % Whitespace between editor names and publisher logo
+  \vspace*{\fill}
+  
+  % {\Huge {\textbf{For internal use only}} }
+  
+  % \begin{figure*}[!h]
+  %  \hspace{0.15\textwidth}%
+  %  \includegraphics[width=0.5\textwidth,angle=15]{figures/ForInternalUseOnly}
+  % \end{figure*}
+  
+  
+%   \vspace{20pt} % Whitespace between editor names and publisher logo
+  \vspace*{\fill}
+  
+  
+  
+  \includegraphics[width=0.15\textwidth]{style/PH_CMYK}
+  \\[0.3\baselineskip] % Publisher logo
+  
+  \null
+  \vfill
+  
+  \vspace{1em}
+  \large DER TECHNISCHEN UNIVERSIT\"AT M\"UNCHEN\\
+   \vspace{0.5em}
+  \large FACHBEREICH: DENSE AND STRANGE HADRONIC MATTER (E62)\\
+  \vspace{0.5em}
+  
+  {\scshape 2022} \\[0.3\baselineskip] % Year published }
+  
+}
+
+\restoregeometry

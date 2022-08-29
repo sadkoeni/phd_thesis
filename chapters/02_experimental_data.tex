@@ -1,0 +1,44 @@
+\section{Experimental data}
+
+\subsection{ALICE}
+\subsubsection{Overview}
+\begin{itemize}
+    \item Trigger System
+    \item ITS
+    \item TPC
+    \item TOF
+\end{itemize}
+
+\subsubsection{Basics of ALICE data structure}
+\subsubsection{Collision system and event cuts}
+\subsubsection{Reconstruction of raw (anti)nuclei}
+\subsubsection{Raw \ratio\ \ ratio}
+\subsubsection{Raw antitriton-to-triton ratio}
+\subsubsection{Correction for secondaries from material spallation}
+\subsubsection{Annihilations within the detector}
+\subsection{Extracting the inelastic cross section from the antimatter to matter ratio}
+\subsubsection{Comparison of ratios with Monte Carlo simulations}\label{sec:MCSim}
+In order to fairly compare the Monte Carlo simulations to the produced data, it is vital to account for the baryochemical potential\footnote{In other words: how much more antimatter particles we have for each matter particle. Given that we collide purely matter particles, there is a penalty for producing antimatter, even though at such high energies it is vanishingly small.} at such high energies. The relevant ratio of antiprotons to protons is shown in figure \ref{fig:BaryochemicalPotential}. Based on the same arguments as the formula for the coalescence parameter \ref{eq:CoalescenceParameter}, the effect on the ratio of antinuclei will be the same as to the antiproton-to-proton ratio taken to the exponent of the mass number of the antinucleus. 
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{Ratio of antiprotons to protons produced at mid-rapidity as a function of beam rapidity. At ALICE energies the value approaches unity, demonstrating that at such high energies antimatter and matter are produced in almost equal amounts.}
+    \label{fig:BaryochemicalPotential}
+\end{figure}
+\subsubsection{Ratios as a function of the inelastic cross section}
+\subsubsection{Non-linear error propagation}
+\subsubsection{Accounting for energy losses between the primary vertex and the point of annihilation}
+\subsubsection{Uncertainty coming from the material budget}
+\subsubsection{Evaluating the average material for antinuclei annihilations in the ALICE detector}
+\subsubsection{Independence of collision system}
+The antimatter-to-matter ratio method's dependence on collision system has been investigated by redoing the analysis performed in pPb collisions in \cite{dbarIvan} for high multiplicity pp collisions. The dependence on the collision system is due to the multiplicity differences, and the resulting difference in the baryochemical potential as discussed in section \ref{sec:MCSim}. By taking the antiproton-to-proton ratio for the different collision systems and comparing them, the predicted difference between the antideuteron-to-deuteron ratio was obtained. The results are shown in figure \ref{fig:pp_pPb_dbardRatio}, which show that the differences between collisions systems are consistent with the expected deviation. This independence of the collision system is expected, since the inelastic cross section is completely independent on the collision system. This becomes especially self-evident when considering that the annihilations do not occur in the initial collisions, but rather as the antiparticles travel through the detector material.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{}
+    \includegraphics{}
+    \caption{Ratio of the antiproton-to-proton ratios (left) and antideuteron-to-deuteron ratios (right) obtained in high multiplicity pp collisions and in pPb collisions, compared to the expected difference from the different baryochemical potentials (dashed red line).}
+    \label{fig:pp_pPb_dbardRatio}
+\end{figure}
+

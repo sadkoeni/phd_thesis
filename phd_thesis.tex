@@ -1,0 +1,741 @@
+% \documentclass[a4paper,10pt,twocolumn]{article}
+\RequirePackage[l2tabu,orthodox]{nag}
+% \documentclass[draft,a4paper,10pt,twocolumn,openany,fleqn]{extbook}
+\documentclass[12pt,fleqn]{article}
+% \docume1ntclass[12pt,openany,fleqn,draft]{book}
+% \documentclass[12pt,a4paper,openany,fleqn,draft]{book}
+
+% \documentclass[a4paper,10pt,openany,fleqn]{extbook}
+% \documentclass[a4paper,10pt,openany,twocolumn,fleqn,draft]{extbook}
+%\documentclass[a4paper,10pt,onecolumn]{article}
+
+% Allows using subfiles as separate projects
+\usepackage{subfiles}
+
+\usepackage{lipsum}
+% \usepackage{showframe}
+\usepackage{layout}
+\usepackage{lineno}
+
+\usepackage{amsmath}
+
+\usepackage{ifpdf,ifxetex,ifluatex} 
+
+\ifpdf
+    \typeout{^^J *** PDF mode *** }
+\else
+    \typeout{^^J *** DVI mode ***}
+\fi
+
+\ifluatex
+    \typeout{ *** LuaLaTeX *** ^^J}
+    % patch \typein
+    % see http://tex.stackexchange.com/questions/12435/
+    % incompatibilities-between-lualatex-and-typein
+    \makeatletter
+    \def\@xtypein[#1]#2{%
+        \typeout{#2}%
+        \@tempcnta\endlinechar
+        \endlinechar\m@ne
+        \read\@inputcheck to#1%
+        \endlinechar\@tempcnta
+        \@typein}
+    \makeatother 
+    % LuaLaTeX specific code
+\else\ifxetex
+    \typeout{ *** XeLaTeX *** ^^J}
+    % XeLaTeX specific code
+
+    \usepackage{fontspec}
+    \defaultfontfeatures{Mapping=tex-text}
+
+    \setmainfont[
+      Extension = .otf,
+      UprightFont = *-regular,
+      BoldFont = *-bold,
+      ItalicFont = *-italic,
+      BoldItalicFont = *-bolditalic,
+    ]{xits}
+
+%     \setmathfont[
+%       Extension = .otf,
+%       BoldFont = *bold,
+%     ]{xits-math}
+
+    \usepackage{polyglossia}
+% 	\usepackage{csquotes}
+
+%     \setmainlanguage[spelling=new,babelshorthands=true]{english}
+    \setmainlanguage{english}
+
+    \usepackage[]{unicode-math}
+\else
+    \typeout{ *** LaTeX *** ^^J}
+
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage[english]{babel}
+
+    %\usepackage{lmodern}
+    \usepackage[adobe-utopia]{mathdesign}
+    \usepackage[kerning=true,babel=true]{microtype}
+    \usepackage{textcomp}
+
+%     \usepackage{amssymb}
+%     \usepackage{amsfonts}
+% 
+\fi\fi
+% \typein{}
+
+\usepackage{wasysym}
+% \usepackage{marvosym}
+
+% Font settings
+% \usepackage{antpolt}
+% \usepackage{libertine}
+% \usepackage[urw-garamond]{mathdesign}
+% \renewcommand{\rmdefault}{ugm}
+% \usepackage{agaramondpro}
+
+% \setmathrm{Libertine}
+% \setmathsf{Libertine}
+% \setmathtt{Libertine}
+% \setboldmathrm[BoldFont={Libertine}]{Libertine Bold}
+
+% \setmainfont[Ligatures=TeX]{Linux Libertine O}
+% \setmathfont[Scale=MatchLowercase]{Neo Euler} 
+% \setmathfont[range=\mathup]{Linux Libertine O}
+% \setmathfont[range=\mathit]{Linux Libertine O Italic}
+% \setmathfont[range=\mathbfup]{Linux Libertine O Bold}
+% \setmathfont[range=\mathbfit]{Linux Libertine O Bold Italic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% colors and graphics
+% \usepackage[svgnames]{xcolor}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% geometry
+
+% Pro­vides sup­port for set­ting the spac­ing be­tween lines in a doc­u­ment. 
+% Pack­age op­tions in­clude sin­glespac­ing, one­half­s­pac­ing, and 
+% dou­blespac­ing. Al­ter­na­tively the spac­ing can be changed as re­quired with 
+% the \sin­glespac­ing, \one­half­s­pac­ing, and \dou­blespac­ing com­mands. Other 
+% size spac­ings also avail­able.
+% \usepackage{setspace}
+% \onehalfspacing
+
+%% my geo
+% \usepackage{geometry}
+% % \usepackage[cm]{fullpage}
+% % \usepackage{a4wide}
+% \geometry{%
+%   a4paper,%
+%   top=1in,%
+%   bottom=1in,%
+%   %   left=0.85in,%
+%   %   right=0.7in,%
+%   %   hmarginratio=2:1%
+% }
+%% french template geo
+% \usepackage[headheight=15.91pt]{geometry}
+% \usepackage[headheight=15.91pt]{geometry}
+% margin=1cm,footskip=.5cm
+\usepackage[a4paper]{geometry}
+% \usepackage[cm]{fullpage}
+\setlength{\headheight}{14.5pt}% adjust the value
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% style
+
+% maths
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\include{commands}
+
+% \usepackage{float}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,nolistsep}
+
+\usepackage{lettrine}
+\setcounter{DefaultLines}{3}
+% \renewcommand{\DefaultLraise}{0}
+% \renewcommand{\DefaultLhang}{0}
+\renewcommand{\DefaultLoversize}{0.1}
+\setlength{\DefaultNindent}{0.5em}
+
+% \renewcommand{\LettrineFontHook}{\color[gray]{0.6}}
+\usepackage{tikz}
+\usetikzlibrary{arrows,backgrounds,calc,matrix,patterns,plotmarks,positioning,shadows,shapes}
+
+% \usepackage[center,labelsep=endash]{caption} % avant subfig
+% \usepackage{subfig} % plusieurs figures en une seule (remplace subfigure)
+% \usepackage{pdfpages} % inclusion de pdf
+% \usepackage{titlesec}
+\usepackage{wrapfig}
+% \usepackage[nottoc]{tocbibind}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{stfloats}
+\usepackage[bf]{caption}
+% ,centerlast,tableposition=top
+\usepackage{subcaption}
+\captionsetup{
+  subrefformat=parens,
+}
+\usepackage{longtable}
+
+\setlength{\heavyrulewidth }{0.2em}
+% utile
+\usepackage{lastpage}
+% \usepackage{eurosym}
+\usepackage[utopia]{quotchap}
+% \renewcommand{\chapnumfont}{\usefont{T1}{AGaramondPro}{b}{n}\fontsize{100}{130}
+% \selectfont\color{chaptergrey}}
+% 
+% \renewcommand{\chapnumfont}{\usefont{T1}{antpolt}{b}{n}\fontsize{100}{130}
+% \selectfont\color{chaptergrey}}
+
+\usepackage[babel]{csquotes}
+% \MakeAutoQuote{«}{»}
+
+% \usepackage[square,numbers,sort&compress]{natbib}
+
+\usepackage{graphicx}
+
+% \usepackage{pdflscape}
+\usepackage{lscape}
+
+%% hyperref
+\usepackage{hyperref}
+\hypersetup{
+%   hyperindex,
+  plainpages=false,
+%   pdfpagelabels,
+%   pagebackref,
+  % colorlinks=false, hypertexnames=false
+  unicode=true,
+  psdextra=true,
+  bookmarksopen=true,
+%   colorlinks=false,
+%   colorlinks=true,
+  linktocpage=true,
+  pdfauthor={Rafał Lalik},
+  pdftitle={PhD Thesis},
+  pdfkeywords={Rafał Lalik, PhD Thesis, Pion Tracker},
+}
+
+% The package offers a solution to the problem that when you link to a float 
+% using hyperref, the link anchors to below the float's caption, rather than 
+% the beginning of the float.
+% \usepackage[all]{hypcap}
+
+%%% Commandes
+% \newcommand{\ornementChapitre}{\begin{center}\begin{Large}\textorn{2}\end{Large}
+%   \end{center}}
+%% centrage des colonnes sur plusieurs lignes
+\renewcommand\multirowsetup{\centering}
+%% création d'un type de colonne centrée de largeur 1.5
+\newcolumntype{D}{>{\centering}p{1.5cm}}
+%% notes dans la marge
+\newcommand{\note}[1]{\marginpar{%
+    \vskip-\baselineskip %raise the marginpar a bit
+    \raggedright\footnotesize
+    \color{red}{\itshape\hrule\smallskip#1}\par\smallskip\hrule}}
+\newcommand{\nonotes}{\renewcommand{\note}[1]{}}
+%% strong %%
+\DeclareRobustCommand{\strong}[1]{%
+  \textbf{#1}%
+}
+%% dédicace %%
+\DeclareRobustCommand{\dedicace}[1]{%
+  \clearemptydoublepage
+  \thispagestyle{empty}
+  \vspace*{\stretch{1}}\par
+  {\begin{flushright}\emph{#1}\end{flushright}\par}
+  \vspace*{\stretch{2}}
+}
+%% sur-paragraphe (ligne entre deux groupes de paragraphes) %%
+\DeclareRobustCommand{\surparagraph}{%
+  \par\medskip
+}
+%% raccourcis %%
+% \newcommand\avc{H.264}
+% \newcommand\ituCC{ITU-R BT.500-11~\cite{itu-bt500-11}}
+% \newcommand\ituNfDx{ITU-T P.910~\cite{itu-bt910}}
+
+
+%%% Paramétrages du document
+%% url dans la même police que le reste
+\urlstyle{rm}
+%% profondeur de la table des matières
+\setcounter{tocdepth}{2}
+% \setcounter{secnumdepth}{2}
+% on définit l'interligne pour tout le document
+% \onehalfspacing
+
+% modification of the ToC headers
+\usepackage{titletoc}
+\titlecontents{part}
+[3pc]
+{\addvspace{1.5pc}\filcenter\hrule height 1pt \Large{\textbf{\partname}}~}
+{\Large\textbf}
+{\Large\textbf}
+{}
+[\hrule height 1pt\addvspace{.5pc}]
+%% redéfinition des labels (tableaux, figures, etc.) % voir french.cfg
+\addto\captionsfrench{\def\figurename{Figure}}
+\addto\captionsfrench{\def\tablename{Tableau}}
+\addto\captionsfrench{\def\listfigurename{Table des illustrations}}
+
+%% definition of the page styles
+% \let\footruleskip\undefined
+
+\newcommand\abstractname{Abstract}  %%% here
+\makeatletter
+\if@titlepage
+  \newenvironment{abstract}{%
+      \titlepage
+      \null\vfil
+      \@beginparpenalty\@lowpenalty
+      \begin{center}%
+        \bfseries \abstractname
+        \@endparpenalty\@M
+      \end{center}}%
+    {\par\vfil\null\endtitlepage}
+\else
+  \newenvironment{abstract}{%
+      \if@twocolumn
+        \section*{\abstractname}%
+      \else
+        \small
+        \begin{center}%
+          {\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
+        \end{center}%
+        \quotation
+      \fi}
+      {\if@twocolumn\else\endquotation\fi}
+\fi
+\makeatother
+
+\makeatletter
+\let\sv@endpart\@endpart
+\def\@endpart{\thispagestyle{empty}\sv@endpart}
+\makeatother
+
+\newcommand\ozdlewa{\includegraphics{gfx/arrow_l}}
+\newcommand\ozdprawa{\includegraphics{gfx/arrow_r}}
+% \addcontentsline{toc}{chapter}{{\Roman{chap}} #1}
+% {\vglue 1.1cm
+% \leftskip 10pt plus 1 fill \rightskip 10pt plus 1 fill \parindent 0pt
+% \Large\bf
+% \ozdlewa\hglue 5mm\Roman{chap}\hglue 5mm\ozdprawa\break\vglue -5mm
+% \LARGE\bf
+% #1\par
+% \vglue10mm
+% }}o
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% style
+
+\usepackage{fancyhdr}
+
+\usepackage{ifthen}
+
+\pagestyle{fancy}
+\fancyhf{} % on efface tout
+\fancyhead[RO]{\nouppercase{\emph{\rightmark}}}
+\fancyhead[LE]{\nouppercase{\emph{\leftmark}}}
+\fancyfoot[RO,LE]{\strong{--~\thepage~--}} % h2g2 style
+
+\fancypagestyle{plain}{ % pour les pages de chapitre
+  \fancyhf{} % on efface tout
+  
+\fancyfoot[RO,LE]{\strong{--~\thepage~--}} % h2g2 style
+\renewcommand{\headrulewidth}{0pt}
+}
+
+% %% on enlève le pied et l'en-tête d'une page paire vide
+\let\origdoublepage\cleardoublepage
+
+\newcommand{\clearemptydoublepage}{%
+    \clearpage
+    {\pagestyle{empty}\origdoublepage}%
+}
+\let\cleardoublepage\clearemptydoublepage
+
+%=========================================================================
+%== commands
+
+% Commands to be used within the TUM report document
+% Included by MAIN.TEX
+% Please include your own cool commands here. 
+% Be only sure to comment it sufficiently so others can use it.
+
+%-------------------------------------------------------------
+%                      Own Commands
+%-------------------------------------------------------------
+
+\usepackage[%
+ multi-part-units = single,
+ separate-uncertainty = true,
+]{siunitx}
+% \sisetup{detect-all}
+% \usepackage{unicode-math-symbols}
+
+\usepackage{xspace}
+
+%-------------------------------------------------------------
+% math stuff -------------------------------------------------
+%-------------------------------------------------------------
+
+% nice R, N, C
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\compl}{\mathbb{C}}
+
+% norm
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+
+% un demi
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\fpi}{$4\pi$\xspace}
+\newcommand{\fss}{$fss$\xspace}
+
+% parantheses
+\newcommand{\parenth}[1]{ \left( #1 \right) }
+\newcommand{\bracket}[1]{ \left[ #1 \right] }
+\newcommand{\accolade}[1]{ \left\{ #1 \right\} }
+%\newcommand{\angle}[1]{ \left\langle  #1 \right\rangle }
+
+% partial derivative: %#1 function, #2 which variable
+% simple / single line version
+\newcommand{\pardevS}[2]{ \delta_{#1} f(#2) }
+% fraction version
+\newcommand{\pardevF}[2]{ \frac{\partial #1}{\partial #2} }
+
+% render vectors: 3 and 4 dimensional
+\newcommand{\veciii}[3]{\left[ \begin{array}[h]{c} #1 \\ #2 \\ #3	\end{array} \right]}
+\newcommand{\veciv}[4]{\left[ \begin{array}[h]{c} #1 \\ #2 \\ #3 \\ #4	\end{array} \right]}
+
+% render matrices: 3  dimensional (arguments in row first order)
+\newcommand{\matiii}[9]{\left[ \begin{array}[h]{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9	\end{array} \right]}
+%DOESN'\T WORK,DON'T KNOW WHY \newcommand{\mativ}[16]{\left[ 
+% \begin{array}[h]{cccc} #1 & #2 & #3 & #4 \\ #5 & #6 & #7 & #8 \\ #9 & #10 & #11 
+% & #12 \\ #13 & #14 & #15 & #16 \end{array} \right]}
+
+
+
+%-------------------------------------------------------------
+% some abreviations ----------------------------------
+%-------------------------------------------------------------
+\newcommand{\checklater}[1]{ % Text
+\textcolor{JungleGreen}{#1}
+%\textcolor{black}{#1}
+}
+
+\newcommand {\bsl} {$\backslash$}
+
+\newcommand{\etAl}{\emph{et al.}\mbox{ }}
+\newcommand{\EliPar}{\\[1cm]}
+%-------------------------------------------------------------
+% formating --------------------------------------------------
+%-------------------------------------------------------------
+
+% Theorem & Co environments and counters
+%\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{equat}[theorem]{Equation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{algorithm}[theorem]{Algorithm}
+
+% inserting figures
+\newcommand{\insertfigure}[4]{ % Filename, Caption, Label, Width percent of textwidth
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=#4\textwidth]{#1}
+		\end{center}
+		\vspace{-0.4cm}
+		\caption{#2}
+		\label{#3}
+	\end{figure}
+}
+
+\newcommand{\rigidTransform}[2]
+{
+	${}^{#2}\!\mathbf{H}_{#1}$
+}
+
+%code, in typewriter
+\newcommand{\code}[1]
+ {\texttt{#1}}
+
+% comment that appears on the border - very practical !!!
+%%%%%%%%\newcommand{\comment}[1]{\marginpar{\raggedright \noindent \footnotesize {\sl #1} }}
+
+% page clearing
+% \newcommand{\clearemptydoublepage}{%
+%   \ifthenelse{\boolean{@twoside}}{\newpage{\pagestyle{empty}\cleardoublepage}}%
+%   {\clearpage}}
+
+
+%-------------------------------------------------------------
+%-------------------------------------------------------------
+%\makeatletter
+%\newcommand{\paragraph}
+%{\@startsection{paragraph}{4}
+%{\z@}{3.25ex \@plus 1ex \@minus .2ex}
+%{-1em}
+%{\normalfont\normalsize\bfseries}
+%}
+
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+
+\newcommand{\eru}[1]{{^{#1}}}
+\newcommand{\erd}[1]{{_{#1}}}
+\newcommand{\eras}[2]{\ {^{#1}_{#2}}}
+
+\newcommand{\hades}{HADES\xspace}
+\newcommand{\chades}{Hades\xspace}
+\newcommand{\fopi}{FOPI\xspace}
+\newcommand{\piontracker}{pion tracker\xspace}
+\newcommand{\xsec}{cross-section\xspace}
+\newcommand{\xsecs}{cross-sections\xspace}
+\newcommand{\etrg}{empty target\xspace}
+\newcommand{\phasespace}{phase-space\xspace}
+
+\newcommand{\eq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\dEdx}{$\ud E$/$\ud x$}
+
+\newcommand{\ff}{form factors}
+\newcommand{\elmagn}{electromagnetic}
+\newcommand{\elp}{\mathrm{e}^+}
+\newcommand{\elm}{\mathrm{e}^-}
+\newcommand{\neue}{\nu_e}
+\newcommand{\aneue}{\bar{\nu}_e}
+\newcommand{\neuu}{\nu_\mu}
+\newcommand{\pmu}{\mu^+}
+\newcommand{\mmu}{\mu^-}
+\newcommand{\aneuu}{\bar{\nu}_\mu}
+
+\newcommand{\hyp}{\ce{Y}}
+\newcommand{\Kaon}{\ce{K}}
+\newcommand{\prot}{\ce{p}}
+\newcommand{\neut}{\ce{n}}
+\newcommand{\nucl}{\ce{N}}
+\newcommand{\elec}{\ce{e}}
+\newcommand{\piz}{\pi^{0}}
+\newcommand{\pim}{\pi^{-}}
+\newcommand{\pip}{\pi^{+}}
+\newcommand{\pimp}{\pim p}
+\newcommand{\Kzs}{\ce{K^0_S}}
+\newcommand{\Kz}{\ce{K^0}}
+\newcommand{\Km}{\ce{K^-}}
+\newcommand{\Kp}{\ce{K^+}}
+\newcommand{\Dp}{{\Delta^{+}}}
+\newcommand{\Dpp}{{\Delta^{++}}}
+\newcommand{\Szero}{{\Sigma^{0}}}
+\newcommand{\Splus}{{\Sigma^{+}}}
+\newcommand{\Sstar}{{\Sigma(1385)}}
+\newcommand{\SstarA}{{\Sigma(1385)^{0,+}}}
+\newcommand{\Sstarz}{{\Sigma(1385)^0}}
+\newcommand{\Sstarp}{{\Sigma(1385)^+}}
+\newcommand{\Lzero}{{\Lambda}}
+\newcommand{\Lstar}{{\Lambda(1405)}}
+\newcommand{\Lstard}{{\Lambda(1520)}}
+\newcommand{\Nstar}{{\text{N}^{*}}}
+\newcommand{\pKL}{{\prot\Kp\Lambda}}
+\newcommand{\pp}{\ce{pp}\xspace}
+
+\newcommand{\gev}{\giga\electronvolt}
+\newcommand{\gevc}{\giga\electronvolt\per c}
+\newcommand{\gevsc}{\giga\electronvolt\per c\squared}
+
+\newcommand{\mev}{\mega\electronvolt}
+\newcommand{\mevc}{\mega\electronvolt\per c}
+\newcommand{\mevsc}{\mega\electronvolt\per c\squared}
+
+\newcommand{\kev}{\kilo\electronvolt}
+\newcommand{\kevc}{\kilo\electronvolt\per c}
+\newcommand{\kevsc}{\kilo\electronvolt\per c\squared}
+
+\newcommand{\ptcm}{$p_\mathrm{t}$\xspace}
+\newcommand{\ycm}{$y^\mathrm{cms}$\xspace}
+\newcommand{\pty}{$p_\mathrm{t}$-$y^\mathrm{cms}$\xspace}
+\newcommand{\ncmspty}{$p_\mathrm{t}$-$y$\xspace}
+
+\newcommand{\pcm}{$p^\mathrm{cms}$\xspace}
+\newcommand{\cthcm}{$\cos\theta^\mathrm{cms}$\xspace}
+\newcommand{\pcth}{$p^\mathrm{cms}$-$\cos\theta^\mathrm{cms}$\xspace}
+\newcommand{\ncmspcth}{$p$-$\cos\theta$\xspace}
+
+\newcommand{\mptcm}{p_\mathrm{t}}
+\newcommand{\mycm}{y}
+\newcommand{\mpcm}{p^\mathrm{cms}}
+\newcommand{\mcthcm}{\cos\theta^\mathrm{cms}}
+
+\newcommand{\us}{\micro\second}
+\newcommand{\mrad}{\milli\radian}
+\newcommand{\mbar}{\milli\barn}
+\newcommand{\mub}{\micro\barn}
+
+\newcommand{\racs}{\sqrt{s}}
+\newcommand{\hracs}{\racs = \SI{3.18}{\gev}}
+
+\newcommand{\hor}{^\mathrm{H}}
+\newcommand{\itc}{$\mathrm{I}2\mathrm{C}$}
+
+\newcommand{\Dr}{Dr\xspace} % Dr
+\newcommand{\eg}{\emph{e.g.,}\xspace} % e.g.
+\newcommand{\apriori}{\emph{a priori}\xspace} % a priori
+\newcommand{\etal}{\emph{et al.}\xspace} % et. al.
+\newcommand{\etc}{{etc.}\xspace} % etc.
+\newcommand{\ie}{\emph{i.e.,}\xspace} % i.e.
+\newcommand{\nb}{\emph{n.b.}\xspace} % n.b.
+\newcommand{\cf}{\emph{cf.}\xspace} % cf. confer
+\newcommand{\ns}{neutron star\xspace} % cf. confer
+
+\DeclareSIUnit\pion{\pi}
+
+%=========================================================================
+%== referecnes
+
+\usepackage[
+  backend=biber,
+  style=alphabetic,
+%   citestyle=alphabetic,
+%   bibstyle=authoryear,
+  urldate=iso8601,
+  date=iso8601,
+  doi=true,
+  url=false,
+  isbn=false,
+  eprint=false,
+]{biblatex}
+\ExecuteBibliographyOptions{
+%   style=numeric,
+%   sorting=none,
+  backref
+}
+
+\makeatletter
+\ifdef{\old@document@subfiles}{%
+  \def\srcroot{../..}
+}{%
+  \def\srcroot{.}
+}%
+\makeatother
+% \ifundef{\srcroot}
+% \def\srcroot{}
+% \fi
+
+\renewbibmacro{in:}{}
+
+\addbibresource{\srcroot/biblio/sample.bib}
+\addbibresource{\srcroot/biblio/bib.bib}
+
+\AtEndDocument{%
+%   \balance
+%   \printindex[names]
+%   \balance
+%   \printindex[places]
+
+  \listoffigures
+  \listoftables
+
+  %
+  \clearpage
+%   \bibliographystyle{unsrtnat}
+%   \bibliography{%
+% sources/pioncountrates,%
+% sources/pionchicane,%
+% sources/silicons,%
+% sources/nxyter,%
+% sources/analysis%
+%   }
+  \printbibliography
+}
+
+\usepackage{pstricks}
+\usepackage[version=3]{mhchem}
+
+\usepackage[olditem,oldenum]{paralist}
+\usepackage{subcaption}
+\usepackage{sidecap}
+\usepackage[capitalize]{cleveref}
+
+
+% \graphicspath{{figures/diffana/}{../../figures/diffana/}}
+\graphicspath{{./}{../../}}
+
+\begin{document}
+
+  \begin{titlepage}
+   \input{components/cover}
+  \end{titlepage}
+
+\frontmatter
+
+{
+% \pagestyle{empty}
+
+% ---------------------------------------------------------------------------
+%
+%  Official Stuff
+%
+% ---------------------------------------------------------------------------   
+% \clearemptydoublepage
+\input{components/titlepage}
+
+\subfile{sources/preface}
+
+\cleardoublepage
+\tableofcontents
+
+\cleardoublepage
+\pagenumbering{Roman}
+
+}
+
+\mainmatter
+
+% \include{toc}
+
+\linenumbers
+
+% \pagestyle{headings}
+% \pagestyle{fancy}
+
+% \layout
+
+\pagenumbering{arabic}
+
+\newpage
+\input{chapters/01_introduction}
+\newpage
+\input{chapters/02_experimental_data}
+\newpage
+\input{chapters/03_anti-3He_xs}
+\newpage
+\input{chapters/04_anti-triton_xs}
+\newpage
+\input{chapters/05_antinuclei_in_cosmic_rays}
+\newpage
+\input{chapters/06_final_remarks}
+\newpage
+\input{chapters/07_Appendix}
+
+
+\end{document}
