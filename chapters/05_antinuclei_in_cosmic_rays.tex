@@ -173,8 +173,10 @@ The resulting cross sections are shown for both antideuterons and \ahe\ in figur
 \begin{figure}
     \centering
     \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled_with_paramterisation.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled_with_paramterisation.pdf}
-    \caption{Scaled inelastic cross sections of antideuterons (left) and \ahe\ (right) on proton targets. The band shows the experimental uncertainty from the ALICE measurements \cite{}, plus an additional 8\% uncertainty associated with the scaling from heavier targets (C, O, Al) to protons (H). }
+    \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled.pdf}
+     \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled_with_paramterisation.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled.pdf}
+    \caption{Scaled inelastic cross sections of \ahe\ (top) and antideuterons (bottom) on proton (left) and Helium-4 (right) targets. The band shows the experimental uncertainty from the ALICE measurements \cite{}, plus an additional 8\% uncertainty associated with the scaling from heavier targets (C, O, Al) to protons (H).}
     \label{fig:ScaledXS_ahe_adeut}
 \end{figure}
 
@@ -183,18 +185,50 @@ The resulting cross sections are shown for both antideuterons and \ahe\ in figur
 Presented in this section are the results for the effect of different dark matter profiles and masses on the expected antideuteron fluxes from dark matter. They are also compared to secondary antideuterons produced in high energy cosmic ray collisions with the interstellar medium. 
 
 \subsubsection{Results for different dark matter masses}
-In this section the effects of different dark matter masses on the antinuclei fluxes will be discussed, both for \ahe\ and for antideuterons. The fluxes can be found in figure \ref{fig:antinuclei_fluxes_DMmassComparison}, where they are compared to a prediction for secondary antinuclei from high energy cosmic ray collisions with the interstellar medium . 
+In this section the effects of different dark matter masses on the antideuteron fluxes will be discussed. The fluxes can be found in figure \ref{fig:Results_dbar_fluxes_diff_DM_masses}, where they are compared to a prediction for secondary antinuclei from high energy cosmic ray collisions with the interstellar medium. In the lower panel on each figure, the transparency of the galaxy to antideuterons is shown. This is defined in equation \ref{eq:TransparencyDefinition} as the ratio of the obtained flux with a given parameterization of the inelastic cross section, to the flux obtained when all inelastic interactions are set to zero.
+
+\begin{equation}\label{eq:TransparencyDefinition}
+    \mathrm{Transparency(sigma_{inel})} = \frac{\mathrm{Flux(sigma_{inel}})}{\mathrm{Flux(sigma_{inel}=0}) 
+\end{equation}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.48\textwidth]{}
-    \caption{Expected antideuteron (left) and \ahe\ (right) fluxes for different dark matter masses.}
-    \label{fig:dbar_fluxes_DMmassComparison}
+    \includegraphics[width=0.45\textwidth]{figures/WWdbarPaperTOA.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/WWdbarPaperTOA.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/bbdbarPaperTOA.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/bbdbarPaperTOA.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/blambdadbarPaperTOA.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/blambdadbarPaperTOA.pdf}
+    \caption{Expected antideuteron fluxes for different \dmm\ ranging from 51GeV to 1TeV. They are compared to an expected spectrum of secondary antideuterons from high energy cosmic ray collisions. The results are shown for the position of the solar system. The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}. The results are also shown for different possible annihilation channels of dark matter, either through \WW\ (top), through \bb\ (middle) or through $\Lambda_b \rightarrow $\bb and light mediators (bottom).}
+    \label{fig:Results_dbar_fluxes_diff_DM_masses}
 \end{figure}
+
+
 \subsubsection{Results for different dark matter profiles}
 \subsection{Results for \ahe}
+In this section the results for \ahe\ fluxes from dark matter will be discussed, both for different dark matter masses and for different profiles. Similarly as was done for antideuterons, the fluxes will be compared to an expected flux from secondaries from high energy cosmic ray collisions with the ISM. \ahe\'s advantage over antideuterons is that due to the double charge, they are far easier to identify in particle detectors at all but the highest energies.
 \subsubsection{Results for different dark matter masses}
+
+In this section the results for different dark matter masses \dmm\ are shown and discussed. These masses range over 2 orders of magnitude from 10 GeV all the way to 1TeV, all of which are valid hypotheses for WIMP masses. As can be seen in figure \ref{fig:Results_He3_fluxes_diff_DM_masses}, the result is not just a difference in the overall normalization, but also in the shape of the produces spectrum. This is because the larger energy available with the higher mass translates into more kinetic energy in the final state particles, i.e. the produced antinuclei. It can also be seen that the increased production with increased mass does not compensate for the reduction in annihilation rate due to the lower number density\footnote{This is the a/\dmm\ scaling seen in equation \ref{eq:DM_source_term}.}, thus the flux decreases with increasing dark matter mass. Also shown in the bottom panel for each figure, is the transparency of the galaxy to \ahe\, defined in the same way as it was for antideuterons in equation \ref{eq:TransparencyDefinition}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/Antihelium_fluxes_LISWW_100GeV.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/Antihelium_fluxes_solar_modulated_WW_100GeV.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/Antihelium_fluxes_LISWW_100GeV.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/Antihelium_fluxes_solar_modulated_WW_100GeV.pdf}
+    \caption{Expected \ahe\ fluxes for different \dmm\ ranging from 1GeV to 1TeV. They are compared to an expected spectrum of secondary \ahe\ from high energy cosmic ray collisions. The results are shown for the position of the solar system. The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}. The results are also shown for different possible annihilation channels of dark matter, either through \WW\ (top) or through \bb\ (bottom).}
+    \label{fig:Results_He3_fluxes_diff_DM_masses}
+\end{figure}
 \subsubsection{Results for different dark matter profiles}\label{sec:ResDMProfiles}
+The effect of the different dark matter profiles is shown only on one channel and one dark matter mass, since it has similar effects on all channels/masses. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figu}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
 \subsection{Experiments to detect antinuclei in the cosmos}
 Given their rarity, antinuclei in cosmic rays are difficult to detect. The experiment which currently has the best sensitivity for detecting antinuclei is AMS-02, which is a magnetic spectrometer on the international space station. As a magnetic spectrometer, AMS-02 is more sensitive to charge differences, and therefore more sensitive to \ahe\ nuclei than to antideuterons, since the latter need to be distinguished from the significalty more abundant antiprotons. However, it is still a big surprise that AMS has reported signals consistent with multiple \ahe\ nuclei, given that none of the currently available models predict a flux within the sensitivity of AMS, much less an order of magnitude above. These reports have cause a large amount of effort from both experimental and theoretical communities to come up with theories which might explain this signal, while also taking into account the lack of evidence for an antideuteron signal. It is currently unclear which process would produce such a large \ahe\ flux without boosting the antideuteron flux in a similar amount, with some suggested options being a boost to \ahe\ production via $\Lambda_b$ decays\cite{}. \\
 
