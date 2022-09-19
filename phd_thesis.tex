@@ -686,7 +686,6 @@
    \input{components/cover}
   \end{titlepage}
 
-\frontmatter
 
 {
 % \pagestyle{empty}
@@ -709,7 +708,6 @@
 
 }
 
-\mainmatter
 
 % \include{toc}
 
@@ -737,5 +735,8 @@
 \newpage
 \input{chapters/07_Appendix}
 
+\newpage
+\bibliographystyle{utphys}   % Remember we use title in the biblio
+\bibliography{bib.bib}
 
 \end{document}
