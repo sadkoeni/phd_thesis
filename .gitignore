@@ -1,3 +1,15 @@
 *.aux
 *~
-
+*.bcf
+*.log
+*.lof
+*.lot
+*.out
+*.xml
+*.gz
+*.toc
+*.fls
+*latexmk
+.DS_Store
+*.bbl
+*.blg
