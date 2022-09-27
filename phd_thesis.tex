@@ -153,7 +153,6 @@
 \usepackage{multirow}
 \usepackage{mathtools}
 \usepackage{xfrac}
-\include{commands}
 
 % \usepackage{float}
 
@@ -277,6 +276,7 @@
 % \setcounter{secnumdepth}{2}
 % on définit l'interligne pour tout le document
 % \onehalfspacing
+\include{commands}
 
 % modification of the ToC headers
 \usepackage{titletoc}
@@ -505,8 +505,7 @@
 \newcommand{\erd}[1]{{_{#1}}}
 \newcommand{\eras}[2]{\ {^{#1}_{#2}}}
 
-\newcommand{\hades}{HADES\xspace}
-\newcommand{\chades}{Hades\xspace}
+
 \newcommand{\fopi}{FOPI\xspace}
 \newcommand{\piontracker}{pion tracker\xspace}
 \newcommand{\xsec}{cross-section\xspace}
@@ -612,23 +611,7 @@
 %=========================================================================
 %== referecnes
 
-\usepackage[
-  backend=biber,
-  style=alphabetic,
-%   citestyle=alphabetic,
-%   bibstyle=authoryear,
-  urldate=iso8601,
-  date=iso8601,
-  doi=true,
-  url=false,
-  isbn=false,
-  eprint=false,
-]{biblatex}
-\ExecuteBibliographyOptions{
-%   style=numeric,
-%   sorting=none,
-  backref
-}
+
 
 \makeatletter
 \ifdef{\old@document@subfiles}{%
@@ -641,10 +624,10 @@
 % \def\srcroot{}
 % \fi
 
-\renewbibmacro{in:}{}
+%\renewbibmacro{in:}{}
 
-\addbibresource{\srcroot/biblio/sample.bib}
-\addbibresource{\srcroot/biblio/bib.bib}
+%\addbibresource{\srcroot/bib.bib}
+%\addbibresource{\srcroot/bib.bib}
 
 \AtEndDocument{%
 %   \balance
@@ -657,15 +640,8 @@
 
   %
   \clearpage
-%   \bibliographystyle{unsrtnat}
-%   \bibliography{%
-% sources/pioncountrates,%
-% sources/pionchicane,%
-% sources/silicons,%
-% sources/nxyter,%
-% sources/analysis%
-%   }
-  \printbibliography
+
+ %\printbibliography
 }
 
 \usepackage{pstricks}
@@ -736,7 +712,7 @@
 \input{chapters/07_Appendix}
 
 \newpage
-\bibliographystyle{utphys}   % Remember we use title in the biblio
-\bibliography{bib.bib}
+\bibliographystyle{ieeetr}   % Remember we use title in the biblio
+\bibliography{bib}
 
 \end{document}
