@@ -30,9 +30,9 @@ where the factor $1/2$ comes from symmetry considerations for majorana dark matt
 
 The dark matter density profile $\rho_\chi(\vec{r})$ affects both the total amount of antinuclei produced as well as their initial distribution. This parameter can be constrained from measurements of the Milky Way's rotation curve, similarly to how it is done for other galaxies. However, measuring the rotation curve of the Milky Way involves extra challenges, given that we are measuring from within. This is due to the fact that for other galaxies, measuring the difference in velocity through red/bluehisft at different positions is sufficient to measure the rotation curve, whereas for our own galaxies we need the measure both the 3d position and velocity of many stars. A more detailed discussion can be found in \cite{Sofue_2016, Sofue2020}. Our galaxy's rotation curve  has been reported in \cite{Sofue2020}, found by combining multiple existing measurements. It is reproduced in figure \ref{fig:MilkyWayRotationCurve}. \\
 
-\begin{figure}[hbtp][h]
+\begin{figure}[hbtp]
     \centering
-    \includegraphics[width=0.45*\textwidth]{figures/RotationCurveMilkyWay.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/RotationCurveMilkyWay.pdf}
     \caption{Rotation curve of stars in the Milky Way, as a function of distance from the galactic center. Reproduction of data reported in \cite{Sofue2020}.}
     \label{fig:MilkyWayRotationCurve}
 \end{figure}
@@ -74,7 +74,7 @@ with $\alpha$=0.17 and $r_s$=28.44kpc, and the much shallower isothermal profile
 \end{equation}
 with $r_s$=4.38kpc. The profiles are plotted in figure \ref{fig:DMProfiles}, using best fit values taken from \cite{Ibarra}. It can be seen that the isothermal profile has a very shallow rise towards the galactic center, while the Einasto profile rises very steeply. The NFW profile lies between the two, and is often used preferentially \cite{}. These three profiles cover most of the available parameter space for the dark matter profile. \\
 
-\begin{figure}[hbtp][h]
+\begin{figure}[hbtp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/DMProfiles_distributions_log.png}
     \caption{Dark matter density profiles used in this work, as a function of the distance to the galactic centre. The best fit values for each profile are taken from \ref{Ibarra, IbarraSources}}
@@ -87,11 +87,21 @@ To summarize: the dark matter density profile in our galaxy is constrained by me
 
 The second term of equation \ref{eq:DM_source_term} is the dark matter mass, \dmm\ . The dark matter mass is a free parameter, with possible values ranging from very light dark matter\footnote{A popular light dark matter model is the axion model \cite{}.} in the eV range all the way to the WIMP dark matter discussed in this work, with plausible mass ranges from 10s of GeV to the TeV range. As discussed in section \ref{sec:IntroWIMPs}, the appeal of WIMP dark matter is that the expected weak cross section of such a particle in the very early universe would yield a population today of the same magnitude as we observe. It would also explain the lack of evidence for the production of dark matter at accelerators, since we might at this point not yet have reached the energies required to produce such particles\footnote{Additionally, some supersymmetric partners could have exactly these required properties, which would make them suitable dark matter candidates\cite{}. However, the lack of evidence for supersymmetry makes this argument somewhat weaker than it was during the inception of WIMPs \cite{}}. 
 
-Since the exact nature of dark matter remains a mystery, any mass within this WIMP range which is not excluded by other measurements can be assumed. The chosen mass has a direct effect on all three remaining terms of equation \ref{eq:DM_source_term}: i) $\frac{1}{m_\chi^2}$, ii) $\frac{dN_{\mathrm{\bar{p}, \bar{d}, {^3\overline{He}}}}}{dE}$  and iii)$<\sigma v>$. The effect on i) is trivial, and reduces the overall normalization of the antinuclei source term for higher \dmm\ . The mass' effect on ii) is based on the amount of energy available for the production of (anti)nuclei, as well as for their kinetic energy. For higher masses, the antinuclei yields increase non-trivially, but slower then the inverse square reduction from the first term. Additionally, the extra energy available for higher masses translates into a spectrum peaked at higher momenta. The effect on iii) is mostly experimental, since $<\sigma v>$ is constrained from antiproton measurements. 
+Since the exact nature of dark matter remains a mystery, any mass within this WIMP range which is not excluded by other measurements can be assumed. The chosen mass has a direct effect on all three remaining terms of equation \ref{eq:DM_source_term}: i) $\frac{1}{m_\chi^2}$, ii) $\frac{dN_{\mathrm{\bar{p}, \bar{d}, {^3\overline{He}}}}}{dE}$  and iii)$<\sigma v>$. The effect on i) is trivial, and reduces the overall normalization of the antinuclei source term for higher \dmm\ . The mass' effect on ii) is based on the amount of energy available for the production of (anti)nuclei, as well as for their kinetic energy. For higher masses, the antinuclei yields increase non-trivially, but slower then the inverse square reduction from the first term. Additionally, the extra energy available for higher masses translates into a spectrum peaked at higher momenta. This depends not only on the available energy, but also on the decay channel. The $\frac{dN_{\mathrm{\bar{p}, \bar{d}, {^3\overline{He}}}}}{dE}$ spectra used for the antideuteron and \ahe\ results shown in this chapter are shown in figure \ref{fig:DMsource_spectra}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/}
+    \includegraphics[width=0.45\textwidth]{figures/he3_dm_source_spectra.png}
+    \caption{Antideuteron (left) and \ahe\ (right) spectra from dark matter annihilations, normalized to a single annihilation event. Spectra for \WW\ \bb\ channels are taken from \cite{Ibarra:2012cc}. }
+    \label{fig:DMsource_spectra}
+\end{figure}
+
+The effect of \dmm\ on $<\sigma v>$ is mostly experimental, since $<\sigma v>$ is constrained from antiproton measurements. 
 
 Any dark matter annihilation process which can result in antideuterons must of course also produce antiprotons. However, contrary to heavier antinuclei, antiprotons are also copiously produced in other processes, due to the much lower energy threshold required for producing a single antinucleon, and the loss of the need to coalesce multiple antinucleons into a single compound antinucleus. This results in a significant and well constrained antiproton flux, which has been measured by the AMS collaboration \cite{}. Thus, any model chosen must not produce a dark matter component for antiprotons which is incompatible with those measurements. These limits are expressed in terms of $<\sigma v>$ as a function of \dmm\ . This representation is chosen since $\rho_\chi$ can be measured independently, and $<\sigma v>$ varies much more slowly with \dmm\ than the other terms. The limits -- which have been extracted by several groups \cite{} and compiled by \cite{}-- are shown in figure \ref{fig:DMSigmaVLimits}. Indicated in the figure is the maximum limit on $<\sigma v>$, as extracted by several groups, as well as the "thermal value", which is the value expected in the early universe for a WIMP particle which would result in the currently observed abundance of dark matter. Also indicated in this figure is the region in which a possible excess of antiprotons was observed in the \pbar\ spectrum measured by the AMS collaboration, which could hint at a dark matter particle within this mass range of 50-100GeV/$c^2$. It can be seen from the left hand side of the figure that for low dark matter masses, the limits lie significantly below the thermal value for this cross section. Thus, \dmm\ affects the constraints on  $<\sigma v>$, particularly for low masses. It is also worth noting that these limits have to be extracted for a given dark matter density profile, and thus when exploring the maximum allowed antinuclei flux given the antiproton constraints, the choice of $\rho_\chi(\vec{r})$ is degenerate with the limits on $<\sigma v>$ set by the AMS antiproton limits.\\
 
-\begin{figure}[hbtp][h]
+\begin{figure}[hbtp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/PbarLimitsAMS.png}
     \caption{Limits on  $<\sigma v>$ based on AMS antiproton data. Figure is taken from \cite{}.}
@@ -190,7 +200,7 @@ The resulting cross sections are shown for both antideuterons and \ahe\ in figur
     \centering
     \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled_with_paramterisation.pdf}
     \includegraphics[width=0.45\textwidth]{figures/Antihelum_on_p_targets_scaled.pdf}
-    \includegraphics[width=0.9\textwidth]{figures/dbar_xs_comparison_dbarNotInLabels.png}
+    \includegraphics[width=0.45\textwidth]{figures/dbar_xs_comparison_dbarNotInLabels.png}
     \caption{Scaled inelastic cross sections of \ahe\ (top) on proton (left) and Helium-4 (right) targets and antideuterons on proton targets (bottom). The band shows the experimental uncertainty from the ALICE measurements \cite{}, plus an additional 8\% uncertainty associated with the scaling from heavier targets (C, O, Al) to protons (H).}
     \label{fig:ScaledXS_ahe_adeut}
 \end{figure}
@@ -223,10 +233,10 @@ In this section the results for antihelium-3 fluxes using different dark matter 
 
 \begin{figure}[hbtp]
     \centering
-    \includegraphics[width=0.45\textwidth]{figures/he3bar_bb_LIS.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/he3bar_bb_SM.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/he3bar_WW_LIS.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/he3bar_WW_SM.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/he3bar_bb_LIS.png}
+    \includegraphics[width=0.45\textwidth]{figures/he3bar_bb_SM.png}
+    \includegraphics[width=0.45\textwidth]{figures/he3bar_WW_LIS.png}
+    \includegraphics[width=0.45\textwidth]{figures/he3bar_WW_SM.png}
     \caption{Expected \ahe\ fluxes for different \dmm\ ranging from 1GeV to 2TeV. They are compared to an expected spectrum of secondary \ahe\ from high energy cosmic ray collisions. The results are shown for the position of the solar system. The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}. The results are also shown for different possible annihilation channels of dark matter, either through \WW\ (top) or through \bb\ (bottom).}
     \label{fig:Results_He3_fluxes_diff_DM_masses}
 \end{figure}
@@ -236,9 +246,9 @@ The effect of the different dark matter profiles is shown only on one channel an
 
 \begin{figure}[hbtp]
     \centering
-    \includegraphics[width=0.48\textwidth]{}
+    \includegraphics[width=0.48\textwidth]{figures/bbdbarPaperLISDiffProfiles.pdf}
     \includegraphics[width=0.48\textwidth]{figures/Transparency_comparison_DM_profiles_bb51GeV_DMXs_option_nominal.png}
-    \caption{\ahe\ fluxes for different dark matter profiles (top) and the corresponding transparencies (bottom), for antideuterons (left) and \ahe\ (right) from dark matter annihilation through the \WW\ channel (red) and from high energy cosmic ray collisions with the ISM (blue).}
+    \caption{Antideuteron fluxes for different dark matter profiles (left) and the corresponding transparencies (right), for antideuterons from dark matter annihilation through the \bb\ channel.}
     \label{fig:different_DM_profiles_and_transparencies}
 \end{figure}
 
