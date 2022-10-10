@@ -32,7 +32,7 @@ The dark matter density profile $\rho_\chi(\vec{r})$ affects both the total amou
 
 \begin{figure}[hbtp]
     \centering
-    \includegraphics[width=0.45\textwidth]{figures/RotationCurveMilkyWay.pdf}
+    \includegraphics[width=\textwidth]{figures/RotationCurveMilkyWay.pdf}
     \caption{Rotation curve of stars in the Milky Way, as a function of distance from the galactic center. Reproduction of data reported in \cite{Sofue2020}.}
     \label{fig:MilkyWayRotationCurve}
 \end{figure}
@@ -175,7 +175,7 @@ Galprop is configured by passing a set of parameters from an external text file.
         \hline
         z$_h$  & kpc &  4 & 6.78 \\
         \hline
-        D$_0$ & cm$^2$s$^{-1}$& 4.5 \times $10^{28}$ & 7.48 \times $10^{28}$ \\
+        D$_{xx}$ & cm$^2$s$^{-1}$& 4.5 \times $10^{28}$ & 7.48 \times $10^{28}$ \\
         \hline
     \end{tabular}
     \caption{Two of the parameters for the tuning of Galprop, which show the degeneracy between them.}
@@ -235,7 +235,7 @@ There are also two different background models considered for antideuterons, lab
 \end{figure}
 
 \subsubsection{Results for \ahe\ }
-In this section the results for antihelium-3 fluxes using different dark matter masses \dmm\ are shown and discussed. These masses range over 2 orders of magnitude from 10 GeV all the way to 2 TeV, all of which are valid hypotheses for WIMP masses. As can be seen in figure \ref{fig:Results_He3_fluxes_diff_DM_masses}, the result is not just a difference in the overall normalization, but also in the shape of the produced spectrum. This is because the larger energy available with the higher mass translates into more kinetic energy in the final state particles, i.e. the produced antinuclei. It can also be seen that the increased production with increased mass does not compensate for the reduction in annihilation rate due to the lower number density\footnote{This is the a/\dmm\ scaling seen in equation \ref{eq:DM_source_term}.}, thus the magnitude of the flux decreases with increasing dark matter mass. Also shown in the bottom panel for each figure, is the transparency of the galaxy to \ahe\, defined in equation \ref{eq:TransparencyDefinition}. 
+In this section the results for antihelium-3 fluxes using different dark matter masses \dmm\ are shown and discussed. These masses range over 2 orders of magnitude from 10 GeV all the way to 2 TeV, all of which are valid hypotheses for WIMP masses. As can be seen in figure \ref{fig:Results_He3_fluxes_diff_DM_masses}, the result is not just a difference in the overall normalization, but also in the shape of the produced spectrum. This is because the larger energy available with the higher mass translates into more kinetic energy in the final state particles, i.e. the produced antinuclei. It can also be seen that the increased production with increased mass does not compensate for the reduction in annihilation rate due to the lower number density\footnote{This is the 1/$m_\chi^2$ scaling seen in equation \ref{eq:DM_source_term}.}, thus the magnitude of the flux decreases with increasing dark matter mass. Also shown in the bottom panel for each figure, is the transparency of the galaxy to \ahe\, defined in equation \ref{eq:TransparencyDefinition}. 
 
 \begin{figure}[hbtp]
     \centering
@@ -265,16 +265,16 @@ Presented in this chapter are the experimental uncertainties on the effect of in
 \begin{table}[htpb]
     \centering
     \begin{tabular}{|c|c|c|c|}
-        \hline\\
+        \hline
         Source of effect & Effect for CR  & Effect for DM & Source \\
         \hline 
-        Inelastic interactions $\mathrm{\overline{d}}$ (ahe\ )& $\pm$20\% (15\%) & $\pm 10 $\% (15\%) & This thesis, \cite{}\\
+        Inelastic interactions $\mathrm{\overline{d}}$ (ahe\ )& $\pm$20\% (15\%) & $\pm 10 $\% (15\%) & This thesis, \cite{dbar_prop_paper, he3_absorption_paper}\\
         \hline
-        Propagation parameters & $\approx$20\% & $\approx$200\% & This thesis, \cite{}\\
+        Propagation parameters & $\approx$20\% & $\approx$200\% & This thesis, \cite{dbar_prop_paper}\\
         \hline
-        Production  $\mathrm{\overline{d}}$ (ahe\ )& $^{+27}_{-42}$\%  &  $^{+63}_{-70}$\%  & \cite{}\\
+        Production  $\mathrm{\overline{d}}$ (ahe\ )& $^{+27}_{-42}$\% ($\pm$ 10-20x) &  $^{+63}_{-70}$\% ($\pm$ 10-30x) & \cite{dbar_prop_paper, Ibarra2014, Korsmeier:2017xzj}\\
         \hline
-        DM model uncertainties & N/A & $\approx$ 1000\% & \cite{} \\
+        DM model uncertainties & N/A & $\approx$ 1000\% & \cite{dbar_prop_paper} \\
         \hline
     \end{tabular}
     \caption{A list of the sizes of uncertainties involved in making predictions for antinuclei fluxes. The second and third column are describing the size of the effect on antinuclei from high energy cosmic ray collisions and from potential dark matter annihilations, respectively.}
