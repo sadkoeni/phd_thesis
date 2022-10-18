@@ -7,10 +7,22 @@
     \item ITS
     \item TPC
     \item TOF
+	\item V0
 \end{itemize}
 
 \subsubsection{Basics of ALICE data structure}
+ALICE data is split by runs, then by events, and within the event by tracks, as is shown in figure \ref{fig:ALICE_data_schematic}. Runs are periods of time during which collisions with the same conditions occurred, which means that the data taking is started and kept up until there is some problem which requires the run to be ended. This means that runs are of arbitrary length. They are denoted by LHC + the last two digits of the year in which the data was taken + a letter of the alphabeth, sequentially used, e.g.: LHC17a is the first data run taken during 2017. Once the raw data is taken, the Data Preparation Group (DPG) is responsible for doing a reconstruction pass over the data, which means to build the tracks from the individual detector hits, correcting for any calibration or distortion effects. The data structure  one is left with is a list of events, each of which contain a list of tracks. This is what is subsequently used by analysers. 
+
+\begin{figure}
+	\includegraphics[]{}
+	\centering
+	\caption{Schematic of the data structures within ALICE. The data is split by run periods, then by event, and within the event by tracks. }
+		\label{fig:ALICE_data_schematic}
+\end{figure}
 \subsubsection{Collision system and event cuts}
+The data provided in ALICE by necessity includes a large range of particles and impurities, since for each analysis what qualifies as impurities changes. Therefore, cuts are applied at the analysis level, to provide a much cleaner environment for the actual analysis. Within the analysis, these cuts happen on both an event and a track level, leaving a subset of tracks which can be analyzed. The goals of these cuts are: i) to cut bad quality tracks, where the PID is not certain, ii) to cut tracks of uninteresting particles for the specific analysis, e.g. weak decays in the analyses in this thesis and iii) to reduce the background, such as from secondary particles. These cuts also vary between collision systems, which is necessitated by their different properties. To exemplify, lets compare high multiplicity pp and Pb--Pb collisions. In HM pp collisions the mean multiplicity is 34, while in central lead lead collisions it is about 1000. This means that the mean occupancy of the detectors is much greater in Pb--Pb collisions, which in turn means that the tracking algorythm has a higher chance to assign a wrong cluster to a track. \\
+
+
 \subsubsection{Reconstruction of raw (anti)nuclei}
 \subsubsection{Raw \ratio\ \ ratio}
 \subsubsection{Raw antitriton-to-triton ratio}
