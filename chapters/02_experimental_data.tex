@@ -26,14 +26,25 @@ The main selection criteria for the event was its multiplicty. The multiplicity 
 
 \subsubsection{Reconstruction of raw (anti)nuclei spectra}
 In order to obtain the raw antinuclei spectra, the tracks first have to be identified as antinuclei. This particle identification (PID) occurs on the basis of two main detectors: the TPC and the TOF. Due to the distinct masses of antinuclei (they are heavier than most other long lived particles), they leave a distinct signal in each detector. In the TPC, antideuterons are clearly seperated by their energy loss up to a momentum of about 1.4 GeV. For antitriton, the seperation works until a momentum of 1.X GeV. \ahe\ is well sepatared from lighter particles in the TPC for all momenta, due to its double charge. Since the energy loss rises with $Z^2$, the energy loss of \ahe\ is characteristically much higher than those of singly charged particles. \\
-In the TOF, the time of flight measurement combined with the track length and curvature gives a measurement of the particles mass, according to equation \ref{eq:TOFm2}. This allows a clean signal for antitriton and \ahe\. For antideuterons, there is still a significant contamination from the tail of the proton distribution at those masses, which requires a fit to the signal and the background to extract the antideuteron yield. Figures \ref{fig:TPC_fits_ahe} and \ref{fig:TOF_fits_ahe}, \ref{fig:TPC_fits_trit} and \ref{fig:TOF_fits_trit}, show the extraction procedure in the TPC and TOF, for \ahe\ and \atrit\, respectively. An example figure of the antideuteron extraction in the TOF is shown in figure \ref{fig:dbar_TOF_fit}(for more details see \cite{dbar_ann}). The combination of these measurement allows the extraction of the (anti)nuclei spectra, which are shown in \ref{fig:(anti)nucleiSpectra}.
+In the TOF, the time of flight measurement combined with the track length and curvature gives a measurement of the particles mass, according to equation \ref{eq:TOFm2}. This allows a clean signal for antitriton and \ahe\. For antideuterons, there is still a significant contamination from the tail of the proton distribution at those masses, which requires a fit to the signal and the background to extract the antideuteron yield. Figures \ref{fig:TPC_fits_ahe} and \ref{fig:TOF_fits_ahe}, \ref{fig:TPC_fits_trit} and \ref{fig:TOF_fits_trit}, show the extraction procedure in the TPC and TOF, for \ahe\ and \atrit\, respectively. The particle and antiparticle distributions are fit with a gaussian function. For \ahe\ , a second gaussian is used to account for the background from (anti)triton. Their respective signals in the TOF detector are very clean, as is shown in figures \ref{fig:TOF_fits_ahe} and \ref{fig:TOF_fits_trit}, therefore, the TOF signal is used by applying a cut on the $m_{TOF}^2$. An example figure of the antideuteron extraction in the TOF is shown in figure \ref{fig:dbar_TOF_fit}(for more details see \cite{dbar_ann}). The combination of these measurement allows the extraction of the (anti)nuclei spectra, which are shown in \ref{fig:(anti)nucleiSpectra}. The combined signal extraction cuts are shown in table \ref{tab:PIDcuts}.
 
 \begin{equation}\label{eq:TOFm2}
 
 \end{equation}
-\subsubsection{Raw \ratio\ \ ratio}
-\subsubsection{Raw antitriton-to-triton ratio}
+
+\begin{table}
+%todo insert table of PID cuts from analysis notes.
+\end{table}
+
+%todo: insert all the PID figures from the he3bar and atrit analyses.
+\subsubsection{Raw \ratio\ \ and antitriton-to-triton ratio}
 \subsubsection{Correction for secondaries from material spallation}
+In order to obtain pure samples of nuclei, any secondary nuclei not created need to be subtracted from the obtained raw spectrum. Two sources of secondary particles exists: weak decays and material spallation. For \ahe\ and \atrit\, weak decays are negligible, since the amount of $^3H_\Lambda$ measured in pp collisions is xx the amount of \ahe\, as can be seen from figure \ref{}. The branching ratio of $^3H_\Lambda \rightarrow $ \ahe\ is expected to be 25\% \cite{PDG}. Thus, secondary nulcei from material spallation remain, which shall simply be referred to as secondaries hereinafter. In order to differentiate between secondaries and primaries, we make use of the fact that all primaries have a common origin (called the primary vertex), while the distribution of secondaries should not point to the primary vertex. The measure of how close a particle's track reaches to the primary vertex is known as the distance of closest approach (DCA), and within ALICE is resolved in both the $xy$ and the $z$ planes. So, from physical expectations we expect the primary DCA distribution to be peaked sharply at 0, while the distributions for secondaries should be mainly flat. Example distributions from Monte Carlo Simulations are shown in figure \ref{fig:}.
+
+
+%rodo include figure for hypertriton to he3 ratio
+%todo include figure for exemplary DCA distributions 
+Figure \ref{fig:} shows that while the distribution for primaries is indeed sharply peaked at 0, the distribution of secondaries is not flat, but also peaks around 0. This is an experimental effect due to the tracking algorithm, which prefers reconstructing tracks pointing towards the primary vertex. This is excacerbated by the possibility to assign a wrong ITS cluster to the track. Several cuts can be made on the tracks to minimize this effect, which are outlines in section \ref{sec:event and track selection}. 
 \subsubsection{Annihilations within the detector}
 
 
