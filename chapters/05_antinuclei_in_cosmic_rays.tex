@@ -18,20 +18,20 @@ The most well-known source for antinuclei in cosmic rays --- and the only one wh
     q (\vec{r}, p) = \sum_{CR=\mathrm{H}, \mathrm{He}} \sum_{ISM=\mathrm{H},\mathrm{He}} n_{ISM}(\vec{r} \int dp_{\mathrm{CR}}' \beta_{\mathrm{CR}} c \frac{d\sigma(p, p_{\mathrm{CR}}')}{dp} n_{\mathrm{CR}}(\vec{r}, p_{\mathrm{CR}}')
 \end{equation}
 
-, where $\sum_{CR=\mathrm{H}, \mathrm{He}} \sum_{ISM=\mathrm{H},\mathrm{He}}$ denote the sums over the particle species in cosmic rays and the interstellar medium, $n_{ISM}(\vec{r}$ is the density of the interstellar gas at this point, $n_{\mathrm{CR}}(\vec{r}, p_{\mathrm{CR}}'$ is the density of cosmic rays at a given energy, and $frac{d\sigma(p, p_{\mathrm{CR}}')}{dp}$ is the differential production cross section for an antinucleus, as a function of the momentum of the produced antinucleus $p$ and the momentum of the incoming cosmic ray $p_{\mathrm{CR}}'$. The particles in the interstellar medium are considered to be at rest in this calculation, which is a valid approximation since they move at  very low speeds in comparison to the incoming cosmic rays\footnote{Interstellar gas particles can be expected to move at speeds of the order of the rotational velocity of the milky way, which is O(100 km/s) or O($\beta = 10^-4$). This is much lower than the velocity of incoming protons at the threshold for antinuclei production, where O($\beta >0.999$).}. \\
+, where $\sum_{CR=\mathrm{H}, \mathrm{He}} \sum_{ISM=\mathrm{H},\mathrm{He}}$ denote the sums over the particle species in cosmic rays and the interstellar medium, $n_{ISM}(\vec{r})$ is the density of the interstellar gas at this point, $n_{\mathrm{CR}}(\vec{r}, p_{\mathrm{CR}}')$ is the density of cosmic rays at a given energy, and $\frac{d\sigma(p, p_{\mathrm{CR}}')}{dp}$ is the differential production cross section for an antinucleus, as a function of the momentum of the produced antinucleus $p$ and the momentum of the incoming cosmic ray $p_{\mathrm{CR}}'$. The particles in the interstellar medium are considered to be at rest in this calculation, which is a valid approximation since they move at  very low speeds in comparison to the incoming cosmic rays\footnote{Interstellar gas particles can be expected to move at speeds of the order of the rotational velocity of the milky way, which is O(100 km/s) or O($\beta = 10^-4$). This is much lower than the velocity of incoming protons at the threshold for antinuclei production, where O($\beta >0.999$).}. \\
 
-The production cross section of antinuclei in such small collisions systems is suppressed at low energies due to the baryon number conservation, since it is necessary to produce at least 4 (6) new nucleons in order to produce antideuterons (\ahe). The requirement for these additional nucleons means that the threshold of the required COM energy is about $\sqrt{s}_{\mathrm{th}}\approx 6 (8)  m_p$. Given that the ISM target is at rest, all the energy must come from the incoming cosmic ray particle. This means that the frame of reference of the collision will be highly boosted in comparison to the galactic frame, and that the centre of mass energy will only rise $\propto \sqrt{E_\mathrm{CR}}$. 
-In the case of \ahe\ this corresponds to a threshold energy of the incoming proton of $E_p \approx 31$ GeV. In order to estimate these cross sections, Monte Carlo event generators are used to create the proton and neutron spectra and distributions, and coalescence afterburners are then applied in order to estimate the production of antinuclei. In this work, the production cross section by \cite{Shukla} and \cite{Gomez} are used, referred to hereinafter as Shukla et. al. For \ahe\, O($10^{11}-10^{12}$) events are needed to get a statistical precision on the \% level \cite{Shukla}. The resulting production cross sections for \ahe\ and antideuterons are shown in figure \ref{fig:CR_production_XS}.
+The production cross section of antinuclei in such small collisions systems is suppressed at low energies due to the baryon number conservation, since it is necessary to produce at least 4 (6) new nucleons in order to produce antideuterons (\ahe). The requirement for these additional nucleons means that the threshold of the required COM energy is about $\sqrt{s}_{\mathrm{th}}\approx 6 (8)  m_p$ for antideuterons (\ahe ). Given that the ISM target is at rest, all the energy must come from the incoming cosmic ray particle. This means that the frame of reference of the collision will be highly boosted in comparison to the galactic frame, and that the centre of mass energy will only rise $\propto \sqrt{E_\mathrm{CR}}$. 
+In the case of \ahe\ this corresponds to a threshold energy of the incoming proton of $E_p \approx 31$ GeV. In order to estimate these cross sections, Monte Carlo event generators are used to create the proton and neutron spectra and distributions, and coalescence afterburners are then applied in order to estimate the production of antinuclei. In this work, the production cross section by \cite{Shukla} and \cite{Gomez} are used, referred to hereinafter as Shukla et. al. For \ahe\, O($10^{11}-10^{12}$) events are needed to get a statistical precision on the \% level on the total yield for this energy\cite{Shukla}. The resulting production cross sections for \ahe\ and antideuterons are shown in figure \ref{fig:CR_production_XS}, where they are shown for a wide array of incoming beam energies. 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.48\textwidth]{}
     \includegraphics[width=0.48\textwidth]{}
-    \caption{Production cross section for antideuterons (left) and \ahe\ (right), as a function of the energy of the antinucleus produced, for a range of different projectile energies, taken from Shukla et. al. The \ahe\ cross section includes the effect of antitritons which are produced and subsequently decay to \ahe\. }
+    \caption{Production cross section for antideuterons (left) and \ahe\ (right), as a function of the energy of the antinucleus produced, for a range of different projectile energies, taken from Shukla et. al. The \ahe\ cross section includes the effect of antitritons which are produced and subsequently decay to \ahe\ . }
     \label{fig:CR_production_XS}
 \end{figure}
 
-The cross sections shown are constrained by data from a variety of accelerator experiments. The list of experiments used to constrain the production cross for antideuterons is shown in figure \ref{fig:dbar_prod_v_rapidity}, while for \ahe\ the data is very scarce for p-p collisions at low energies. In order to validate the production, the authors instead used their model to simulate pp collisions at $\sqrt{s}=7$ TeV, in order to compare with ALICE data. The resulting fit is shown in figure  
+The cross sections shown are constrained by data from a variety of accelerator experiments. The list of experiments used to constrain the production cross for antideuterons is shown in figure \ref{fig:dbar_prod_v_rapidity}, while for \ahe\ the data is very scarce for p-p collisions at low energies. In order to validate the production, the authors instead used their model to simulate pp collisions at $\sqrt{s}=7$ TeV, in order to compare with ALICE data. The resulting fit is shown in figure \ref{fig:prod_v_ALICE}, where the uncertainties are obtained by varying the coalescence momentum by 30\%.  
 
 \begin{figure}
     \centering
@@ -42,12 +42,20 @@ The cross sections shown are constrained by data from a variety of accelerator e
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.48\textwidth]{figures/}
-    \includegraphics[width=0.48\textwidth]{figures/}
-    \caption{Comparison of the antideuteron (left) and \ahe\ (right) spectra obtained by Shukla et. al. with ALICE data for \sqrt{s}=7 TeV pp collisions.}
-    \label{fig:dbar_prod_v_rapidity}
+    \includegraphics[width=\textwidth]{figures/production_xs_ALICE_comparison.png}
+    \caption{Comparison of the antideuteron (left) and \ahe\ (right) spectra obtained by Shukla et. al. with ALICE data for $\sqrt{s}=7$ TeV pp collisions.}
+    \label{fig:prod_v_ALICE}
 \end{figure}
 
+Once these cross sections are obtained, they need to be folded with the galactic cosmic ray spectrum at each point in space. This spectrum spans over more than 11 orders of magnitude if all particles are considered, and at least 6 orders of magnitude for protons. A compilation of available data on the cosmic ray spectrum can be found in figure \ref{fig:CR_spectra_Thomas}. The implementation of this process in Galprop is done by implementing the cross section above, and thus calculating equation \ref{eq:secSourceTerm} at each point in the space/momentum grid employed in GALPROP. For a more detailed discussion of Galprop see section \ref{sec:GALPROP}. Also shown in this figure is the source term of antideuterons, as a function of both the incoming particle momentum and the momentum of the produced antideuteron.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.69\textwidth]{figures/ThomasP_cosmic_ray_spectra.png}
+    \includegraphics[width=0.29\textwidth]{figures/}
+    \caption{Cosmic ray particle spectra, for protons and all particles, from relevant experiments. Figure taken from \cite{ThomasThesis}.}
+    \label{fig:CR_spectra_Thomas}
+\end{figure}
 %This whole section needs a rewrite. I need to mention:
 % - Production cross sections for both antideuterons and anti-3He, with the plots, and discussing the difference between the two production models.
 % - energy ranges for cosmic rays, and the shape of the produced spectra
