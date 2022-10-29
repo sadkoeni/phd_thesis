@@ -69,13 +69,13 @@ Some WIMP dark matter theories predict that WIMP annihilations can produce a sig
 \begin{figure}[hbtp]
     \centering
     \includegraphics[width=\textwidth]{figures/DM_processes.pdf}
-    \caption{A schematic of dark matter pair annihilation into standard model particles (left) and of dark matter decay into standard model particles (right) for a WIMP particle. The exact process by which this would occur is not known, and therefore currently model dependent.}
+    \caption{A schematic of dark matter pair annihilation into standard model particles (left) and of dark matter decay into standard model particles (right) for a WIMP particle. The exact process by which this would occur is not known, and therefore currently model dependent. Note that a scattering process between a dark matter and a standard model particle would look very similar to the diagram on the left, with the space and time axes inverted (i.e. change the arrow direction of the top dark matter and bottom standard model particle). However, this scattering might happen via a very different internal process, so the two cannot be directly related in a model independent way.}
     \label{fig:DM_ann_decay_processes}
 \end{figure}
 
 The spectrum and yield of antinuclei produced in these annihilations has to be estimated based on known standard model processes. To this end, Monte Carlo event generators are employed\cite{}, in which the initial state is the first state of standard model particles which is assumed to occur in the annihilation process, with a COM energy equal to twice the dark matter mass \dmm \cite{}.%particle physics cookbook, also https://arxiv.org/pdf/hep-ph/9904481.pdf}. 
 The exact initial state of SM particles is not known, but commonly the channels \WW\ and \bb\ are considered \cite{}. These two form a convinient subset, as over the range of expected masses (~10 GeV to about 1 TeV), they are consistently two of the more opimistic scenarios, and cover the different parameter space within these optimistic scenarios\cite{}. This can be seen from figure \ref{fig:DM_source_spectra_other_channels}. 
-eince event generators do not produce (anti)nuclei -- but only the individual nucleons -- the (anti)nuclei yields and spectra have to be calculated using the coalescence model\footnote{See Append
+eince event generators do not produce (anti)nuclei -- but only the individual nucleons -- the (anti)nuclei yields and spectra have to be calculated using the coalescence model\footnote{See the appendix i\ref{App:statHadronModel} for an explaination for why the statistical hadronization model cannot be used to predict antinuclei spectra.}
 The authors argue that while the branching ratio for the process $\overline{\Lambda}_b \rightarrow $ \ahe\ $+X$ is not well constrained by data, the default tunes\footnote{Tunes when used to talk to event generators are the specific settings which are used for the event generator to more accurately reproduce a given result, e.g. the proton spectra at a given energy.} of the event generators tends to underestimate this, and thus the amount of \ahe\ production (it also has an impact on the antideuteron production, but far less, as can be seen in section \ref{} below). In particular, the authors note a discrepancy between two commonly used event generators (Pythia\cite{} and EPOS\cite{}) of about X orders of magnitude. In order to rectify this, the authors suggest using a special setting of the Pythia event generator, to reproduce the branching fraction close to the one of EPOS. This setting is referred to as the $\overline{\Lambda}_b$ tune in the following discussion. According to their results, the authors note that there is an almost 100 fold increase in the resulting \ahe\ flux, in particular at high energies around X GeV. This is of particular interest since according to the authors, such an increase would cause a signal detectable by the AMS-02 experiment, with an event rate of about 1/year.  The authors also consider the decay of $\overline{\Lambda}_b$ through light intermediator particles, which provides a slightly different spectrum.\\
 So in addition to the spectra obtained using default event generators from \cite{}, the spectra incorporating the $\overline{\Lambda}_b$ decay are also considered as part of this thesis. All the relevant spectra from these processes for antideuterons and \ahe\ are shown in figure \ref{fig:DMsource_spectra}. \\ 
 \begin{figure}[hbpt]
@@ -225,6 +225,7 @@ In this thesis PBHs were considered as a possible source for antideuterons, usin
 %write about the mass spectrum today
 %write about the process by which they emitt antinuclei (Hawking emission). 
 %write about how they can only contribute a small part of dark matter, due to constraints on the antinuclei spectra we would see. 
+
 
 \subsection{Constraining the propagation of antinuclei through the galaxy}\label{sec:Propagation}
 In the process of propagating thorough our galaxy, particles undergo several different effects. They get produced at various points in both space and time, for example most heavy nuclei are produced in supernovae\cite{}. As they then propagate from their source towards their eventual detection point near earth, they undergo diffusion effects, undergo elastically scattered and are diverted by the magnetic fields of the galaxy and individual celestial objects. They are also under the effect of bulk motion via convection effects. Finally, there are various effects which might cause a particle to disappear, mainly inelastic interactions with the interstellar medium, or breakup for unstable particles. All of these processes are characterised by the transport equation \cite{}, which is reproduced in equation \ref{eq:TransportEquation}
@@ -389,11 +390,11 @@ Presented in this chapter are the experimental uncertainties on the effect of in
         \hline
         Source of effect & Effect for CR  & Effect for DM & Source \\
         \hline 
-        Inelastic interactions $\mathrm{\overline{d}}$ (ahe\ )& $\pm$20\% (15\%) & $\pm 10 $\% (15\%) & This thesis, \cite{dbar_prop_paper, he3_absorption_paper}\\
+        Inelastic interactions $\mathrm{\overline{d}}$ (\ahe\ )& $\pm$20\% (15\%) & $\pm 10 $\% (15\%) & This thesis, \cite{dbar_prop_paper, he3_absorption_paper}\\
         \hline
         Propagation parameters & $\approx$20\% & $\approx$200\% & This thesis, \cite{dbar_prop_paper}\\
         \hline
-        Production  $\mathrm{\overline{d}}$ (ahe\ )& $^{+27}_{-42}$\% ($\pm$ 10-20x) &  $^{+63}_{-70}$\% ($\pm$ 10-30x) & \cite{dbar_prop_paper, Ibarra2014, Korsmeier:2017xzj}\\
+        Production  $\mathrm{\overline{d}}$ (\ahe\ )& $^{+27}_{-42}$\% ($\pm$ 10-20x) &  $^{+63}_{-70}$\% ($\pm$ 10-30x) & \cite{dbar_prop_paper, Ibarra2014, Korsmeier:2017xzj}\\
         \hline
         DM model uncertainties & N/A & $\approx$ 1000\% & \cite{dbar_prop_paper} \\
         \hline
