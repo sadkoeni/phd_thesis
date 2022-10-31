@@ -246,12 +246,12 @@ In this thesis PBHs were considered as a possible source for antideuterons, usin
 In the process of propagating thorough our galaxy, particles undergo several different effects. They get produced at various points in both space and time, for example most heavy nuclei are produced in supernovae\cite{}. As they then propagate from their source towards their eventual detection point near earth, they undergo diffusion effects, undergo elastically scattered and are diverted by the magnetic fields of the galaxy and individual celestial objects. They are also under the effect of bulk motion via convection effects. Finally, there are various effects which might cause a particle to disappear, mainly inelastic interactions with the interstellar medium, or breakup for unstable particles. All of these processes are characterised by the transport equation \cite{}, which is reproduced in equation \ref{eq:TransportEquation}
 \begin{equation}
     \label{eq:TransportEquation}
+    \centering
     \begin{split}
-        \frac{\partial\psi}{dt} = q(\textbf{r},p) \\
+        \frac{\partial\psi}{dt} = q(\textbf{r},p) 
         + \mathrm{\textbf{div}}(D_{xx}\mathrm{\textbf{grad}}\psi - \textbf{V}\psi) + \frac{\partial}{\partial p}p^2D_{pp} \frac{\partial}{\partial p}\frac{\psi}{p^2} - \frac{\partial}{\partial p} \left[ \psi \frac{dp}{d t}   -\frac{p}{3} (\mathrm{\textbf{div}}\cdot  \mathrm{\textbf{V}} )\psi              \right] \\ 
         - \frac{\psi}{\tau_f}-\frac{\psi}{\tau_r}
     \end{split}
-    
 \end{equation}
 , where $\psi$ is the time and space dependent flux of a given cosmic ray species, $q(\textbf{r},p)$ is the source term as a function of position and momentum, $D_{xx}$and $D_{pp}$ are the spatial diffusion and diffusive re-acceleration coefficients, $V$ is the convection velocity, and $\tau_f$ and $\tau_r$ are parameters characterising the annihilation and fragmentation rates, respectively. The relationship between the last term and the inelastic cross section of a cosmic ray species is given by: 
 
@@ -369,17 +369,17 @@ There are also two different background models considered for antideuterons, lab
     \includegraphics[width=0.49\textwidth]{figures/antideuteron_LIS_WW.pdf}
     \includegraphics[width=0.49\textwidth]{figures/antideuteron_TOA_WW.pdf}
     \includegraphics[width=0.49\textwidth]{figures/antideuteron_LIS_bb.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/antideuteron_TOA_bb.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/antideuteron_lambdaB_LIS.pdf}
     \includegraphics[width=0.49\textwidth]{figures/antideuteron_lambdaB_TOA.pdf}
-    \caption{Expected antideuteron fluxes for different \dmm\ ranging from 10 GeV to 1 TeV, and from primordial black holes (PBHs). They are compared to an expected spectrum of secondary antideuterons from high-energy cosmic-ray collisions. The results are shown for the position of the solar system. The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}. The results are also shown for different possible annihilation channels of dark matter, either through \WW\ (top), through \bb\ (middle), through $\Lambda_b \rightarrow $\bb\ and light mediators (bottom).}
+    \caption{Expected antideuteron fluxes for different \dmm\ ranging from 10 GeV to 1 TeV, and from primordial black holes (PBHs). They are compared to an expected spectrum of secondary antideuterons from high-energy cosmic-ray collisions. The results are shown for the position of the solar system. The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}. The results are also shown for different possible annihilation channels of dark matter, either through \WW\ (top) or through \bb\ (bottom).}
     \label{fig:Results_dbar_fluxes_diff_DM_masses}
 \end{figure}
 \begin{figure}\ContinuedFloat
     \centering
+    \includegraphics[width=0.49\textwidth]{figures/antideuteron_TOA_bb.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/antideuteron_lambdaB_LIS.pdf}
     \includegraphics[width=.49\textwidth]{figures/antideuteron_fluxes_PBH_LIS.png}
     \includegraphics[width=.49\textwidth]{figures/antideuteron_TOA_PBH.pdf}
-    \caption{Expected antideuteron fluxes (cont.) from primordial black holes (PBHs). The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}.}
+    \caption{Expected antideuteron fluxes (cont.) dark matter annihilations through $\Lambda_b \rightarrow $\bb\ and light mediators (top) and from primordial black holes (PBHs) (bottom). The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}.}
     \label{fig:Results_dbar_fluxes_diff_DM_masses}
 \end{figure}
 
@@ -400,7 +400,7 @@ In this section the results for antihelium-3 fluxes using different dark matter 
     \centering
     \includegraphics[width=0.49\textwidth]{figures/he3bar_LambdaB_LIS_fine.png}
     \includegraphics[width=0.49\textwidth]{figures/he3bar_LambdaB_TOA_fine.png}
-    \caption{Expected \ahe\ fluxes from dark matter annihilations through $\overline{\Lambda}_b$ decays. They are compared to an expected spectrum of secondary \ahe\ from high energy cosmic ray collisions. The results are shown for the position of the solar system. The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}.}
+    \caption{Expected \ahe\ fluxes (cont.) from dark matter annihilations through $\overline{\Lambda}_b$ decays. They are compared to an expected spectrum of secondary \ahe\ from high energy cosmic ray collisions. The results are shown for the position of the solar system. The figures on the left show the results without solar modulation, and on the right with solar modulation included by means of a force field model, as is discussed in section \ref{sec:Propagation}.}
     \label{fig:Results_He3_fluxes_diff_DM_masses}
 \end{figure}
 
