@@ -1,15 +1,48 @@
 \section{Introduction}
 
 \subsection{The goal of this work}
+The main topic of this work in the annihilation of composite antinuclei in nuclear matter. This process -- by which one or all of the antinucleons interact and annihilate with nucleons -- destroys the antinucleus in the process. Because of these annihilations, antinuclei are some of the rarest stable objects in our matter dominated\footnote{It remains of the biggest mysteries of physics why our universe is dominated by matter over antimatter, as the Big Bang should have produced them in equal amounts.} universe, as once produced they tend to annihilate quickly on cosmic timescales. And only very rare process even create antinuclei in the first place. \\
+But this rarity is why antinuclei have received increased attention in recent years\cite{}, since any process which gives a signal by producing antinuclei does not have to contend with large backgrounds, but can be searched for with hope for a clean signal. In particular, theories which go beyond the current standard model of physics and can produce antinuclei, often hail them as a golden channel for detection. But in order to make any inference from future antinuclei measurements from such processes, their properties must be known, including the chance by which they might annihilate before reaching our detectors. One theory in particular has a vested interest in antinuclei: the WIMP dark matter model. Some versions of this model predict dark matter annihilations into antinuclei, which could enable an indirect channel into unveiling the nature of dark matter.\\
+
+So this effort to aid the search for new physics thus joins two separate fields of study: high-energy physics, which allows us to produce and study the properties of antinuclei on earth, and the search for signals of dark matter in cosmic rays, in particular antinuclei. The goal of this work is to present the work which was done during my PhD: the measurement of the inelastic cross sections of the $A$=3 antinuclei, and the effect of the measured antinuclei inelastic cross sections on an antinuclei signal in cosmic rays near earth. 
 
 \subsection{The standard model of particle physics}
+In this section a brief introduction to the standard model of particle physics is given, in order to introduce the terminology and concepts which will be used in this thesis. 
+The standard model of particle physics describes the forces by elementary particles interact with each other: the strong force, as described by quantum chromodynamics (QCD), the electromagnetic force as described by quantum electrodynamics (QED) and the weak force as described by electroweak theory (EWT). The standard model has been incredibly successful in describing the three forces. The forth fundamental force of nature, gravity, completes the description of nature, however, it remains unknown how to incorporate it into the standard model. Additionally, there are phenomena which are currently inexplicable within the standard model, notably dark matter and dark energy. This has prompted many searches for physics beyond the standard model (BSM), in order to complete our understanding of nature. So far however, these searches have so far remained without success. \\
+
+In the standard model, there are 4 types of elementary particles: quarks, leptons, gauge bosons and the higgs scalar boson, which are summarized in figure \ref{fig:StandardModelParticles}. There are 3 generations of quarks and leptons, which differ from previous generations in their mass. Quarks are split into up-like quarks, with a $+\frac{2}{3}$ electric charge, and down-like quarks with a $-\frac{1}{3}$ electric charge. Leptons are split between charged leptons with charge $q=-1$ and neutrinos, which carry no electric or color charge, and are very light. There are 4 gauge bosons for the 3 fundamental forces which the standard model describes: the gluon ($g$) for the strong force, the photon ($\gamma$) for the electromagnetic force, and the W and Z bosons for the weak force. The weak bosons couple to all quarks and leptons, while photons couple to electrically charged particles (quarks and charged leptons), and gluons couple to quarks, since they carry a color charge\footnote{Color charge is the QCD equivalent of the electric charge.}. Additionally, gluons can interact with themselves, since they also carry the color charge of the strong force.
+Additionally, there is the scalar higgs boson, which is responsible for the mechanism which gives all particles their mass.
+All these particles also have a corresponding antiparticle, with the same mass, spin and lifetime, but with all other quantum numbers inverted according to the charge, parity and time reversal (CPT) symmetry\footnote{Further information about CPT symmetry can be found in any university level physics textbook, such as \cite{}.}. \\
+
+\begin{figure}[bhtp]
+    \centering
+    \includegraphics{}
+    \caption{The particles of the standard model of particle physics. There are 3 generations of quarks and leptons, which differ from previous generations only in their mass. Quarks are split into up-like quarks, with a $+\frac{2}{3}$ charge, and down-like quarks with a $1\frac{1}{3}$ charge. Leptons are split between charged leptons with charge $q=-1$ and neutrinos, which carry no electromagnetic or color charge, and are very light. There are 4 gauge bosons for the 3 fundametal forces which the standard model describes: the gluon ($g$) for the strong force, the photon ($\gamma$) for the electromagnetic force, and the W and Z bosons for the weak force. Additionally, there is the scalar higgs boson, which is responsible for the mechanism which gives other particles their mass.}
+    \label{fig:StandardModelParticles}
+\end{figure}
+
+
+Quarks always form composite particles made up of either three quarks (baryons) or a quark-antiquark pair (mesons). These two differ in the fact that baryons are fermions and mesons are bosons. The baryon number\footnote{The baryon number is a quantum number where baryons have 1 and antibaryons have 0.} is also conserved in all known reaction of the standard model, which means that the total number of baryons-antibaryons remains constant. \\
+It is important to note why quarks are never found individually. Quarks carry color charge, which is the charge of the strong force. The shape of the strong force does not allow for isolated color charges to exist, a principle called  color confinement. Unlike for example the electromagnetic force, which gets weaker as the distance between two particles grows, the strong force remains constant. Since the energy stored in the field between two particles can be found by $\int \vec{f}.d\vec{r}$, i.e. the path integral of the force along the separation between the particles. If the force decreases enough\footnote{If the force decreases as 1/$r$, the integral of $\int_{x_0}^{\inf} \frac{1}{\vec{r} } .d\vec{r} \propto \mathrm{ln}(r)$ will go to infinity at infinite distances, therefore the force simply decreasing is not sufficient. However, if the force decreases as 1/$r^2$ -- as it does for the electromagnetic and gravitational forces -- the integral is finite at infinite distances.} as the distance grows, this allows potential energy to be stored in the field between two particles, without this energy becoming infinitely large at large distances. However, if the force remains constant even with larger distances, the energy stored in the field increases proportionally to the distance between particles. For the strong force, this gluon field between two particles which are being separated is often called a string. Eventually, enough energy is stored in the string that a new antiquark-quark pair can be created, isolating the color charges at each end of the string, thus splitting the string in two. This mechanism, which is shown in figure \ref{fig:IntroStringFragmentation}, is called string fragmentation, and is an intuitive explanation for why the color charges of the strong force cannot be isolated. \\
+
+\begin{figure}[bhtp]
+    \centering
+    \includegraphics{}
+    \caption{Caption}
+    \label{fig:IntroStringFragmentation}
+\end{figure}
+
+
+
+
+\subsubsection{Symmetries and symmetry breaking within the standard model}
 
 \include{chapters/01.3_antimatter-matter-annihilations}
 \include{chapters/01.4_antinuclei_in_the_cosmos}
 
 \subsection{Antinuclei on earth}
+On earth, we have the ability to artificially produce antinuclei at high energy physics facilities, like the LHC. In fact, antideuterons were first observed in 1965 in collisions of protons on Beryllium at the Proton Synchrotron\cite{}. Since then, antinuclei have been observed in higher energy collisions in much larger amounts, both at CERN facilities \cite{}, and others \cite{}. In particular the ALICE experiment has 
 \subsubsection{Production at accelerators}
 \subsubsection{Annihilation at accelerators}
-\subsubsection{Previous status of knowledge on antinuclei annihilation}
 
 \include{chapters/01.6_dark_matter}

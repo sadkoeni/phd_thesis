@@ -1,14 +1,53 @@
 \section{Experimental data and experimental method}
 
 \subsection{ALICE}
+This section aims to highlight the capabilities of the ALICE detector, in particular in the context of identifying antinuclei and measuring their inelastic cross sections. Using the ALICE detector for this analysis is interesting on many levels, including in terms of experimental methods, since the ALICE detector was not designed with such a measurement in mind. Rather, the excellent tracking and particle identification capabilities of the detector are what enable the measurement in first place. We shall therefore discuss the full chain of experimental methods, starting from the particle identification in each of the detectors, to the ALICE data structure and how they are used to obtain the antiparticle-to-particle ratios. 
+
 \subsubsection{Overview}
+A Large Ion Collider Experiment (ALICE) is one of the four major experiments at the large hadron collider (LHC) in Geneva, Switzerland. It is the only dedicated heavy-ion experiment at the LHC, with the main physics motivation being the study of quark-gluon-plasma (QGP). The experiment has 19 subdetector systems \cite{}, of which the most important for this analysis are the Time-Projection-Chamber (TPC), the Inner Tracking System (ITS) and the Time-of-Flight detector (TOF). In particular the TPC sets ALICE apart from the other major LHC experiments, by enabling very precise tracking of particles, good particle identification via momentum and the specific energy loss measurements, and its sensitivity to particles down to low momentum (down to $p_T$<0.2 GeV/$c$). The momentum measurement is enabled by a solenoid magnetic field, which is usually operated at 0.5T\footnote{There are also dedicated low B field runs, where the field is set to only 0.2T.}. The central detector systems are constructed in a cylindrical shape, providing full azimuthal coverage. The coverage in the forward and backward direction can conveniently be described using the measure of pseudorapidity ($\eta$), which is defined as $\eta (\theta) = -\mathrm{ln}[tan(\theta/2)]$, where $\theta$ is the angle which the emitted particle has to the beam axis. This measure is anti-symmetric around $\theta = \pi/2$, i.e. the angle normal to the beam axis, and is 0 at this angle. Small absolute values of $\eta \ltapprox 1$ are referred to as midrapidity, while particles emitted in the beam direction ($|\eta|\gtapprox 1$) are called for forward $\eta >0$ and backward $\eta < 0$. The central detectors of ALICE cover the midrapidity range of $|\eta|\atapprox 1$. A schematic representation of ALICE with all its subdetector systems can be found in figure \ref{fig:ALICE}. It is important to note that the detector discussed in this section is the ALICE detector as it existed during the Run 2 data taking period (2015-2018). The main limitation of this version of the ALICE detector were its low interaction and data readout rates, the latter of which was limited to about 1kHz. This is due to the 1$\mu s$ timespan of reading out a single event, which is dead-time for the detector. The upgrade for LHC Run3 which has started in 2022 will instead be able to read out data at rates up to 50 kHz, and provide a significant boost to the statistics which the ALICE detector can provide.
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{Schematic representation of the ALICE detector and its subdetector systems, during the Run 2 data taking period (2015-2018). Figure taken from \cite{}.}
+    \label{fig:ALICE}
+\end{figure}
+
+\subsubsection{The ALICE Trigger System}
+The ALICE detector cannot read out all events which occur, both due to the detector dead-time when reading out an event and due to the data rates which would be involved. Instead, interesting events are selected by predefined criteria, and then triggered upon. This trigger system then initiates the entire read-out sequence of the detector. The most basic trigger is the so called minimum bias (MB) trigger, which should trigger in the presence of any collisions and not introduce any bias based on the occurring physics. This is an important data sample to check against, however, it is interesting to bias the selected events in favor of "more interesting" physics. Such triggers look for less common conditions more favorable to rare physics events, such as e.g. the presence of more charged particles. These triggers exploit the fact that data acquisition is limited by the ALICE read-out rate -- not by the occurrence rate of rare events -- in order to collect data for rare events at the same 1kHz rate at which MB data can be collected. \\
+
+For pp collisions, the trigger-criterion used in the analyses presented in this thesis is the multiplicity in the V0 detectors (V0A & V0C), which is used as a proxy for the charged particle multiplicity at midrapidity. The V0 detectors are plastic scintillator arrays in the forward and backwards regions, covering a pseudorapidity range of $x2.8<\eta<5.1$ and $-3.7<\eta<-1.7$, respectively. They are located 3.4 m and 0.9 m from the interaction point. The high multiplicity trigger (kHighMult) is configured so that the highest 0.17\% of multiplicity events are selected by the V0 detectors, while also requiring a minimum of 1 charged particle at midrapidity. This proxy works well for high multiplicities also at midrapidity, as this selection in an average of 30-40 charged particles at mid-rapidity. 
+
+\subsubsection{Inner Tracking System (ITS)}
+The Inner Tracking System (ITS) is the innermost detector in ALICE, staring at a radius of just 3.9 cm from the interaction point and reaching a radius of 43 cm. It consists of 3 lightweight silicon bases sub-systems, called the Silicon Pixel Detector (SPD), the Silicon Strip Detector (SSD) and the Silicon Drift Detector (SDD). The ITS covers a pseudorapidity range of $|\eta|<0.9$\footnote{The SPD can detect particles with a wider range, up to $|\eta|<1.95$.}. A schematic of the ITS is shown in figure \ref{fig:ITS_schematic}. Since the ITS is the closest detector to the interaction point, it plays a vital role in determining the position of the primary vertex. Indeed, its ability to accurately reconstruct particle trajectories enables the reconstruction of the primary vertex to a precision of 100 $\mu$m, and constrain the DCA distributions of emitted particles. This is particularly important when analysing nuclei at low momenta, since for deuterons, $^3\mathrm{He}$ and $^3\mathrm{H}$ the contribution from secondaries from material spallation is the dominant contamination in the nuclei signal. The requirement of a cluster in the first ITS layer (SPD), removes any tracks from particles which get removed from material further out, unless by chance there is a matchable cluster on their trajectory.  The ITS also allows the rejection of pile-up events\footnote{Pile-up is what happens when tracks from a different physical collision are incorrectly matched to the same event.}. The particle identification capabilities of the ITS become less reliable for very large specific energy loss ($dE/dx$), due to saturation effects, which makes the ITS less useful for PID of doubly charged particles such as $^3\mathrm{He}$.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=\textwidth]{}
+    \caption{A schematic of the ALICE Inner Tracking System, taken from \cite{}. The three layer groups (SPD, SSD, SDD) are marked. }
+    \label{fig:ITS_schematic}
+\end{figure}
+
+\subsubsection{Time Projection Chamber}
+The Time Projection Chamber (TPC) is the main tracking detector of the ALICE experiment. It follows the ITS in the central barrel, at radii from 85 cm to 247 cm from the interaction point, covering a pseudorapidity range of $|\eta|<0.9$. The schematic layout of the TPOC is shown in figure \ref{} 
+
+\begin{figure}
+    \centering
+    \includegraphics[]{}
+    \caption{Caption}
+    \label{fig:TPC_schemtic}
+\end{figure}
+
+
+
 \begin{itemize}
-    \item Trigger System
-    \item ITS
+    \item Trigger System done
+    \item ITS done
     \item TPC % discuss boethe bloch in detail here
     \item TOF
 	\item V0
 \end{itemize}
+
 
 \subsubsection{Basics of ALICE data structure}
 ALICE data is split by runs, then by events, and within the event by tracks, as is shown in figure \ref{fig:ALICE_data_schematic}. Runs are periods of time during which collisions with the same conditions occurred, which means that the data taking is started and kept up until there is some problem which requires the run to be ended. This means that runs are of arbitrary length. They are denoted by LHC + the last two digits of the year in which the data was taken + a letter of the alphabeth, sequentially used, e.g.: LHC17a is the first data run taken during 2017. Once the raw data is taken, the Data Preparation Group (DPG) is responsible for doing a reconstruction pass over the data, which means to build the tracks from the individual detector hits, correcting for any calibration or distortion effects. The data structure  one is left with is a list of events, each of which contain a list of tracks. This is what is subsequently used by analysers. 
@@ -90,10 +129,40 @@ In order to fairly compare the Monte Carlo simulations to the produced data, it 
     \label{fig:BaryochemicalPotential}
 \end{figure}
 \subsubsection{Ratios as a function of the inelastic cross section}
-\subsubsection{Non-linear error propagation}
-The experimental observable is the antiparticle-to-particle ratio, which is then used to calculate the inelastic cross section. Thus, it is necessary to propagate the errors from the former to the latter. This is however non-trivial, since the two are related via an exponential as described in the previous section. Thus, the initially symmetric uncertainties on the ratio become asymmetric when propagated to the ratio. Additionally, the systematic and statistical uncertainties, which are independent on the ratio and thus sum up in quadrature, can no longer be summed in quadrature on the inelastic cross section, since the scaling between them is no longer linear but exponential. Indeed, as the slope of the exponential is not known a priori, the uncertainties cannot be added at all. This leaves two options for the representation of uncertainties on the inelastic cross section: i) show the statistical and systematic uncertainties separately, and give the parameterization of the exponential curve used to add them together or ii) sum the two uncertainties on the ratio and then propagate the total uncertainty. The second option was chosen since the total uncertainty is usually the important quantity. \\
+In order to extract the inelastic cross section measurement from the antiparticle-to-particle ratio, we have to compare the measured ratio in each bin to values from MC simulation with varied values of the inelastic cross section. Thus, it is useful to plot the measured ratios in simulation as a function of the inelastic cross section. These plots are shown for the $^3\overline{\mahtrm{He}}/{^3\mathrm{He}}$ and $^3\overline{\mahtrm{H}}/{^3\mathrm{H}}$ ratios in figures \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3He} and \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}, respectively. These plots also show fit lines to the Monte Carlo points, which were with with an exponential according to the Lambert-Beer absorption law \cite{}, which is reproduced in equation \ref{eq:LambertBeer}
 
-An important note is that this asymmetry arises far more prominently in the antiparticle-to-particle analysis than in the TOF/TPC analysis. This is due to 2 factors: the much reduced statistical uncertainties for the TPC/TOF analysis and the increased material budget required (as opposed to the TPC only part of the antiparticle-to-particle analysis). This results in the fact that within the uncertainties, the effect of the inelastic cross section on the TPC/TOF ratio is well approximated with a linear function. Thus, the error propagation from the TPC/TOF ratio to the inelastic cross section has only barely noticable asymmetries. 
+\begin{equation}\label{eq:LambertBeer}
+    N/N_0 = \mathrm{exp}\left( -x\times \sigma \times k \right)
+\end{equation}
+, where x is the distance travelled through a medium, $\sigma$ is the absorption cross section and k is a constant dependent on the parameters of the medium. This can be understood as a general absorption law. Since the only difference between the different Monte Carlo simulations is the implemented inelastic cross section, $\sigma = \sigma_\mathrm{inel}$. Thus, by mapping the measured antiparticle-to-particle ratio onto the fitted dependence to find the intercepts, the corresponding value of the inelastic cross section is found from the x values of the intercepts. 
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics{}
+    \caption{Bin by bin plots of the $^3\overline{\mahtrm{He}}/{^3\mathrm{He}}$ ratio as a function of the varied inelastic cross section in Monte Carlo simulations, together with the one measured in data.}
+    \label{fig:Meth:RatiosAsFunctionsOfSigmaInel3He}
+\end{figure}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics{}
+    \caption{Bin by bin plots of the $^3\overline{\mahtrm{H}}/{^3\mathrm{H}}$ ratio as a function of the varied inelastic cross section in Monte Carlo simulations, together with the one measured in data.}
+    \label{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}
+\end{figure}
+
+For the TPC/TOF method, a similar method is used in order to extract the measurement of the inelastic cross section from the TPC/TOF ratio. However, due to the increased amount of material budget which particles have to traverse and the much reduced statistical uncertainties provided by the Pb--Pb data set, the exponential functions are much less steep in the area of interest. An example of such a fit is shown in figure \ref{fig:TPCTOF_fit}. 
+
+\begin{figure}[bthp]
+    \centering
+    \includegraphics{}
+    \caption{TPC/TOF ratio for \ahe\ as a function of the varied inelastic cross section. Figure taken from \ref{}.}
+    \label{fig:TPCTOF_fit}
+\end{figure}
+
+\subsubsection{Non-linear error propagation}
+The experimental observable is the antiparticle-to-particle ratio, which is then used to calculate the inelastic cross section. Thus, it is necessary to propagate the errors from the former to the latter. This is however non-trivial, since the two are related via an exponential as described in the previous section. Thus, the initially symmetric uncertainties on the ratio become asymmetric when propagated to the inelastic cross section. Additionally, the systematic and statistical uncertainties -- which are independent on the ratio and thus sum up in quadrature -- can no longer be summed in quadrature on the inelastic cross section, since the scaling between them is no longer linear but exponential. Indeed, as the slope of the exponential is not known a priori, the uncertainties cannot be added at all without knowledge of the dependence of the antiparticle-to-particle ratio in a given bin on the inelastic cross section. This leaves two options for the representation of uncertainties on the inelastic cross section: i) show the statistical and systematic uncertainties separately, and give the parameterization of the exponential curve used to add them together for each bin or ii) sum the two uncertainties on the ratio and then propagate the total uncertainty. The second option is significantly more practical since it gives the reader immediate access to the total uncertainty, and does not require extra explanation. The separate uncertainties can be recovered using the fits shown in figures \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3He} and \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}. \\
+
+An important note is that this asymmetry arises far more prominently in the antiparticle-to-particle analysis than in the TOF/TPC analysis. This is due to 2 factors: the much reduced statistical uncertainties for the TPC/TOF analysis and the increased material budget required (as opposed to the TPC only part of the antiparticle-to-particle analysis). This results in the fact that within the uncertainties, the effect of the inelastic cross section on the TPC/TOF ratio is well approximated with a linear function. Thus, the error propagation from the TPC/TOF ratio to the inelastic cross section has only barely noticeable asymmetries. 
 
 %todo: do the anlytical error propagation when the two parameters are related by an exponential. 
 \subsubsection{Accounting for energy losses between the primary vertex and the point of annihilation}
@@ -112,7 +181,7 @@ Originally, the uncertainty on the material budget was quantified to be about 5\
     \label{fig:ALICE_mat_budget}
 \end{figure}
 
-Therefore, a global uncertainty of about 5\% is assumed on the material budget. The way this uncertainty is applied to the antiparticle-to-particle ratios is by means of the uncertainty due to the primordial ratio, which is the ratio of how many antiparticles are produced in respect to their particle equivalents, at the energies probed. This measurement is based on the $\bar{p}/p$ ratio as measured by ALICE \cite{}. The uncertainty on this ratio is 1.5\%, which is applied for each nucleon in question for both analyses, i.e. 3\% for antideuterons and 4.5\% for \ahe\.
+Therefore, a global uncertainty of about 5\% is assumed on the material budget. The way this uncertainty is applied to the antiparticle-to-particle ratios is by means of the uncertainty due to the primordial ratio, which is the ratio of how many antiparticles are produced in respect to their particle equivalents, at the energies probed. This measurement is based on the $\bar{p}/p$ ratio as measured by ALICE \cite{}. The uncertainty on this ratio is 1.5\%, which is applied for each nucleon in question for both analyses, i.e. 3\% for antideuterons and 4.5\% for \ahe\ \atrit .
 %\subsubsection{Evaluating the average material for antinuclei annihilations in the ALICE detector}
 \subsubsection{Independence of collision system}
 The antimatter-to-matter ratio method's dependence on collision system has been investigated by redoing the analysis performed in pPb collisions in \cite{dbarIvan} for high multiplicity pp collisions. The dependence on the collision system is due to the multiplicity differences, and the resulting difference in the baryochemical potential as discussed in section \ref{sec:MCSim}. By taking the antiproton-to-proton ratio for the different collision systems and comparing them, the predicted difference between the antideuteron-to-deuteron ratio was obtained. The results are shown in figure \ref{fig:pp_pPb_dbardRatio}, which show that the differences between collisions systems are consistent with the expected deviation. This independence of the collision system is expected, since the inelastic cross section is completely independent on the collision system. This becomes especially self-evident when considering that the annihilations do not occur in the initial collisions, but rather as the antiparticles travel through the detector material.
