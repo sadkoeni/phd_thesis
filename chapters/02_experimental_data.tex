@@ -158,7 +158,11 @@ For the TPC/TOF method, a similar method is used in order to extract the measure
     \caption{TPC/TOF ratio for \ahe\ as a function of the varied inelastic cross section. Figure taken from \ref{}.}
     \label{fig:TPCTOF_fit}
 \end{figure}
-
+\subsubsection{Bench-marking the method on the antiproton inelastic cross section}
+talk about: 
+ - show pbar results (from dbar paper)
+ - how this validates the method (antiparticle-to-particle)
+ - comment on the TOF/TPC method not having been benchmarked before? This provides a strong reason to do the antiparticle-to-particle method
 \subsubsection{Non-linear error propagation}
 The experimental observable is the antiparticle-to-particle ratio, which is then used to calculate the inelastic cross section. Thus, it is necessary to propagate the errors from the former to the latter. This is however non-trivial, since the two are related via an exponential as described in the previous section. Thus, the initially symmetric uncertainties on the ratio become asymmetric when propagated to the inelastic cross section. Additionally, the systematic and statistical uncertainties -- which are independent on the ratio and thus sum up in quadrature -- can no longer be summed in quadrature on the inelastic cross section, since the scaling between them is no longer linear but exponential. Indeed, as the slope of the exponential is not known a priori, the uncertainties cannot be added at all without knowledge of the dependence of the antiparticle-to-particle ratio in a given bin on the inelastic cross section. This leaves two options for the representation of uncertainties on the inelastic cross section: i) show the statistical and systematic uncertainties separately, and give the parameterization of the exponential curve used to add them together for each bin or ii) sum the two uncertainties on the ratio and then propagate the total uncertainty. The second option is significantly more practical since it gives the reader immediate access to the total uncertainty, and does not require extra explanation. The separate uncertainties can be recovered using the fits shown in figures \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3He} and \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}. \\
 
@@ -188,8 +192,8 @@ The antimatter-to-matter ratio method's dependence on collision system has been 
 
 \begin{figure}[h]
     \centering
-    \includegraphics{}
-    \includegraphics{}
+    \includegraphics[width=0.49\textwidth]{figures/antiproton-to-proton-ratio-pp-pPb-comparison.png}
+    \includegraphics[width=0.49\textwidth]{figures/antideuteron-to-deuteron-ratio-comparison-pp-pPb.png}
     \caption{Ratio of the antiproton-to-proton ratios (left) and antideuteron-to-deuteron ratios (right) obtained in high multiplicity pp collisions and in pPb collisions, compared to the expected difference from the different baryochemical potentials (dashed red line).}
     \label{fig:pp_pPb_dbardRatio}
 \end{figure}
