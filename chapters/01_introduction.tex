@@ -12,7 +12,7 @@ The standard model of particle physics describes the forces by elementary partic
 
 In the standard model, there are 4 types of elementary particles: quarks, leptons, gauge bosons and the higgs scalar boson, which are summarized in figure \ref{fig:StandardModelParticles}. There are 3 generations of quarks and leptons, which differ from previous generations in their mass. Quarks are split into up-like quarks, with a $+\frac{2}{3}$ electric charge, and down-like quarks with a $-\frac{1}{3}$ electric charge. Leptons are split between charged leptons with charge $q=-1$ and neutrinos, which carry no electric or color charge, and are very light. There are 4 gauge bosons for the 3 fundamental forces which the standard model describes: the gluon ($g$) for the strong force, the photon ($\gamma$) for the electromagnetic force, and the W and Z bosons for the weak force. The weak bosons couple to all quarks and leptons, while photons couple to electrically charged particles (quarks and charged leptons), and gluons couple to quarks, since they carry a color charge\footnote{Color charge is the QCD equivalent of the electric charge.}. Additionally, gluons can interact with themselves, since they also carry the color charge of the strong force.
 Additionally, there is the scalar higgs boson, which is responsible for the mechanism which gives all particles their mass.
-All these particles also have a corresponding antiparticle, with the same mass, spin and lifetime, but with all other quantum numbers inverted according to the charge, parity and time reversal (CPT) symmetry\footnote{Further information about CPT symmetry can be found in any university level physics textbook, such as \cite{}.}. \\
+All these particles also have a corresponding antiparticle, with the same mass, spin and lifetime, but with all other quantum numbers inverted according to the charge, parity and time reversal (CPT) symmetry\footnote{Further information about CPT symmetry can be found in any university level physics textbook, such as \cite{}, and in section \ref{sec:IntroSymmetries}.}. \\
 
 \begin{figure}[bhtp]
     \centering
@@ -35,14 +35,214 @@ It is important to note why quarks are never found individually. Quarks carry co
 
 
 
-\subsubsection{Symmetries and symmetry breaking within the standard model}
+\subsubsection{Symmetries and symmetry breaking within the standard model}\label{sec:IntroSymmetries}
+The standard model of particle physics contains three important and related discrete symmetries\cite{}. C-symmetry, which stands for charge and represents replacing particles with their antiparticles. P-symmetry, which stands for parity symmetry, which represents spatial inversion along the 3 physical axes. And finally T-symmetry, which stands for time-inversion symmetry, which represents inversion of the direction of time. It also contains several continuous symmetries such as time translation, spatial translation and spatial rotation, which give rise to conservation of energy, momentum and angular momentum, respectively\footnote{The relations between physical symmetries and conservation laws was established by Noether's first theorem \cite{Noether1918}. }.\\
 
-\include{chapters/01.3_antimatter-matter-annihilations}
-\include{chapters/01.4_antinuclei_in_the_cosmos}
+They are called near symmetries, because each of them individually is broken within the standard model. A symmetry can be broken in two ways: explicitly or spontaneously. Explicit symmetry breaking is when the Lagrangian corresponding to an interaction does not itself respect the symmetry, while spontaneous symmetry breaking is when the Lagrangian respects the symmetry, but its ground state solution does not. The most famous individual violation is the breaking of P-symmetry of the weak force, which couples only to left-handed fermions and right-handed antifermions. Since replacing particles with antiparticles would replace this symmetry, the combination of the C and P symmetries is in principle respected by the weak interaction. This combined CP symmetry is thought to be respected by the strong and electromagnetic force, however, there is a degree of CP violation in the mixing of different quark generations by means of the weak force, as described by the Cabbibo-Kobayashi-Masakawa (CKM) matrix. Introducing a complex phase in the quark mixing allows for the weak force to violate CP symmetry. This can be exemplified by the following consideration. Consider a process $a \rightarrow b$, and the corresponding process with the antiparticles $\bar{a} \rightarrow \bar{b}$ and denote the amplitudes with $M$ and $\bar{M}$. By CP symmetry (i.e. before the violation), these numbers must be the same. We can separate them into a magnitude and a phase as $M = \bar{M} = |M|e^{i\theta}$. If there is a complex phase term introduces (for example by the CKM matrix) the amplitudes become $M = |M|e^{i\theta}e^{i\phi}$ and $\bar{M} = |M|e^{i\theta}e^{-i\phi}$. Since measurable rates are proportional to $|M|^2$, CP symmetry is still conserved. However, now consider the case where the reaction can take two different routes, $a \rightarrow 1 \rightarrow b$ and $a \rightarrow 2 \rightarrow b$ and the amplitudes become: $M = |M_1|e^{i\theta_1}e^{i\phi_1} + |M_2|e^{i\theta_2}e^{i\phi_2}$ and $\bar{M} = |M_1|e^{i\theta_1}e^{-i\phi_1} + |M_2|e^{i\theta_2}e^{-i\phi_2}$. This allows the calculation of the differences in amplitudes as $|M|^2 - |\bar{M}|^2 = -4|M_1||M_2|\mathrm{sin}(\theata_1 - \theta_2)\mathrm{cos}(\phi_1 - \phi_2)$. Thus, the introduction of a complex phase causes a violation between matter and antimatter. \\
+CP violation was first observed in the decays of neutral Kaons\cite{CP_violations_early} in 1964, and was confirmed in 1999 \cite{CP_violations_proof}. Since then it has also been observed in the decays of $B$ and $D$ mesons \cite{CP_violation_B, CP_violation_D}. CP violation is also necessary (but not sufficient) in order to produce the matter-antimatter asymmetry, as is elaborated in section \ref{sec:IntroSakharovContidion}. Even though the CP symmetry is being violated, the combined CPT symmetry is expected to be conserved in all standard model processes\cite{}. 
+
+Let us now consider what is known as the strong CP problem: the fact that the QCD Lagrangian must include a CP violating term in order to account for the difference between the pion and $\eta$ masses \cite{tHooft}, which is characterised by a free parameter $0<\bar{\theta}<2\pi$; but by measurements of the neutron electric dipole moment it has been shown that $\theta \approxlt 10^{-10}$. This represents a fine tuning problem, there must be a CP violating term in QCD, but it must also be set to be almost 0. So far, only one convincing solution has been introduced: the Peccei-Quinn (PQ) model. This model introduces a new global symmetry to the QCD Lagrangian, and a corresponding scalar field. This symmetry is then spontaneously broken at low energies, creating the axion\footnote{The name axion comes from a brand of laundry detergent, and was chosen because the axion "cleans up" the strong CP problem.}. For a more detailed mathematical description see \cite{axion_review}.
+
+
+\subsection{Matter and antimatter in the universe}
+
+
+\subsubsection{Origin of hadronic matter}
+
+\subsubsection{A matter dominated universe: antimatter-matter asymmetry}
+Our universe is to the best of our knowledge entirely dominated by matter over antimatter. In fact, by our best estimates only X\% of the baryonic mass in our universe is made of antimatter. This observation is staggering, because in all the reactions we can observe in particle physics experiments near earth, whenever new matter is produced the same amount of antimatter is produced also\cite{}. So the a priori assumption was that the universe houses as much antimatter as it does matter. And at first glance, this doesn't seem to impose any impossible constraints, as from a distance matter and antimatter are indistinguishable\footnote{This means to say that matter atoms would produce the same spectral lines as antimatter atoms, and undergo the same fusion reactions we see in stars.}. So while our solar system might be made of matter, what is to keep other solar systems, or even other galaxies from being made of antimatter? The issue arises when we look at the surroundings of solar systems or galaxies. Interstellar/intergalactic space is not completely empty, but populated at very low densities by protons and helium-4 from surrounding stars/galaxies. We know the density of protons in these regions to be about $n_\mathrm{H} \approx 1$ cm$^3$ for interstellar space\cite{}, and $n_\mathrm{H} \approx 1$ m$^3$ for intergalactic space \cite{}. And when a matter dominated region and an antimatter dominated region are next to each other, then in this vast space of low density matter, plenty of annihilations would occur. These annihilations would produce distinctive signals in gamma ray searches\cite{}, due to high energy photons emitted from annihilations. The lack of such signals\cite{}, places stringent limits on any large areas of antimatter within the observable universe, and leads us to believe that our universe is indeed dominated by matter. The source of thus matter-antimatter asymmetry is one of the big remaining mysteries of physics.  \\
+
+It isn't known exactly how the different populations of matter and antimatter came to be. Perhaps only a minute difference between the two caused a tiny fraction more matter to be produced than antimatter. And since the majority of both annihilated, what we see today might by this tiny leftover fraction. For this reason, searches for differences between matter particles and their antimatter counterparts are looking to find even the tiniest discrepancy between the two\cite{}. 
+
+\subsubsection{Sakharov condition}\label{sec:IntroSakharovContidion}
+For an excess of baryons from an initially symmetric value, the following conditions must hold true:
+\begin{itemize}
+    \item Some interactions of elementary particles must violate baryon number conservation, since the net baryon number of the universe must change over time
+    \item C and CP must be violate in order that there is no equality in the forward and backward rates of the baryon number violating processes. 
+    \item The net flux must created in out-of-equilibrium conditions, since otherwhise CPT would assure compensation of the effect. 
+\end{itemize}
+
+The first condition is trivial. The second can be gaged from a simple example: if CP symmetry holds, then the forward and backwad reactions of the baryon number violating processes will cancel out. Elaborate. The third condition requires some more explanation. It is based on the fact that we believe that CPT symmetry is exact. Therefore, there must be a process which only happens in one direction in time. This cannot occur in an equilibrium condition, since then all reactions occur forward and backward in time. Therefore, it must be a reaction linked to out-of-equilibrium processes. 
+\subsubsection{CP violations}
+Talk about CP violations, in general terms with the example of the CKM phases, and then some experimental evidence (Kaon and beauty physics). 
+
+\subsubsection{Baryogenesis within the standard model}
+Talk about :
+ - the higgs mechanism, that particle masses are determined by their yukawa coupling times the higgs vacuum expectation value
+ - The fact that the vacuum expectation value of the higgs changes at super high temperatures
+ - if you assume a first order phase transition in the early universe as it cools, there would be a phase boundary across which quark masses change
+ - if the reflection/transmission coefficients of quarks/antiquarks are different, you can have a net baryon flux through the phase transition, this can be caused by CP violation in the electroweak force
+ - the antibaryon excess on the other side would be removed by sphalerons (could it not also simply cause highly contracted antimatter regions? )
+ - this leaves a net baryon number
+
+\subsection{Antimatter-matter annihilations}
+The lightest quarks -- $u$ and $d$ -- make up normal nuclear matter, i.e. protons $uud$ and neutrons $udd$, which are the two lightest baryons with masses of 938 MeV/$c^2$ and 939 MeV/$c^2$, respectively. Since the proton is the lightest baryon, and the baryon number must be conserved, any reaction of the proton with other matter must leave an intact proton at the end, thus never making the energy stored in the proton's mass available to create new particles. When baryons interact with their antibaryons, they annihilate, releasing their entire mass as available energy to create new particles. This is because by definition, the total baryon number of such a reaction is 0. The same is true for the annihilations of leptons and lepton number conservation, and for the conservation of electron charge in the annihilations of leptons and baryons. In principle, if a quantum number is antisymmetric under the CPT symmetry, it will be conserved by construction in antimatter-matter annihilation events and thus will never limit the available phase space of reactions. \\
+
+But what actually happens when an antiparticle-particle pair meets and annihilates? Let us consider the case where only one quark and one antiquark annihilate, and the rest spectate. 
+
+\subsubsection{Annihilation of $q\bar{q}$ and $l\bar{l}$ pairs}
+It is simplest to start with the Feynman diagrams for the annihilations of elementary quarks and leptons. A selection of the lowest order is given in figure \ref{fig:annihilationsFeynmanElementary}. The relative contribution is proportional to the force's interaction strength to the power of the number of vertices, so $\alpha$ for the electromagnetic force, $\alpha_w$ for the weak force and $\alpha_s$ for the strong force. The three parameters have an ordering $\alpha_s$>>$\alpha$>>$\alpha_w$. Essentially, quark and leptons can annihilate with their antiparticles through electromagnetic and weak channels, which can also convert from quarks to leptons and vice versa. Quarks can additionally annihilate via a gluon into either another quark-antiquark pair of into hadron jets. For quarks, annihilation through the strong force should outweigh annihilation through the electromagnetic force by a factor $\alpha_s^2/\alpha^2 >>1$, which means that the strong channel should dominate. 
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{A selection of the lowest order Feynman diagrams showing the annihilations of elementary particles. Top row: Bottom row: }
+    \label{fig:annihilationsFeynmanElementary}
+\end{figure}
+
+\subsubsection{Antiproton-proton annihilations}
+It is important to note at the start of this chapter that there is currently no theory or even model which can describe the available data for antiproton-proton annihilations, or offer up an explanation for the underlying mechanism\cite{}. This is in stark contrast to quark-antiquark annihilation, which is just a first order QCD process. In this section we shall attempt to give an overview of the difficulties in describing this process, and thereby offer up a qualitative picture of the possible annihilation mechanisms.\\
+
+It is then tempting to assume that in order to scale up an annihilation event, one might just be able to scale up the single Feynman diagram for quark-antiquark annihilation in order to get a description for antiproton-proton annihilation. However, the picutre is far more complicated. This can be intuitively understood by the fact that (anti)protons are made up of 3 valence (anti)quarks, but in the annihilation of (anti)proton pair, some of their valence (anti)quarks may well survive. In fact, consider the following reaction $\matrm{p\bar{p}} \rightarrow 3 \mathrm{M}$, where M denotes a meson. This can be done by simply rearranging the quark content of the proton and antiproton, which is illustrated in figure \ref{fig:Quark_Rearrangement}. Such a rearranging of the quarks can happen if the quarks can feel each others strong potential, which can be mediated through pion exchange. This effectively allows the potential for rearranging to the felt at further distances than the potential for annihilation. The annihilation potential between an antiproton-proton pair therefore can have a long range ( $\approxgt 1$ fm ) and a short range ($\approxlt 1$ fm) term, where the long range term is dominated by rearranging of quarks and antiquarks into mesons, and the short range term is dominated by quark-antiquark annihilation. The common notation of these processes is $An$ and $Rn$ for annihilation ($A$) and rearrangement ($R$) into $n$ mesons.\\
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{Schematic of $\matrm{p\bar{p}}$ annihilation into 3 mesons, done by rearranging the intermediate quarks but without annihilating any quark-antiquark pair.}
+    \label{fig:Quark_Rearrangement}
+\end{figure}
+
+%This is further complicated by the fact that due to the release of significant energy, multiple further mesons may be formed by strong fragmentation in either of these reactions. 
+One important observable to distinguish between these two different annihilation mechanisms is the production of strangeness, i.e. by the reaction $\matrm{p\bar{p}} \rightarrow 2\matrm{K}+ X\mathrm{M}$. This reaction cannot occur with a simple rearrangement of quarks\footnote{Neglecting quark-antiquark creation by string fragmentation.}, as a new $s\bar{s}$ pair has to be created. If antiproton-proton annihilation would be dominated by the rearrangement of quarks, we would expect to see almost no produced kaons, while if the quark annihilation channel would dominate, we would expect to produce Kaons almost as much as pions. In fact we observe about 5\% of final states which include kaons, suggesting that the truth lies somewhere in between the two models. \\
+
+talk about:
+- The isospin dependence of annihilation, and the constraining results
+- The spin dependence of annihilation, and the constraining results
+
+Given these considerations, the antiproton-proton annihilation cannot easily be described by pertubative QCD, and we are still missing an effective model capable of explaining the data. This is what makes an effective model of this interaction so difficult. Instead, an empirical parameterization is commonly used to describe the antiproton-proton inelastic cross section. A description accurately fitting the available data has been proposed by Tal et al. \cite{}, and is reproduced in equation \ref{eq:Talpbarpxs}. Figure \ref{fig:pbar_p_xs_data_comp} shows this parameterization and others on the available data.  
+
+\begin{equation}\label{eq:Talpbarpxs}
+    
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{A comparison of antiproton-proton inelastic cross section parameterizations with the available data.}
+    \label{fig:pbar_p_xs_data_comp}
+\end{figure}
+An overview of available data on the antiproton-proton annihilation data is given in table \ref{tab:pbarp_ann_data}, with the relevant observables. 
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|}
+         &  \\
+         & 
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:pbarp_ann_data}
+\end{table}
+
+\subsubsection{Antiproton-nucleus annihilation}
+In the previous section it has been established that while the antiproton-proton inelastic cross section has been well measured, a theoretical description is still lacking. In this section we therefore focus on the experimental results for antiproton-matter annihilations, and how we can use them to infer something about the underlying annihilation mechanism. 
+
+talk about:
+- data
+- meson absorption within the nucleus
+- nuclear breakup?
+- formation of hypernuclei (measurements of hypernuclei lifetimes)
+- scaling with the mass number A
+- effect of Coulomb?
+\subsubsection{Antinuclei-matter annihilations: the Glauber model and geometric scaling}\label{sec:IntroGlauber}
+Having established the details of the antiproton inelastic cross section, we can now start to consider the process of antinuclei annihilation. All the considerations made for the antiproton inelastic cross section still hold true, but additionally there is also the potential between the antinucleons to consider. \textcolor{blue}{how does this affect things? make a simple argument about the wave function overlap, i.e. multiple antinucleons annihilating at the same time or not. We can make some deductions from the dbar -> pbar +X reaction, but it is not clear if those created the pbar out of newly created quarks or if they are simply annihilated one antineutron. At high energies, where the nucleons can fully resolve each other, geometric scaling should hold assuming there is no shadowing. At low energies however, it is unclear how this would actually work. thus the discussion leads into the glauber model and its low energy limitations.}
+
+\subsubsection{The effect of the coulomb interaction on antinuclei-matter annihilations}
+So far, only the effect of the strong force on the cross sections of antinuclei-nuclei annihilations has been considered, but there is also an electromagnetic component, since both particles are oppositely charged. 
+
+
+%\include{chapters/01.3_antimatter-matter-annihilations}
+%\include{chapters/01.4_antinuclei_in_the_cosmos}
+\subsection{Antinuclei in the cosmos}
+
+\subsubsection{ Why producing antinuclei is so difficult: production mechanisms of antinuclei}\label{sec:IntroProductionAntinuclei}
+\begin{equation}\label{eq:CoalescenceParameter}
+    B_N = E_A \frac{d^3 N_A}{dp^3_A} \left[ \left( E_{p,n} \frac{d^3 N_{p,n}}{dp^3_{p,n}} \right)^A |_{\vec{p}_p=\vec{p}_n=\vec{p}_A/A } \right]^{-1}
+\end{equation}
+\subsubsection{ Why to we care: antinuclei as a golden channel for new physics}\label{sec:Intro:AntinucleiGoldenChannel}
+The main reason why cosmic ray antinuclei make such an interesting probe for new physics is twofold: i) the rarity of the standard model processes which produce them means that any signal does not have to contend with a copious background and ii) that there are already viable theories of new physics -- namely WIMP dark matter -- which predict a detectable antinuclei signal. This has led to the coining of cosmic ray antinuclei as a "smoking gun" for new physics. 
+%write about the history of the search for antinuclei
+
+\subsubsection{ What affects antinuclei in cosmic rays: production, propagation and annihilation}
+\subsubsection{ How can antinuclei in the cosmos be detected: AMS, GAPS, cubesats}
+
 
 \subsection{Antinuclei on earth}
-On earth, we have the ability to artificially produce antinuclei at high energy physics facilities, like the LHC. In fact, antideuterons were first observed in 1965 in collisions of protons on Beryllium at the Proton Synchrotron\cite{}. Since then, antinuclei have been observed in higher energy collisions in much larger amounts, both at CERN facilities \cite{}, and others \cite{}. In particular the ALICE experiment has 
+On earth, we have the ability to artificially produce antinuclei at high energy physics facilities, like the LHC. In fact, antideuterons were first observed in 1965 in collisions of protons on Beryllium at the Proton Synchrotron\cite{}. Since then, antinuclei have been observed in higher energy collisions in much larger amounts, both at CERN facilities \cite{}, and heavy ion facilities \cite{}. The ALICE experiment in particular, has published spectra of antinuclei up to $^4\overline{\mathrm{He}}$ \cite{}. This section aims to give an overview of the studies of antinuclei on earth. 
 \subsubsection{Production at accelerators}
+Production at accelerators can be classed by energy, and by collisions system. Energy affects the barychemical potential \footnote{The baryochemical potential is a measure of how much more energy is required to produce antibaryons to baryons. A value of 0 means that they are produced in equal amounts, and is found at LHC energies at mid-rapidity\cite{}.}, while the collisions system determines the penalty factor producing heavier (anti)nuclei. The penalty factor -- which describes the amount by which the production of (anti)nuclei is suppressed for each additional nucleon -- is roughly 1/300 in Pb--Pb collisions at 5.02 TeV, while being roughly 1/1000 in pp collisions at 13 TeV \cite{}. The relative $p_T$ integrated yields of nuclei are shown in figure \ref{fig:PenaltyFactorNuclei}. \\
+
+\begin{figure}[tbhp]
+    \centering
+    \includegraphics[width=\textwidth]{}
+    \caption{Caption}
+    \label{fig:PenaltyFactorNuclei}
+\end{figure}
+
+
+
 \subsubsection{Annihilation at accelerators}
 
-\include{chapters/01.6_dark_matter}
+\subsection{Dark matter and its connection to antinuclei}
+
+\subsubsection{The evidence for dark matter}
+\subsubsection{WIMP dark matter and the WIMP miracle}\label{sec:IntroWIMPs}
+The WIMP miracle is well known to be the fact that when one considers a particle of the weak mass scale with a self annihilation cross section close to the weak interaction strength (on the pb level), the present day dark matter relic density can be obtained. Additionally, in many versions of supersymmetry, the lightest supersummetric particle is indeed a weakly interacting heavy particle, the ideal scenario for the WIMP\cite{}. In the following section the derivation of the WIMP abundance is shown, which is reproduced here from \cite{Baer-Choi-Kim}. The WIMP is denoted as $\chi$, and it is assumed be in thermal equilibrium with other matter while the Temperature is $T>$\dmm . During this time, the WIMP density $n_\chi$ evolves according to the Boltzmann equation, shown in equation \ref{eq:boltzman_deriv_eq}: 
+\begin{equation}\label{eq:boltzman_deriv_eq}
+    \frac{dn_\chi}{dt} = -3H n_\chi - <\sigma_{ann}v>(n_\chi^2 - n_{eq}^2)
+\end{equation}
+where H is the Hubble constant at that time, which in a radiation dominated universe is given by $H^2 = \rho_{rad}/3M^2_P$, where $M_P$ is the plank mass. While the system is in equilibrium, the number density tracks the equilibrium density $n_{eq}$. Subsequently, at some temperature $T_f$<m$_\chi$, the expansion rate will exceed the annihilation rate, and dark matter will freeze out, and their comoving number density (i.e. the number density accounting for the volumetric expansion of the universe) will remain constant from this point on. An approximate solution to the Boltzmann equation at this point gives equation \ref{eq:sol_Boltzmann}, where $\Omega_\chi h^2$ is the dimensionless dark matter density in the universe\footnote{$\Omega_\chi$ can be interpreted as the curvature of space which dark matter is responsible for.}, $s_0$ is the present day entropy density of the Universe, $g_*$ is the number of relativistic degrees of freedom of the particle $\chi$ at freeze out, and $x_f = T_f/m_\chi \approxeq 1/25$ is the freeze out temperature scaled to the dark matter mass. The value for $x_f=1/25$ is obtained from solving the Friedmann equation\footnote{This is the solution to Einstein's field equations for an open, closed or flat universe.} numerically for the freezeout Temperature (see \ref{Baer} for more details). This means that WIMPs would have still moved at relativistic speeds at freezeout, with velocities $<v>\approx c/3$. 
+
+\begin{equation}
+    \label{eq:sol_Boltzmann}
+    \Omega_\chi h^2 \approx \frac{s_0}{\rho_c/h^2} \left( \frac{45}{\pi^2g_*}\right)^2 \frac{1}{x_f M_P} \frac{1}{<\sigma_{ann}v>}
+\end{equation}
+
+Plugging in the known values for the parameters\cite{ref 533 DM review} and setting $\Omega_\chi h^2$ = 0.12 from the latest Planck Collaboration results \cite{Planck2018}, one obtains equation \ref{eq:DM_relic_density}. 
+
+\begin{equation}
+    \label{eq:DM_relic_density}
+    \frac{\Omega h^2}{0.12} = \frac{1}{<\frac{\sigma_{ann}}{10^{-36} cm^2} \frac{v/c}{0.1}}
+\end{equation}
+
+Thus, setting the thermally averaged annihilation cross section to a value of 1pb * $c$, and using average velocities of the order one would expect from a WIMP at freezeout, the current dark matter abundance is recovered. A schematic representation of this process is shown in figure \ref{fig:DM_thremal_eq_freeze_out}, where the decoupling temperature $T_{dec}$ and the freezeout temperature $T_{f}$ are shown separately. The decoupling temperature is the temperature at which the dark matter and luminous matter stop being in thermal equilibrium, while the freeze out temperature the point where the expansion rate becomes the dominant term for the density change for dark matter, over the annihilation term. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/schematic_thermal_eq_evolution_DM.png}
+    \caption{Transition of dark matter from thermal equilibrium to freeze out. Both the decoupling temperature (where dark matter stops being in thermal equilibrium with luminous matter) and the freeze out temperature (when the rate of expansion has dropped the annihilation rate to negligible amounts, so that the comoving density can be considered constant) are indicated on the schematic. Figure is based on the figure in \cite{Baer}}
+    \label{fig:DM_thremal_eq_freeze_out}
+\end{figure}
+
+
+
+\subsubsection{Other dark matter models}\label{IntroOtherDM}
+WIMP dark matter is not the only dark matter model on the market, indeed, dark matter models span over $\approx$ 30 orders of magnitude in mass. A collection of models and their mass ranges is shown in figure \ref{fig:DarkMatterModelsSummary}. Notable other dark matter candidates are neutrinos, sterile neutrinos, axions and primordial black holes (not shown in figure \ref{fig:DarkMatterModelsSummary}). In this section we shall briefly discuss their main concepts, advantages and disadvantages. Promising candidates usually share the quality that they solve not just the nature of dark matter, but also another problem in physics. As discussed earlier, the WIMP neutralino was considered the supersymmetric extension to the standard model at its inception.\\
+
+\begin{figure}[bthp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/DM_summary_models.png}
+    \caption{Collection of candidate dark matter models over a wide mass range. The most prominent candidates are WIMP dark matter, axion dark matter and sterile neutrinos. Primordial black hole dark matter is not shown on this plot. Figure taken from \cite{BAER20151}.}
+    \label{fig:DarkMatterModelsSummary}
+\end{figure}
+
+Let us first consider axion dark matter. Axions arise naturally in the Peccei-Quinn (PQ) solution to the strong CP problem\cite{PQ_axion, Weinberg} (see section \ref{sec:IntroSymmetries} for more details), by arguing that the CP violating term $\bar{\theta}$ of the QCD Lagrangian is relaxed to 0 due to an additional PQ symmetry. This symmetry is accompanied by a scalar field which spontaneously breaks the symmetry at low energy, giving rise to the axion. While the initial model, which predicted axion masses of order O(100keV) has long since been experimentally ruled out, it has been replaced by models using the same mechanism to dynamically solve the strong CP problem. Axions of such fields are expected to have masses in the $\mu$eV range. As a side effect, the scalar field would populate the universe with axions, which since they are produced non-thermally at rest\cite{cookbook} would be considered cold dark matter even though they have such low masses. As such, and dark matter theory which is not at least partially made up of axions has to provide an alternate solution to the strong CP problem. It's mass can be constrained from the top by \\
+
+Out of all the standard model particles, the neutrino is the only particle which does not interact through either the strong or electromagnetic forces. This makes it the an promising initial candidate for dark matter. However, the present-day abundance of neutrinos would be given by equation \ref{eq:NeutrinoAbundance} (further details can be found in \cite{BAER20151}). Given that the current constraints on neutrino masses 
+
+\begin{equation}\label{eq:NeutrinoAbundance}
+    \Omega_\nu h^2 = \frac{\sum m_\nu}{91.5 \mathrm{eV}}
+\end{equation}
+
+talk about:
+- axion DM
+- sterile neutrinos
+- range of masses
+- pbhs
+
+\subsubsection{Dark matter annihilations into antinuclei}
+\subsubsection{Majorana vs. Dirac dark matter}\label{sec:IntroMajoranaDiracDM}
+Since the properties of dark matter are not know beyond its gravitational pull, it is also not known if dark matter is its own anti-particle. 
+\subsubsection{The distribution of dark matter within our galaxy}
+\subsubsection{The search for dark matter: the link between WIMP dark matter and antinuclei}
+
+%\include{chapters/01.6_dark_matter}
