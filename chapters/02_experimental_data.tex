@@ -1,4 +1,4 @@
-\section{Experimental data and experimental method}
+\section{Experimental data and experimental method}\label{sec:ExperimentAndMethod}
 
 \subsection{ALICE}
 This section aims to highlight the capabilities of the ALICE detector, in particular in the context of identifying antinuclei and measuring their inelastic cross sections. Using the ALICE detector for this analysis is interesting on many levels, including in terms of experimental methods, since the ALICE detector was not designed with such a measurement in mind. Rather, the excellent tracking and particle identification capabilities of the detector are what enable the measurement in first place. We shall therefore discuss the full chain of experimental methods, starting from the particle identification in each of the detectors, to the ALICE data structure and how they are used to obtain the antiparticle-to-particle ratios. 
@@ -8,7 +8,7 @@ A Large Ion Collider Experiment (ALICE) is one of the four major experiments at 
 
 \begin{figure}
     \centering
-    \includegraphics{}
+    \includegraphics[width=\textwidth]{figures/ALICE_figure.jpeg}
     \caption{Schematic representation of the ALICE detector and its subdetector systems, during the Run 2 data taking period (2015-2018). Figure taken from \cite{}.}
     \label{fig:ALICE}
 \end{figure}
@@ -23,22 +23,36 @@ The Inner Tracking System (ITS) is the innermost detector in ALICE, staring at a
 
 \begin{figure}[hbtp]
     \centering
-    \includegraphics[width=\textwidth]{}
+    \includegraphics[width=\textwidth]{figures/ITS_figure.jpeg}
     \caption{A schematic of the ALICE Inner Tracking System, taken from \cite{}. The three layer groups (SPD, SSD, SDD) are marked. }
     \label{fig:ITS_schematic}
 \end{figure}
 
 \subsubsection{Time Projection Chamber}
-The Time Projection Chamber (TPC) is the main tracking detector of the ALICE experiment. It follows the ITS in the central barrel, at radii from 85 cm to 247 cm from the interaction point, covering a pseudorapidity range of $|\eta|<0.9$. The schematic layout of the TPOC is shown in figure \ref{} 
+The Time Projection Chamber (TPC) is the main tracking detector of the ALICE experiment. It follows the ITS in the central barrel, at radii from 85 cm to 247 cm from the interaction point, covering a pseudorapidity range of $|\eta|<0.9$. The schematic layout of the TPC is shown in figure \ref{fig:TPC_schemtic}. It consists of a gas filled field cage, which can measure the ionisation cause by charged particles travelling through the gas. Due to the electric field of X V/m, the electrons from ionisation drift towards the read out cathodes of the field cage. The amplitude of the signal gives a measure of the specific energy loss of the particles (dE/dx), while the position of the clusters at the readout cathode gives a 2-dimensional (x and y) position of the tracks of the particles. Finally, by measuring the time of arrival of the electrons relative to the timing of the initial collision, the z position can be calculated. This method is shown on the right of figure \ref{fig:TPC_schemtic}. Measuring the position and therefore the curvature of the track allows the determination of the momentum of the particles. 
 
 \begin{figure}
     \centering
-    \includegraphics[]{}
-    \caption{Caption}
+    \includegraphics[width=0.49\textwidth]{figures/tpc_cage.png}
+    \includegraphics[width=0.49\textwidth]{figures/tpc_cage.png}
+    \caption{Left: Schematic of the field cage of the TPC detector \cite{}. Right: Schematic of the reconstruction mechanism for tracks in the TPC.}
     \label{fig:TPC_schemtic}
 \end{figure}
 
+Due to the combination of a momentum and a specific energy loss measurement, the TPC has amazing particle identification abilities. The energy loss of relativistic particles\footnote{At very low energies below $\lesssim 0.5 $MeV, the Bethe-Bloch formula does not apply. } is given by the Bethe-Bloch formula, which is reproduced in equation \ref{eq:Bethe-Bloch}:
 
+\begin{equation}\label{eq:Bethe-Bloch}
+    -\frac{dE}{dx} = \frac{4\pi n z^2}{m_e c^2 \beta^2} \left( \frac{e^2}{4\pi \epsilon_0}\right)^2 \left[ \mathrm{ln}\left(\frac{2m_ec^2\beta^2}{I(1-\beta^2)}\right)-\beta^2 \right]
+\end{equation}
+
+, where $n$ is the electron density of the material, $I$ is the mean excitation energy of the material, and the other symbols have their usual meaning. Since equation \ref{eq:Bethe-Bloch} is a function of only $\beta$ and $z$ for a given material, a measurement of both the momentum $p=\frac{\beta}{\sqrt{1-\beta^2}}m$ and the energy loss will differentiate particles of different masses. This differentiating power of the TPC is shown in figure \ref{fig:}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/}
+    \caption{Caption}
+    \label{fig:PID_TPC}
+\end{figure}
 
 \begin{itemize}
     \item Trigger System done
