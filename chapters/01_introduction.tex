@@ -128,7 +128,7 @@ Given these considerations, the antiproton-proton annihilation cannot easily be 
     \sigma_\mathrm{inel}^{p\bar{p}} = 24.7 (1 + 0.584T_{\bar{p}}^-0.115 + 0.856 T_{\bar{p}}^{-0.566}) \mathrm{mb}
 \end{equation}
 
-Another description -- which is implemented in the propagation code Geant4 -- is based on attempting to assign cross sections to each individual process which might occur is outlined in \cite{antiproton_dynamics_CERN}. In their model, they split the antiproton-proton annihilation into the sub processes laid out in figure \ref{fig:antiproton_annihilation_channels}. Their momentum dependence is given by Regge theory \cite{antiproton_dynamics_2, antiproton_dynamics_CERN, Regge1959}. This method works well for determining the cross sections into particular channels, which is necessary 
+Another description -- which is implemented in the propagation code Geant4 -- is based on attempting to assign cross sections to each individual process which might occur is outlined in \cite{antiproton_dynamics_CERN}. In their model, they split the antiproton-proton annihilation into the sub processes laid out in figure \ref{fig:antiproton_annihilation_channels}. Their momentum dependence is given by Regge theory \cite{antiproton_dynamics_2, antiproton_dynamics_CERN, Regge1959}. This method works for determining the cross sections into particular channels, which is necessary for an accurate description of particle propagation, as is shown in figure \ref{fig:pbar_p_xs_data_comp}. However, the description does not manage to describe experimental data better than within a factor 2. This highlights the difficulties in accurately describing the inelastic cross section of antiproton-proton annihilations.
 
 \begin{figure}
     \centering
@@ -138,26 +138,27 @@ Another description -- which is implemented in the propagation code Geant4 -- is
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics{}
-    \caption{A comparison of antiproton-proton inelastic cross section parameterizations with the available data.}
+    \includegraphics[width=\textwidth]{figures/Geant4_pbar_inel.png}
+    \caption{A comparison of antiproton-proton inelastic cross section data with the model used in Geant4 \cite{antiproton_dynamics_CERN}. Points are experimental data as described in \cite{pbar_data}, the blue line represents the model.}
     \label{fig:pbar_p_xs_data_comp}
 \end{figure}
-An overview of available data on the antiproton-proton annihilation data is given in \cite{hidden_Strangeness, antiproton_physics_data}.
+An overview of available data on the antiproton-proton annihilation data is given in \cite{hidden_Strangeness, antiproton_physics_data, pbar_data}.
 
 
 
 \subsubsection{Antiproton-nucleus annihilation}
 In the previous section it has been established that while the antiproton-proton inelastic cross section has been well measured, a theoretical description is still lacking. In this section we therefore focus on the experimental results for antiproton-matter annihilations, and how we can use them to infer something about the underlying annihilation mechanism. \\
 
+When moving from antiproton-proton to antiproton-nucleus annihilations, several new effects come into play. The question is if one only one nucleon in the nucleus interacts in the initial annihilation, and then how the antinucleus acts after the annihilation occurs. Thankfully, while those points certainly raise additional difficulties in finding a theoretical description, we can benefit from plentiful measurements of antiproton absorption on matter. These are parameterised according to the Glauber model \cite{Glauber_original, glauber_model_geant4_scaling, Antinucleus-nucleus_Geant4}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{}
+    \caption{Antiproton-nucleus annihilation for different materials}
+    \label{fig:pbar_diff_materials}
+\end{figure}
 
 
-talk about:
-- data
-- meson absorption within the nucleus
-- nuclear breakup?
-- formation of hypernuclei (measurements of hypernuclei lifetimes)
-- scaling with the mass number A
-- effect of Coulomb?
 \subsubsection{Antinuclei-matter annihilations: the Glauber model and geometric scaling}\label{sec:IntroGlauber}
 Having established the details of the antiproton inelastic cross section, we can now start to consider the process of antinuclei annihilation. All the considerations made for the antiproton inelastic cross section still hold true, but additionally there is also the potential between the antinucleons to consider. \textcolor{blue}{how does this affect things? make a simple argument about the wave function overlap, i.e. multiple antinucleons annihilating at the same time or not. We can make some deductions from the dbar -> pbar +X reaction, but it is not clear if those created the pbar out of newly created quarks or if they are simply annihilated one antineutron. At high energies, where the nucleons can fully resolve each other, geometric scaling should hold assuming there is no shadowing. At low energies however, it is unclear how this would actually work. thus the discussion leads into the glauber model and its low energy limitations.}
 
