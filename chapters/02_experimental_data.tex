@@ -82,7 +82,7 @@ In order to obtain the raw antinuclei spectra, the tracks first have to be ident
 In the TOF, the time of flight measurement combined with the track length and curvature gives a measurement of the particles mass, according to equation \ref{eq:TOFm2}. This allows a clean signal for antitriton and \ahe\. For antideuterons, there is still a significant contamination from the tail of the proton distribution at those masses, which requires a fit to the signal and the background to extract the antideuteron yield. Figures \ref{fig:TPC_fits_ahe} and \ref{fig:TOF_fits_ahe}, \ref{fig:TPC_fits_trit} and \ref{fig:TOF_fits_trit}, show the extraction procedure in the TPC and TOF, for \ahe\ and \atrit\, respectively. The particle and antiparticle distributions are fit with a gaussian function. For \ahe\ , a second gaussian is used to account for the background from (anti)triton. Their respective signals in the TOF detector are very clean, as is shown in figures \ref{fig:TOF_fits_ahe} and \ref{fig:TOF_fits_trit}, therefore, the TOF signal is used by applying a cut on the $m_{TOF}^2$. An example figure of the antideuteron extraction in the TOF is shown in figure \ref{fig:dbar_TOF_fit}(for more details see \cite{dbar_ann}). The combination of these measurement allows the extraction of the (anti)nuclei spectra, which are shown in \ref{fig:(anti)nucleiSpectra}. The combined signal extraction cuts are shown in table \ref{tab:PIDcuts}.
 
 \begin{equation}\label{eq:TOFm2}
-    
+    m_{TOF}^2 =     
 \end{equation}
 
 \begin{table}
@@ -142,7 +142,7 @@ In order to fairly compare the Monte Carlo simulations to the produced data, it 
     \label{fig:BaryochemicalPotential}
 \end{figure}
 \subsubsection{Ratios as a function of the inelastic cross section}
-In order to extract the inelastic cross section measurement from the antiparticle-to-particle ratio, we have to compare the measured ratio in each bin to values from MC simulation with varied values of the inelastic cross section. Thus, it is useful to plot the measured ratios in simulation as a function of the inelastic cross section. These plots are shown for the $^3\overline{\mahtrm{He}}/{^3\mathrm{He}}$ and $^3\overline{\mathrm{H}}/{^3\mathrm{H}}$ ratios in figures \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3He} and \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}, respectively. These plots also show fit lines to the Monte Carlo points, which were with with an exponential according to the Lambert-Beer absorption law \cite{}, which is reproduced in equation \ref{eq:LambertBeer}
+In order to extract the inelastic cross section measurement from the antiparticle-to-particle ratio, we have to compare the measured ratio in each bin to values from MC simulation with varied values of the inelastic cross section. Thus, it is useful to plot the measured ratios in simulation as a function of the inelastic cross section. These plots are shown for the $^3\overline{\mathrm{He}}/{^3\mathrm{He}}$ and $^3\overline{\mathrm{H}}/{^3\mathrm{H}}$ ratios in figures \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3He} and \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}, respectively. These plots also show fit lines to the Monte Carlo points, which were with with an exponential according to the Lambert-Beer absorption law \cite{}, which is reproduced in equation \ref{eq:LambertBeer}
 
 \begin{equation}\label{eq:LambertBeer}
     N/N_0 = \mathrm{exp}\left( -x\times \sigma \times k \right)
