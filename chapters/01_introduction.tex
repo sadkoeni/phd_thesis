@@ -122,26 +122,26 @@ It is tempting to assume that in order to scale up an annihilation event, one mi
 One important observable to distinguish between these two different annihilation mechanisms is the production of strangeness, i.e. by the reaction $\mathrm{p\bar{p}} \rightarrow 2\mathrm{K}+ X\mathrm{M}$. This reaction cannot occur with a simple rearrangement of quarks\footnote{Neglecting quark-antiquark creation by string fragmentation.}, as a new $s\bar{s}$ pair has to be created. If antiproton-proton annihilation would be dominated by the rearrangement of quarks, we would expect to see almost no produced kaons, while if the quark annihilation channel would dominate, we would expect to produce Kaons almost as much as pions. In fact we observe about 5\% of final states which include kaons\cite{antiproton_cross_sections_review, hidden_Strangeness}, suggesting that the truth lies somewhere in between the two models. \\
 
 Given these considerations, the antiproton-proton annihilation cannot easily be described by perturbative QCD, and we are still missing an effective model capable of explaining the data. This is what makes an effective model of this interaction so difficult. Instead, an empirical parameterization is commonly used to describe the antiproton-proton inelastic cross section. A description accurately fitting the available data has been proposed by Tan et al. \cite{Tan_1983}, and is reproduced in equation \ref{eq:Talpbarpxs}. 
-%Figure \ref{fig:pbar_p_xs_data_comp} shows this parameterization and others on the available data.  
+%
 
 \begin{equation}\label{eq:Talpbarpxs}
     \sigma_\mathrm{inel}^{p\bar{p}} = 24.7 (1 + 0.584T_{\bar{p}}^-0.115 + 0.856 T_{\bar{p}}^{-0.566}) \mathrm{mb}
 \end{equation}
 
-Another description which is based on attempting to ascribe cross sections to each individual process which might occur is outlined in \cite{antiproton_dynamics_CERN}. In their model, they split the antiproton-proton annihilation into the sub processes laid out in figure 
+Another description -- which is implemented in the propagation code Geant4 -- is based on attempting to assign cross sections to each individual process which might occur is outlined in \cite{antiproton_dynamics_CERN}. In their model, they split the antiproton-proton annihilation into the sub processes laid out in figure \ref{fig:antiproton_annihilation_channels}. Their momentum dependence is given by Regge theory \cite{antiproton_dynamics_2, antiproton_dynamics_CERN, Regge1959}. This method works well for determining the cross sections into particular channels, which is necessary 
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{figures/pbar_p_annihilation_channels.png}
-    \caption{Annihilation channels for antiproton-proton annihilation. The solid lines represent quarks and the dashed lines represent a gluonic string (which can then decay via string fragmentation, as shown in figure \ref{fig:IntroStringFragmentation}). Curled lines represent a $\bar{q}q$ annihilation. The diagrams thus represent: a) 3 antiquark-quark annihilations; b) a single antiquark-quark annihilation into 2 mesons and a gluon string; c) Corresponds to a quark-antiquark and string annihilation, with the creation of 2 quark-antiquark strings. Diagrams e) and f) can produce exotic mesons. Figure taken from \cite{antiproton_dynamics_2}}
-    \label{fig:my_label}
+    \includegraphics[width=0.6\textwidth]{figures/pbar_p_annihilation_channels.png}
+    \caption{Annihilation channels for antiproton-proton annihilation. The solid lines represent quarks and the dashed lines represent a gluonic string (which can then decay via string fragmentation, as shown in figure \ref{fig:IntroStringFragmentation}). Curled lines represent a $\bar{q}q$ annihilation. The diagrams thus represent: a) 3 antiquark-quark annihilations; b) a single antiquark-quark annihilation into 2 mesons and a gluon string; c) Corresponds to a quark-antiquark and string annihilation, with the creation of 2 quark-antiquark strings. Diagrams e) and f) can produce exotic mesons. Figure taken from \cite{antiproton_dynamics_2}. \textit{This is unfortunately the highest quality figure available for this. I am planning to remake this figure in higher resolution.}}
+    \label{fig:antiproton_annihilation_channels}
 \end{figure}
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics{}
-%    \caption{A comparison of antiproton-proton inelastic cross section parameterizations with the available data.}
-%    \label{fig:pbar_p_xs_data_comp}
-%\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics{}
+    \caption{A comparison of antiproton-proton inelastic cross section parameterizations with the available data.}
+    \label{fig:pbar_p_xs_data_comp}
+\end{figure}
 An overview of available data on the antiproton-proton annihilation data is given in \cite{hidden_Strangeness, antiproton_physics_data}.
 
 
