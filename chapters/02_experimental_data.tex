@@ -86,7 +86,7 @@ The performance of the TOF detector is shown in figure \ref{fig:TOF_performance}
 ALICE data is split by runs, then by events, and within the event by tracks, as is shown in figure \ref{fig:ALICE_data_schematic}. Runs are periods of time during which collisions with the same conditions occurred, which means that the data taking is started and kept up until there is some problem which requires the run to be ended. This means that runs are of arbitrary length. They are denoted by LHC + the last two digits of the year in which the data was taken + a letter of the alphabeth, sequentially used, e.g.: LHC17a is the first data run taken during 2017. Once the raw data is taken, the Data Preparation Group (DPG) is responsible for doing a reconstruction pass over the data, which means to build the tracks from the individual detector hits, correcting for any calibration or distortion effects. The data structure  one is left with is a list of events, each of which contain a list of tracks. This is what is subsequently used by analysers. 
 
 \begin{figure}
-	\includegraphics[]{}
+	\includegraphics[width=\textwidth]{figures/data_structure.png}
 	\centering
 	\caption{Schematic of the data structures within ALICE. The data is split by run periods, then by event, and within the event by tracks. }
 		\label{fig:ALICE_data_schematic}
@@ -100,9 +100,6 @@ The main selection criteria for the event was its multiplicty. The multiplicity 
 In order to obtain the raw antinuclei spectra, the tracks first have to be identified as antinuclei. This particle identification (PID) occurs on the basis of two main detectors: the TPC and the TOF. Due to the distinct masses of antinuclei (they are heavier than most other long lived particles), they leave a distinct signal in each detector. In the TPC, antideuterons are clearly seperated by their energy loss up to a momentum of about 1.4 GeV. For antitriton, the seperation works until a momentum of 1.X GeV. \ahe\ is well sepatared from lighter particles in the TPC for all momenta, due to its double charge. Since the energy loss rises with $Z^2$, the energy loss of \ahe\ is characteristically much higher than those of singly charged particles. \\
 In the TOF, the time of flight measurement combined with the track length and curvature gives a measurement of the particles mass, according to equation \ref{eq:TOFm2}. This allows a clean signal for antitriton and \ahe\. For antideuterons, there is still a significant contamination from the tail of the proton distribution at those masses, which requires a fit to the signal and the background to extract the antideuteron yield. Figures \ref{fig:TPC_fits_ahe} and \ref{fig:TOF_fits_ahe}, \ref{fig:TPC_fits_trit} and \ref{fig:TOF_fits_trit}, show the extraction procedure in the TPC and TOF, for \ahe\ and \atrit\, respectively. The particle and antiparticle distributions are fit with a gaussian function. For \ahe\ , a second gaussian is used to account for the background from (anti)triton. Their respective signals in the TOF detector are very clean, as is shown in figures \ref{fig:TOF_fits_ahe} and \ref{fig:TOF_fits_trit}, therefore, the TOF signal is used by applying a cut on the $m_{TOF}^2$. An example figure of the antideuteron extraction in the TOF is shown in figure \ref{fig:dbar_TOF_fit}(for more details see \cite{dbar_ann}). The combination of these measurement allows the extraction of the (anti)nuclei spectra, which are shown in \ref{fig:(anti)nucleiSpectra}. The combined signal extraction cuts are shown in table \ref{tab:PIDcuts}.
 
-\begin{equation}\label{eq:TOFm2}
-    m_{TOF}^2 =     
-\end{equation}
 
 \begin{table}
 %todo insert table of PID cuts from analysis notes.
@@ -142,10 +139,10 @@ We are thus left with the two possible methods for measuring annihilations withi
 
 \begin{figure}[bhtp]
 		\centering
-		\includegraphics[width=\textwidth]{}
-		\caption{Cumulative material budget of the ALICE detector, as a function of radius from the beampipe, taken from \cite{}.}
+		\includegraphics[width=\textwidth]{figures/alice-material_0.png}
+		\caption{Cumulative material budget of the ALICE detector, as a function of radius from the beampipe, taken from \cite{antideuteronXS}.}
 		\label{fig:ALICE_detector_material_budget}
-\end{figure}
+\end{figure}    
 
 \subsection{Extracting the inelastic cross section from the antimatter-to-matter ratio}
 The idea behind using the antimatter-to-matter ratio as the observable to measure the antinuclei inelastic cross section, is that antinuclei will annihilate in the detector material, and therefore disappear from our measurement. In order to quantify the inelastic cross section we thus need to know how many particles were originally produced, i.e. we need to normalise the antinuclei spectrum to the number of originally produced antinuclei. However, we cannot use theoretical predictions tuned to this data, since that would be a circular argument, i.e. we would get out the same inelastic cross section as we put in. Therefore, the matter nuclei are used as a proxy instead. This works very well for a few reasons. First, the matter inelastic cross section can be easily measured, and have been measured for deuterons \cite{}, $^3\mathrm{He}$\cite{} and tritons\cite{}. Second, other effects affecting acceptance or efficiency will largely cancel between the nuclei and antinuclei counterparts, since the two only differ in their charge sign. Third and perhaps most important, is the fact that at LHC energies, the baryochemical potential is very close to 0, and has been accurately measured for antiprotons. This means that we know to a very high degree of accuracy how many antinuclei are produced relative to the produced nuclei, and the other processes by which both might be lost within the detector are also well understood. Thus, the antimatter-to-matter ratio is sensitive to the antinuclei inelastic cross section, and other variables it is sensitive to are well understood and under control. This makes this ratio such a promising probe to measure the inelastic cross section.\\
@@ -157,9 +154,12 @@ In order to fairly compare the Monte Carlo simulations to the produced data, it 
 \begin{figure}
     \centering
     \includegraphics{}
-    \caption{Ratio of antiprotons to protons produced at mid-rapidity as a function of beam rapidity. At ALICE energies the value approaches unity, demonstrating that at such high energies antimatter and matter are produced in almost equal amounts.}
+    \caption{Ratio of antiprotons to protons produced at mid-rapidity as a function of beam rapidity. At LHC energies the value approaches unity, demonstrating that at such high energies antimatter and matter are produced in almost equal amounts.}
     \label{fig:BaryochemicalPotential}
 \end{figure}
+\subsection{Evaluating the average ALICE material budget}
+
+
 \subsubsection{Ratios as a function of the inelastic cross section}
 In order to extract the inelastic cross section measurement from the antiparticle-to-particle ratio, we have to compare the measured ratio in each bin to values from MC simulation with varied values of the inelastic cross section. Thus, it is useful to plot the measured ratios in simulation as a function of the inelastic cross section. These plots are shown for the $^3\overline{\mathrm{He}}/{^3\mathrm{He}}$ and $^3\overline{\mathrm{H}}/{^3\mathrm{H}}$ ratios in figures \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3He} and \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}, respectively. These plots also show fit lines to the Monte Carlo points, which were with with an exponential according to the Lambert-Beer absorption law \cite{}, which is reproduced in equation \ref{eq:LambertBeer}
 
@@ -191,6 +191,15 @@ For the TPC/TOF method, a similar method is used in order to extract the measure
     \label{fig:TPCTOF_fit}
 \end{figure}
 \subsubsection{Bench-marking the method on the antiproton inelastic cross section}
+In order to be sure that the antiparticle-to-particle methods gives an accurate measurement of the inelastic cross section, it first had to be benchmarked to a particle for which the inelastic cross section was well known. This was done for antiprotons in \cite{antideuteronXS}. The resulting inelastic cross sections are shown in figure 
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{The antiproton inelastic cross section on the average ALICE detector material }
+    \label{fig:my_label}
+\end{figure}
+
 talk about: 
  - show pbar results (from dbar paper)
  - how this validates the method (antiparticle-to-particle)
@@ -208,7 +217,7 @@ In order to correct for this, let us consider
 \subsubsection{Uncertainty coming from the material budget}
 The measurement outlined in this thesis relies on the accurate knowledge of the ALICE material budget. This is because the loss of antinuclei is proportional to $e^{-\sigma_\mathrm{inel} \rho l}$, where $\rho$ is the density of the material traversed and $l$ is the path length of the antinucleus through the material. Thus, the material budget can be quantified as the sum of $\rho_i l_i$, over all the materials $i$ in the detector. This means that the constraints on the cross section are actually on the product of the cross section and the material budget, and this any uncertainty on the material budget is 1:1 applied to the inelastic cross section measurement. \\
 
-Originally, the uncertainty on the material budget was quantified to be about 5\% using photon conversions\cite{}, up to the middle of the TPC (since later conversions would result in tracks which have less than half of the TPC clusters and thus cannot we well identified). However, this method left out the bulk of the material budget considered in any analysis using the TOF, as can be seen from figure \ref{fig:}. Therefore, the material between the TPC and TOF detectors needed to be validated using a different method. In order to to this, the same underlying idea as the TPC/TOF analysis was used, but rather than assuming a well known material budget and measuring the cross section, a particle with an accurately measured cross section was used in order to probe the material budget. The trick was to find such a particle which could be identified cleanly enough in the TPC alone. For this purpose, $\pi^+$ and $\pi^-$ from $\mathrm{K}_s^0 \rightarrow \pi^+ + \pi^-$ decays and protons from $\Lambda$ or $\overline{\Lambda}$ decays were used\cite{ALICE-PUBLIC-2022-002}. Due to their decay topology, they could be cleanly identified in the TPC alone, and their cross section was very accurately known. The measured ratio was then compared to ratios from simulation with varied ALICE material budget, in order to ascertain the uncertainty on the material budget between the TPC and TOF. The resulting uncertainties are shown in figure \ref{fig:ALICE_mat_budget}. It can be seen that an uncertainty of $\approx$ 5\% is achieved using this method. \\
+Originally, the uncertainty on the material budget was quantified to be about 5\% using photon conversions\cite{}, up to the middle of the TPC (since later conversions would result in tracks which have less than half of the TPC clusters and thus cannot we well identified). However, this method left out the bulk of the material budget considered in any analysis using the TOF, as can be seen from figure \ref{fig:ALICE_detector_material_budget}. Therefore, the material between the TPC and TOF detectors needed to be validated using a different method. In order to to this, the same underlying idea as the TPC/TOF analysis was used, but rather than assuming a well known material budget and measuring the cross section, a particle with an accurately measured cross section was used in order to probe the material budget. The trick was to find such a particle which could be identified cleanly enough in the TPC alone. For this purpose, $\pi^+$ and $\pi^-$ from $\mathrm{K}_s^0 \rightarrow \pi^+ + \pi^-$ decays and protons from $\Lambda$ or $\overline{\Lambda}$ decays were used\cite{ALICE-PUBLIC-2022-002}. Due to their decay topology, they could be cleanly identified in the TPC alone, and their cross section was very accurately known. The measured ratio was then compared to ratios from simulation with varied ALICE material budget, in order to ascertain the uncertainty on the material budget between the TPC and TOF. The resulting uncertainties are shown in figure \ref{fig:ALICE_mat_budget}. It can be seen that an uncertainty of $\approx$ 5\% is achieved using this method. \\
 
 \begin{figure}[bthp]
     \centering
