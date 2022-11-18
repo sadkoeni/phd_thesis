@@ -157,7 +157,7 @@ In order to fairly compare the Monte Carlo simulations to the produced data, it 
     \caption{Ratio of antiprotons to protons produced at mid-rapidity as a function of beam rapidity. At LHC energies the value approaches unity, demonstrating that at such high energies antimatter and matter are produced in almost equal amounts.}
     \label{fig:BaryochemicalPotential}
 \end{figure}
-\subsection{Evaluating the average ALICE material budget}
+
 
 
 \subsubsection{Ratios as a function of the inelastic cross section}
@@ -168,26 +168,34 @@ In order to extract the inelastic cross section measurement from the antiparticl
 \end{equation}
 , where x is the distance travelled through a medium, $\sigma$ is the absorption cross section and k is a constant dependent on the parameters of the medium. This can be understood as a general absorption law. Since the only difference between the different Monte Carlo simulations is the implemented inelastic cross section, $\sigma = \sigma_\mathrm{inel}$. Thus, by mapping the measured antiparticle-to-particle ratio onto the fitted dependence to find the intercepts, the corresponding value of the inelastic cross section is found from the x values of the intercepts. 
 
-\begin{figure}[htpb]
+\begin{figure}
     \centering
-    \includegraphics{}
-    \caption{Bin by bin plots of the $^3\overline{\mathrm{He}}/{^3\mathrm{He}}$ ratio as a function of the varied inelastic cross section in Monte Carlo simulations, together with the one measured in data.}
+    %\includegraphics[width=0.32\textwidth]{figures/he3_rescaling/Bin_1_scaling.png}
+    \includegraphics[width=0.32\textwidth]{figures/he3_rescaling/Bin_2_scaling.png}
+    \includegraphics[width=0.32\textwidth]{figures/he3_rescaling/Bin_3_scaling.png}
+    \includegraphics[width=0.32\textwidth]{figures/he3_rescaling/Bin_4_scaling.png}
+    \includegraphics[width=0.32\textwidth]{figures/he3_rescaling/Bin_5_scaling.png}
+    \includegraphics[width=0.32\textwidth]{figures/he3_rescaling/Bin_6_scaling.png}
+    \includegraphics[width=0.32\textwidth]{figures/he3_rescaling/Bin_7_scaling.png}
+    \caption{Bin by bin plots of the $^3\overline{\mathrm{He}}/{^3\mathrm{He}}$ ratio as a function of the varied inelastic cross section in Monte Carlo simulations, together with the one measured in data. The fitted line is an exponential fit according to the Lambert-Beer law \ref{eq:LambertBeer}, and is used to extract the cross section scaling factor.}
     \label{fig:Meth:RatiosAsFunctionsOfSigmaInel3He}
 \end{figure}
 
-\begin{figure}[htpb]
+\begin{figure}
     \centering
-    \includegraphics{}
-    \caption{Bin by bin plots of the $^3\overline{\mathrm{H}}/{^3\mathrm{H}}$ ratio as a function of the varied inelastic cross section in Monte Carlo simulations, together with the one measured in data.}
+    \includegraphics[width=0.32\textwidth]{figures/triton/tbar_Fit_Bin1.png}
+    \includegraphics[width=0.32\textwidth]{figures/triton/tbar_Fit_Bin1.png}
+    \includegraphics[width=0.32\textwidth]{figures/triton/tbar_Fit_Bin1.png}
+    \caption{Bin by bin plots of the $^3\overline{\mathrm{H}}/{^3\mathrm{H}}$ ratio as a function of the varied inelastic cross section in Monte Carlo simulations, together with the one measured in data. The fitted line is an exponential fit according to the Lambert-Beer law \ref{eq:LambertBeer}, and is used to extract the cross section scaling factor.}
     \label{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}
 \end{figure}
 
 For the TPC/TOF method, a similar method is used in order to extract the measurement of the inelastic cross section from the TPC/TOF ratio. However, due to the increased amount of material budget which particles have to traverse and the much reduced statistical uncertainties provided by the Pb--Pb data set, the exponential functions are much less steep in the area of interest. An example of such a fit is shown in figure \ref{fig:TPCTOF_fit}. 
 
-\begin{figure}[bthp]
+\begin{figure}
     \centering
     \includegraphics{}
-    \caption{TPC/TOF ratio for \ahe\ as a function of the varied inelastic cross section. Figure taken from \ref{}.}
+    \caption{TPC/TOF ratio for \ahe\ as a function of the varied inelastic cross section. Figure taken from \cite{}.}
     \label{fig:TPCTOF_fit}
 \end{figure}
 \subsubsection{Bench-marking the method on the antiproton inelastic cross section}
@@ -195,9 +203,9 @@ In order to be sure that the antiparticle-to-particle methods gives an accurate 
 
 \begin{figure}
     \centering
-    \includegraphics{}
-    \caption{The antiproton inelastic cross section on the average ALICE detector material }
-    \label{fig:my_label}
+    \includegraphics[width=\textwidth]{}
+    \caption{The antiproton inelastic cross section on the average ALICE detector material, taken from \cite{antideuteronXS}.}
+    \label{fig:pbar_sigma_inel}
 \end{figure}
 
 talk about: 
@@ -214,12 +222,26 @@ An important note is that this asymmetry arises far more prominently in the anti
 We collect the histograms leading to the antiparticle-to-particle ratio as functions of the momentum these particles have at the primary vertex. However, the cross section should be given as a function of the momentum which the particles have during annihilation. This means energy losses which occur before annihilation need to be accounted for. Since we do not see tracks for particles which annihilate, this cannot be done on a case-by-case basis, but must be done statistically.\\
 
 In order to correct for this, let us consider 
+\subsubsection{Evaluating the average ALICE material budget}
+The annihilations in the ALICE detector can occur on any of the materials in the detector. Therefore, the inelastic cross section can only be shown on an average material. In order to obtain the average detector material, a weighted average is evaluated, based on the density of a given material $\rho$, and the distance travelled through the material $\x / r$. This is shown in equation \ref{eq:AveragingA}. 
+\begin{equation}\label{eq:AveragingA}
+    <A> = \frac{1}{2\pi} \int_0^{2\pi}
+\frac{\int_0^R \rho(r, \phi) A(r, \phi) r dr}
+{\int_0^R \rho(r, \phi) r dr}d\phi
+\end{equation}
+
+\begin{equation}\label{eq:AveragingA}
+<A> = 
+\frac{\sum \rho_iA_i x_i }
+{\sum \rho_i x_i }
+\end{equation}
+
 \subsubsection{Uncertainty coming from the material budget}
 The measurement outlined in this thesis relies on the accurate knowledge of the ALICE material budget. This is because the loss of antinuclei is proportional to $e^{-\sigma_\mathrm{inel} \rho l}$, where $\rho$ is the density of the material traversed and $l$ is the path length of the antinucleus through the material. Thus, the material budget can be quantified as the sum of $\rho_i l_i$, over all the materials $i$ in the detector. This means that the constraints on the cross section are actually on the product of the cross section and the material budget, and this any uncertainty on the material budget is 1:1 applied to the inelastic cross section measurement. \\
 
 Originally, the uncertainty on the material budget was quantified to be about 5\% using photon conversions\cite{}, up to the middle of the TPC (since later conversions would result in tracks which have less than half of the TPC clusters and thus cannot we well identified). However, this method left out the bulk of the material budget considered in any analysis using the TOF, as can be seen from figure \ref{fig:ALICE_detector_material_budget}. Therefore, the material between the TPC and TOF detectors needed to be validated using a different method. In order to to this, the same underlying idea as the TPC/TOF analysis was used, but rather than assuming a well known material budget and measuring the cross section, a particle with an accurately measured cross section was used in order to probe the material budget. The trick was to find such a particle which could be identified cleanly enough in the TPC alone. For this purpose, $\pi^+$ and $\pi^-$ from $\mathrm{K}_s^0 \rightarrow \pi^+ + \pi^-$ decays and protons from $\Lambda$ or $\overline{\Lambda}$ decays were used\cite{ALICE-PUBLIC-2022-002}. Due to their decay topology, they could be cleanly identified in the TPC alone, and their cross section was very accurately known. The measured ratio was then compared to ratios from simulation with varied ALICE material budget, in order to ascertain the uncertainty on the material budget between the TPC and TOF. The resulting uncertainties are shown in figure \ref{fig:ALICE_mat_budget}. It can be seen that an uncertainty of $\approx$ 5\% is achieved using this method. \\
 
-\begin{figure}[bthp]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/ALICE_material_budget_tests.png}
     \caption{Uncertainty on the ALICE material budget between the TPC and TOF detectors, as found by comparing the yields in the TPC to the ones in the TOF for pions from $\mathrm{K}_s^0$ decays (red) and protons from $\Lambda$ decays (black). The uncertainty is determined by comparing the measured ratio to ones obtained from detailed Monte Carlo simulations of the ALICE detector with varied material budgets, using Geant3 (left) and Geant4 (right).}
@@ -231,7 +253,7 @@ Therefore, a global uncertainty of about 5\% is assumed on the material budget. 
 \subsubsection{Independence of collision system}
 The antimatter-to-matter ratio method's dependence on collision system has been investigated by redoing the analysis performed in pPb collisions in \cite{dbarIvan} for high multiplicity pp collisions. The dependence on the collision system is due to the multiplicity differences, and the resulting difference in the baryochemical potential as discussed in section \ref{sec:MCSim}. By taking the antiproton-to-proton ratio for the different collision systems and comparing them, the predicted difference between the antideuteron-to-deuteron ratio was obtained. The results are shown in figure \ref{fig:pp_pPb_dbardRatio}, which show that the differences between collisions systems are consistent with the expected deviation. This independence of the collision system is expected, since the inelastic cross section is completely independent on the collision system. This becomes especially self-evident when considering that the annihilations do not occur in the initial collisions, but rather as the antiparticles travel through the detector material.
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.49\textwidth]{figures/antiproton-to-proton-ratio-pp-pPb-comparison.png}
     \includegraphics[width=0.49\textwidth]{figures/antideuteron-to-deuteron-ratio-comparison-pp-pPb.png}
