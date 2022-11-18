@@ -160,13 +160,13 @@ In order to fairly compare the Monte Carlo simulations to the produced data, it 
 
 
 
-\subsubsection{Ratios as a function of the inelastic cross section}
-In order to extract the inelastic cross section measurement from the antiparticle-to-particle ratio, we have to compare the measured ratio in each bin to values from MC simulation with varied values of the inelastic cross section. Thus, it is useful to plot the measured ratios in simulation as a function of the inelastic cross section. These plots are shown for the $^3\overline{\mathrm{He}}/{^3\mathrm{He}}$ and $^3\overline{\mathrm{H}}/{^3\mathrm{H}}$ ratios in figures \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3He} and \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}, respectively. These plots also show fit lines to the Monte Carlo points, which were with with an exponential according to the Lambert-Beer absorption law \cite{}, which is reproduced in equation \ref{eq:LambertBeer}
+\subsubsection{Ratios as a function of the inelastic cross section scaling factor}
+In order to extract the inelastic cross section measurement from the antiparticle-to-particle ratio, we have to compare the measured ratio in each bin to values from MC simulation with varied values of the inelastic cross section. Thus, it is useful to plot the measured ratios in simulation as a function of the scaling factor for the inelastic cross section\footnote{This is a proxy for the actual inelastic cross section measurement. However, the mapping from the scaling factor to the inelastic isnt exact, but is subject to the uncertainty from any energy loss before annihilation occurs, as will be discussed in section \ref{sec:Meth:ELoss}.}. These plots are shown for the $^3\overline{\mathrm{He}}/{^3\mathrm{He}}$ and $^3\overline{\mathrm{H}}/{^3\mathrm{H}}$ ratios in figures \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3He} and \ref{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}, respectively. These plots also show fit lines to the Monte Carlo points, which were with with an exponential according to the Lambert-Beer absorption law \cite{}, which is reproduced in equation \ref{eq:LambertBeer}
 
 \begin{equation}\label{eq:LambertBeer}
     N/N_0 = \mathrm{exp}\left( -x\times \sigma \times k \right)
 \end{equation}
-, where x is the distance travelled through a medium, $\sigma$ is the absorption cross section and k is a constant dependent on the parameters of the medium. This can be understood as a general absorption law. Since the only difference between the different Monte Carlo simulations is the implemented inelastic cross section, $\sigma = \sigma_\mathrm{inel}$. Thus, by mapping the measured antiparticle-to-particle ratio onto the fitted dependence to find the intercepts, the corresponding value of the inelastic cross section is found from the x values of the intercepts. 
+, where x is the distance travelled through a medium, $\sigma$ is the absorption cross section and k is a constant dependent on the parameters of the medium. This can be understood as a general absorption law. Since the only difference between the different Monte Carlo simulations is the implemented inelastic cross section, $\sigma = \sigma_\mathrm{inel}$. Thus, by mapping the measured antiparticle-to-particle ratio onto the fitted dependence to find the intercepts, the corresponding value of the scaling factor on the inelastic cross section is found from the x values of the intercepts. \\
 
 \begin{figure}
     \centering
@@ -190,16 +190,18 @@ In order to extract the inelastic cross section measurement from the antiparticl
     \label{fig:Meth:RatiosAsFunctionsOfSigmaInel3H}
 \end{figure}
 
+In order to reconstruct the values of the inelastic cross section corresponding to the values of the scaling factor, 2 things are necessary: the average material of the ALICE detector (to pick the corresponding cross section implemented in Geant4) and the average energy loss of antinuclei before annihilation occurs (in order to multiply the correct momentum values). These two factors are discussed below in sections \ref{sec:Meth:AveragingMaterial} and \ref{sec:Meth:ELoss}, respectively.\\
+
 For the TPC/TOF method, a similar method is used in order to extract the measurement of the inelastic cross section from the TPC/TOF ratio. However, due to the increased amount of material budget which particles have to traverse and the much reduced statistical uncertainties provided by the Pb--Pb data set, the exponential functions are much less steep in the area of interest. An example of such a fit is shown in figure \ref{fig:TPCTOF_fit}. 
 
 \begin{figure}
     \centering
     \includegraphics{}
-    \caption{TPC/TOF ratio for \ahe\ as a function of the varied inelastic cross section. Figure taken from \cite{}.}
+    \caption{TPC/TOF ratio for \ahe\ as a function of the varied inelastic cross section, for one momentum bin. Figure taken from \cite{antiHe3XS}.}
     \label{fig:TPCTOF_fit}
 \end{figure}
 \subsubsection{Bench-marking the method on the antiproton inelastic cross section}
-In order to be sure that the antiparticle-to-particle methods gives an accurate measurement of the inelastic cross section, it first had to be benchmarked to a particle for which the inelastic cross section was well known. This was done for antiprotons in \cite{antideuteronXS}. The resulting inelastic cross sections are shown in figure 
+In order to be sure that the antiparticle-to-particle methods gives an accurate measurement of the inelastic cross section, it first had to be benchmarked to a particle for which the inelastic cross section was well known. This was done for antiprotons in \cite{antideuteronXS}. The resulting inelastic cross sections are shown in figure \ref{fig:pbar_sigma_inel}.
 
 \begin{figure}
     \centering
@@ -218,23 +220,34 @@ The experimental observable is the antiparticle-to-particle ratio, which is then
 An important note is that this asymmetry arises far more prominently in the antiparticle-to-particle analysis than in the TOF/TPC analysis. This is due to 2 factors: the much reduced statistical uncertainties for the TPC/TOF analysis and the increased material budget required (as opposed to the TPC only part of the antiparticle-to-particle analysis). This results in the fact that within the uncertainties, the effect of the inelastic cross section on the TPC/TOF ratio is well approximated with a linear function. Thus, the error propagation from the TPC/TOF ratio to the inelastic cross section has only barely noticeable asymmetries. 
 
 %todo: do the anlytical error propagation when the two parameters are related by an exponential. 
-\subsubsection{Accounting for energy losses between the primary vertex and the point of annihilation}
-We collect the histograms leading to the antiparticle-to-particle ratio as functions of the momentum these particles have at the primary vertex. However, the cross section should be given as a function of the momentum which the particles have during annihilation. This means energy losses which occur before annihilation need to be accounted for. Since we do not see tracks for particles which annihilate, this cannot be done on a case-by-case basis, but must be done statistically.\\
+\subsubsection{Accounting for energy losses between the primary vertex and the point of annihilation}\label{sec:Meth:ELoss}
+We collect the histograms leading to the antiparticle-to-particle ratio as functions of the momentum these particles have at the primary vertex $p_{Vtx}$. However, the cross section should be given as a function of the momentum which the particles have during annihilation, $p*$. This means energy losses which occur before annihilation need to be accounted for. Since we do not see tracks for particles which annihilate, this cannot be done on a case-by-case basis, but must be done statistically.\\
 
-In order to correct for this, let us consider 
-\subsubsection{Evaluating the average ALICE material budget}
-The annihilations in the ALICE detector can occur on any of the materials in the detector. Therefore, the inelastic cross section can only be shown on an average material. In order to obtain the average detector material, a weighted average is evaluated, based on the density of a given material $\rho$, and the distance travelled through the material $\x / r$. This is shown in equation \ref{eq:AveragingA}. 
-\begin{equation}\label{eq:AveragingA}
-    <A> = \frac{1}{2\pi} \int_0^{2\pi}
-\frac{\int_0^R \rho(r, \phi) A(r, \phi) r dr}
-{\int_0^R \rho(r, \phi) r dr}d\phi
-\end{equation}
+In order to correct for this, let us consider 2 extreme scenarios for where the annihilation might occur. If the annihilation occurs immediately when the particle is produced and meets the beampipe, then it will still have its initial momentum $p_{Vtx}$. The latest point at which a particle can annihilate and still be included, is just before it would get recognized by the detector. This can be denoted as $p_{\mathrm{TPC}}$ and $p_{\mathrm{TOF}}$, for the TPC and TOF regions of the analysis, respectively. $p_{\mathrm{TPC}}$ can be determined very accurately in data, since the tracking of the TPC allows the determination of the momentum. Since the annihilation must occur somewhere between these two momenta, we can assume a mean value of $p* = \frac{p_{\mathrm{TPC}} + p_{Vtx}}{2}$, and evaluate the uncertainties by evaluating the cross section 
+
+
+$p_{\mathrm{TOF}}$ can similarly be found from the measurement of $\beta_{\mathrm{TOF}}$. 
+\subsubsection{Evaluating the average ALICE material budget}\label{sec:Meth:AveragingMaterial}
+The annihilations in the ALICE detector can occur on any of the materials in the detector. Therefore, the inelastic cross section can only be shown on an average material. In order to obtain the average detector material, a weighted average is evaluated, based on the density of a given material $\rho$. This was evaluated over 1 cm steps (which are denoted as $i$) from 0 cm up to a radius $R$, which is the last position in the detector at which the particles could be identified. This means that annihilations before this point are accounted for in the inelastic cross section measurements. Since the distribution of the ALICE detector is non-uniform in azimuthal angle $\phi$, the material values were averaged over many random azimuthal angles (denoted as j). This is shown in equation \ref{eq:AveragingA}. 
+
 
 \begin{equation}\label{eq:AveragingA}
 <A> = 
-\frac{\sum \rho_iA_i x_i }
-{\sum \rho_i x_i }
+\frac{\sum_{i=1}^R \rho_iA_i}{\sum_{i=1}^R \rho_i} = 
+\frac{\sum_{i=1}^R \sum_{j=1}^N \rho_{ij}A_{ij}}{\sum_{i=1}^R \sum_{j=1}^N \rho_{ij}}
 \end{equation}
+
+
+The local $A$ and $Z$ values of the ALICE detector, as well as its density, as a function of radius is shown in figure \ref{fig:localMaterialValuesALICE}. This yields different values for different measuring methods, depending on the range of radii in which the annihilation can occur. If only the TPC is used for determining the antiparticle-to-particle ratio, then only the distance between the beampipe and the middle of the TPC (ca. 200 cm from the beampipe) is considered. When the TOF detector is also used, distances up to the TOF detector (370 cm) are considered. Finally, for the TOF/TPC method, the radii from the middle of the TPC (ca. 200 cm) to the TOF detector (370 cm) are evaluated. \\
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/averageA.png}
+    \caption{Local $A$ and $Z$ values (left) and density (right) of the ALICE detector material ad mid-rapidity as a function of the radial distance from the interaction point.}
+    \label{fig:localMaterialValuesALICE}
+\end{figure}
+
+Once the measured scaling factor on the inelastic cross sections implemented in Geant4 are found, they need to multiplied by the corresponding inelastic cross sections. Since Geant4 only has cross sections implemented on existing materials, the one with the closest mass number $A$ was chosen, and then scaled according to the parameterizations used in Geant4, as described in equations \ref{eq:Glauber_singleA} and \ref{eq:Glauber_multA} in section \ref{sec:Intro:Glauber}.
 
 \subsubsection{Uncertainty coming from the material budget}
 The measurement outlined in this thesis relies on the accurate knowledge of the ALICE material budget. This is because the loss of antinuclei is proportional to $e^{-\sigma_\mathrm{inel} \rho l}$, where $\rho$ is the density of the material traversed and $l$ is the path length of the antinucleus through the material. Thus, the material budget can be quantified as the sum of $\rho_i l_i$, over all the materials $i$ in the detector. This means that the constraints on the cross section are actually on the product of the cross section and the material budget, and this any uncertainty on the material budget is 1:1 applied to the inelastic cross section measurement. \\
