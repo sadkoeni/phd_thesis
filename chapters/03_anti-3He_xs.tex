@@ -24,12 +24,14 @@ The measurement of \sigmainel\ using the TPC-TOF matching method is thus complem
 \subsection{Secondary correction}
 In order to extract the cross section from the antiparticle-to-particle ratio, only particles produced at the primary vertex must be considered. Thus, secondary particles need to be accounted for by using template fits, as described in section \ref{sec:Meth:secondaryCorr}. \\
 
-The template fits done for the secondary correction of $^3\mathrm{He}$ are shown in figure \ref{fig:Template_fits_he}.  
+The template fits done for the secondary correction of $^3\mathrm{He}$ are shown in figure \ref{fig:Template_fits_he}. The cut on |DCA$_z$| < 1 cm was chosen in order to include more secondaries, and improve the statistical constraints on the fit. As can be seen, in the first bin 
 
 \begin{figure}
     \centering
-    \includegraphics{}
-    \caption{Caption}
+    \includegraphics[width=0.32\textwidth]{figures/he3_template_fits/TemplateFitHe3_0.65<p<0.8_rebin_5.png}
+    \includegraphics[width=0.32\textwidth]{figures/he3_template_fits/TemplateFitHe3_0.8<p<1.0_rebin_5.png}
+    \includegraphics[width=0.32\textwidth]{figures/he3_template_fits/TemplateFitHe3_1.0<p<1.2_rebin_5.png}
+    \caption{Template fits for determining the primary fraction of $^3\mathrm{He}$ in the first 3 momentum bins (above this momentum the primary fraction goes to 1), for a |DCA$_z$| < 1 cm cut. The fits were performed using the TFractionFitter method available in ROOT.}
     \label{fig:Template_fits_he}
 \end{figure}
 
