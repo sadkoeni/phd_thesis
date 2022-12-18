@@ -71,7 +71,7 @@ As can be seen from figure \ref{fig:PID_TPC}, the differentiating power of the T
     \label{fig:TOF_schematic}
 \end{figure}
 
-The time resolution of the TOF readout pads is $\approx 50$ ps\footnote{In order to get an idea of this resolution, a particle travelling at the speed of light will travel roughly $c*50 \mathrm{ps} = 1.5$ cm.}.
+The time resolution of the TOF readout pads is $\approx 50$ ps\footnote{In order to get an idea of this resolution, a particle travelling at the speed of light will travel roughly $c*50 \mathrm{ps} = 1.5$ cm.}. In order to measure the time-of-flight, the initial time of the collision must be known. This can be done by the TOF itself with large enough multiplicities, and for lower multiplicities it is done with the T0 detector, which consists of Cherenkov arrays.
 Thus, a measure of the particle velocity, called the TOF beta, can be measured as $\beta = L/t$, where $L$ is the length of the track on its curved trajectory through the TPC, and $t$ is the measured time-of-flight. From the relation $p = \gamma \beta mc$, equation \ref{eq:TOFm2} can be derived, which relates the measured $\beta_{\mathrm{TOF}}$ to the tracks mass. The factor $1/Z^2$ cannot be neglected here since the detector cannot know the particles mass a piori. Thus, when analysing multicharged particles such as \ahe\ , the observable from the TOF is $m_{\mathrm{TOF}}/Z^2$. 
 
 \begin{equation}\label{eq:TOFm2}
@@ -99,6 +99,7 @@ ALICE data is split by periods, which in turn consist of runs, then by events, a
 		\label{fig:ALICE_data_schematic}
 \end{figure}
 \subsection{Identifying antinuclei and building the antiparticle-to-particle ratio}
+This section described the process to identify (anti)nuclei using the ALICE detector, and the method by which the antiparticle-to-particle ratio is then reconstructed. For this purpose, $10^9$ high multiplicity pp events at $\sqrt{s}$ = 13 TeV were analysed. 
 \subsubsection{Collision system and event selection}
 The data provided in ALICE by necessity includes a large range of particles. For analyses which do not want all charged particles, these act as impurities. Therefore, cuts are applied at the analysis level, to provide a much cleaner environment for the actual analysis. Within the analysis, these cuts happen on both an event and a track level, leaving a subset of tracks which can be analyzed. The goals of these cuts are: i) to cut bad quality tracks, such as ones where the PID is not certain, ii) to cut tracks of uninteresting particles for the specific analysis, e.g. particles produced by material spallation in the analyses in this thesis and iii) to reduce the background, such as from secondary particles from weak decays. These cuts also vary between collision systems, which is necessitated by their different properties. To exemplify this, lets compare a relevant difference between high multiplicity pp and Pb--Pb collisions. In HM pp collisions the mean multiplicity is 34, while in central Pb--Pb collisions it is about 1000. This means that the mean occupancy of the detectors is much greater in Pb--Pb collisions, which in turn means that the tracking algorithm has a higher chance to assign a wrong cluster to a track. In order to reduce this effect, the matching window for the TOF detector is reduced in Pb--Pb collisions, from 10 cm to 3 cm. For the analysis method explained in section \ref{sec:TOFTPCMethod}, this introduces an uncertainty, as some tracks could be elastically scattered in the TRD or space frame, causing them to miss the matching window without having interacted inelastically.  To evaluate and counteract this, a special reconstruction of the Pb--Pb data was used, where the matching window was set to 10 cm instead of 3 cm. The effect of this change is explained in section \ref{sec:TOFTPCMethod}. \\
 
@@ -374,7 +375,7 @@ An example of an explicit bias is the selection of bin sizes in the histograms u
 \begin{figure}
     \centering
     \includegraphics[width=0.48\textwidth]{figures/he3_tracking_systematics.png}
-    \includegraphics[width=0.48\textwidth]{figures/triton/Systematics_2.png}
+    \includegraphics[width=0.48\textwidth]{figures/triton/Systematics_tritons.png}
     \caption{Evaluation of the systematic uncertainty due to track cuts, for \ahe\ (left) and \atrit\ (right). The same analysis was re-performed over 100 times with random permutations of "tight", "default", and "loose" cuts on each considered parameter.}
     \label{fig:TrackingSystematics}
 \end{figure}
