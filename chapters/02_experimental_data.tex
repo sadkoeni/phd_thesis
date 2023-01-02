@@ -166,7 +166,8 @@ In the TOF, the time of flight measurement combined with the track length and cu
 %todo insert table of PID cuts from analysis notes.
 \end{table}
 
-It is important to note that the histograms in this analysis are low statistics histograms, i.e. they have many bins with 0 counts towards their sidebands. This presents challenges when using the default implementations of $\chi^2$ fitting algorithms, since those tend not to treat empty bins rigorously, if they are included in the fit at all. Therefore, a minimised log-likelyhood fit was done, using proper Poisson errors on empty bins (i.e. empty bins are assigned an uncertainty of $\pm 1.14$, for further information see the statistics chapter in \cite{PDG2022}). For a more detailed comparison of different fitting algorithms, see section \ref{sec:App:lowStatFitting} in the appendix.
+It is important to note that the histograms in this analysis are low statistics histograms, i.e. they have many bins with 0 counts towards their sidebands. This presents challenges when using the default implementations of $\chi^2$ fitting algorithms, since those tend not to treat empty bins rigorously, if they are included in the fit at all. Therefore, a minimised log-likelyhood fit was done, using proper Poisson errors on empty bins (i.e. empty bins are assigned an uncertainty of $\pm 1.14$, for further information see the statistics chapter in \cite{PDG2022}). 
+%For a more detailed comparison of different fitting algorithms, see section \ref{sec:App:lowStatFitting} in the appendix.
 
 %todo: write a paragraph and insert figures on different fitting algorythms in AliPhysics, what they do and how this affects low statistics analyses -> i.e. a lot. Also talk about errors on the 0 bins here. 
 
