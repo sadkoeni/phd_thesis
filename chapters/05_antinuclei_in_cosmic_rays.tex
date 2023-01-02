@@ -45,7 +45,7 @@ The cross sections shown are constrained by data from a variety of accelerator e
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/dbar_production_experiments_sqrts_v_rapidity.pdf}
-    \caption{A list of experiments with measurements of (anti)deuteron production, as a function of rapidity and $\sqrt{s}$. The compilation is taken from table 2 in \cite{Gomez}.}
+    \caption{A list of experiments with measurements of (anti)deuteron production, as a function of rapidity and $\sqrt{s}$. The compilation is taken from table 2 in \cite{Gomez_Coral_2018}, based on data in \cite{Diego24, Diego28, Diego31, Diego34, Diego50, Diego51, Diego52, Diego53, Diego54, Diego55, Diego56}.}
     \label{fig:dbar_prod_v_rapidity}
 \end{figure}
 
@@ -68,7 +68,7 @@ Once these cross sections are obtained, they need to be folded with the galactic
 \begin{figure}
     \centering
     \includegraphics[width=0.75\textwidth]{figures/dbar_2dplot_production.png}
-    \caption{The source term of antideuteron from high energy cosmic ray collisions, as a function of the incoming proton energy and the outgoing antideuteron energy. The figure is taken from \cite{dbar paper}.}
+    \caption{The source term of antideuteron from high energy cosmic ray collisions, as a function of the incoming proton energy and the outgoing antideuteron energy. The figure is taken from \cite{Serksnyte:2022onw}.}
     \label{fig:dbar_2d_source_CR}
 \end{figure}
 
@@ -89,31 +89,30 @@ Some WIMP dark matter theories predict that WIMP annihilations can produce a sig
 
 
 The spectrum and yield of antinuclei produced in these annihilations has to be estimated based on known standard model processes. To this end, Monte Carlo event generators are employed \cite{Ibarra:2012cc, Coogan_2017, cookbook}, in which the initial state is the first state of standard model particles which is assumed to occur in the annihilation process, with a COM energy equal to twice the dark matter mass \dmm \cite{cookbook}.%particle physics cookbook, also https://arxiv.org/pdf/hep-ph/9904481.pdf}. 
-The exact initial state of SM particles is not known, but commonly the channels \WW\ and \bb\ are considered \cite{Coogan_2017, Ibarra:2012cc}. These two form a convenient subset, as over the range of expected masses (~10 GeV to about 1 TeV), they are consistently two of the more optimistic scenarios, and cover the different parameter space within these optimistic scenarios \cite{cookbook}. This can be seen from figure \ref{fig:DM_source_spectra_other_channels}. 
-Since event generators do not produce (anti)nuclei -- but only the individual nucleons -- the (anti)nuclei yields and spectra have to be calculated using the coalescence model\footnote{See the appendix i\ref{App:statHadronModel} for an explanation for why the statistical hadronization model cannot be used to predict antinuclei spectra.}
-The authors argue that while the branching ratio for the process $\overline{\Lambda}_b \rightarrow $ \ahe\ $+X$ is not well constrained by data, the default tunes\footnote{Tunes when used to talk to event generators are the specific settings which are used for the event generator to more accurately reproduce a given result, e.g. the proton spectra at a given energy.} of the event generators tends to underestimate this, and thus the amount of \ahe\ production (it also has an impact on the antideuteron production, but far less, as can be seen in section \ref{fig:Results_dbar_fluxes_diff_DM_masses} below). In particular, the authors note a discrepancy between two commonly used event generators (Pythia \cite{pythia} and EPOS \cite{EPOS}) of about X orders of magnitude. In order to rectify this, the authors suggest using a special setting of the Pythia event generator, to reproduce the branching fraction close to the one of EPOS. This setting is referred to as the $\overline{\Lambda}_b$ tune in the following discussion. According to their results, the authors note that there is an almost 100 fold increase in the resulting \ahe\ flux, in particular at high energies around X GeV. This is of particular interest since according to the authors, such an increase would cause a signal detectable by the AMS-02 experiment, with an event rate of about 1/year.  The authors also consider the decay of $\overline{\Lambda}_b$ through light intermediator particles, which provides a slightly different spectrum.\\
+The exact initial state of SM particles is not known, but commonly the channels \WW\ and \bb\ are considered \cite{Coogan_2017, Ibarra:2012cc}. These two form a convenient subset, as over the range of expected masses (~10 GeV to about 1 TeV), they are consistently two of the more optimistic scenarios, and cover the different parameter space within these optimistic scenarios \cite{cookbook}. This can be seen from figure \ref{fig:DMsource_spectra_other_channels}. 
+Since event generators do not produce (anti)nuclei -- but only the individual nucleons -- the (anti)nuclei yields and spectra have to be calculated using the coalescence model.
+While the branching ratio for the process $\overline{\Lambda}_b \rightarrow $ \ahe\ $+X$ is not well constrained by data, the default tunes\footnote{Tunes when used to talk to event generators are the specific settings which are used for the event generator to more accurately reproduce a given result, e.g. the proton spectra at a given energy.} of the event generators tends to underestimate this, and thus the amount of \ahe\ production (it also has an impact on the antideuteron production, but far less, as can be seen in section \ref{fig:Results_dbar_fluxes_diff_DM_masses} below). In particular, a discrepancy is observed between two commonly used event generators (Pythia \cite{pythia} and EPOS \cite{EPOS}) of about a factor 3. In order to rectify this, a special setting of the Pythia event generator is used to reproduce the branching fraction close to the one of EPOS. This setting is referred to as the $\overline{\Lambda}_b$ tune in the following discussion. According to these results, there is an almost 10 fold increase in the resulting detectable \ahe\ flux, in particular at high energies around 10 GeV/A. This is of particular interest since according to the authors, such an increase would cause a signal detectable by the AMS-02 experiment, with an event rate of about 1/year.  The authors also consider the decay of $\overline{\Lambda}_b$ through light intermediator particles, which provides a slightly different spectrum.\\
 So in addition to the spectra obtained using default event generators from \cite{Coogan_2017, Ibarra:2012cc}, the spectra incorporating the $\overline{\Lambda}_b$ decay are also considered as part of this thesis. All the relevant spectra from these processes for antideuterons and \ahe\ are shown in figure \ref{fig:DMsource_spectra}. \\ 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/cookbook_other_channels.pdf}
-		\caption{Antiproton (top) and antideuteron (bottom) spectra from dark matter annihilations, normalized to a single annihilation event, for a wide variety of initial SM states. This figure is taken from \cite{cookbook}.}
+		\caption{Antiproton (top) and antideuteron (bottom) spectra from dark matter annihilations as a function of the antinuclei kinetic energy per nucleon, normalized to a single annihilation event, for a wide variety of initial SM states. This figure is taken from \cite{cookbook}.}
     \label{fig:DMsource_spectra_other_channels}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=0.45\textwidth]{figures/dbar_injectionSpectra.pdf}
     \includegraphics[width=0.45\textwidth]{figures/He3bar_injection_channels.png}
-    \caption{Antideuteron (left) and \ahe\ (right) spectra from dark matter annihilations, normalized to a single annihilation event. Spectra for \WW\ \bb\ channels are taken from \cite{Ibarra:2012cc}, $\overline{\Lambda}_b$ tune is taken from \cite{Winkler_2021}.}
+    \caption{Antideuteron (left) and \ahe\ (right) spectra from dark matter annihilations as a function of the antinuclei kinetic energy per nucleon, normalized to a single annihilation event. Spectra for \WW\ and \bb\ channels are taken from \cite{Ibarra:2012cc}, $\overline{\Lambda}_b$ tune is taken from \cite{Winkler_2021}.}
     \label{fig:DMsource_spectra}
 \end{figure}
 
 
-Since decoupling from baryonic matter, the dark matter would have cooled with the expanding universe, and thus is assumed to be at a similar temperature as the cosmic microwave background (CMB) today, of about 2.7K \cite{CMB_temp}. This is referred to as cold dark matter. Another consideration which supports cold dark matter is that the majority seems to be gravitationally bound within galaxies and galaxy clusters \cite{Doetinchem_2020_review, GAPS_setup_Bird, Baushev_2013, DM_review}. As such, the COM frame is assumed to be the same as the galactic frame, and no boost from the initial velocities are necessary. This is convenient, since one can therefore simply take the spectrum of produced antinuclei per dark matter annihilation -- which is obtained from applying a coalescence afterburner to the output of a Monte Carlo event generator -- and multiply it by the local annihilation rate of dark matter. Thus, one can write the source term $q(\vec{r}, E)$ for WIMP dark matter as: 
+Since decoupling from baryonic matter, the dark matter would have cooled with the expanding universe, and thus is assumed to be at a similar temperature as the cosmic microwave background (CMB) today, of about 2.7K \cite{CMB_temp}. This is referred to as cold dark matter. Another consideration which supports cold dark matter is that the majority seems to be gravitationally bound within galaxies and galaxy clusters \cite{Doetinchem_2020_review, GAPS_setup_Bird, Baushev_2013, DM_review}. As such, the COM frame is assumed to be the same as the galactic frame, and no boost from the initial velocities are necessary. This is convenient, since one can therefore simply take the spectrum of produced antinuclei per dark matter annihilation -- which is obtained from applying a coalescence afterburner to the output of a Monte Carlo event generator -- and multiply it by the local annihilation rate of dark matter. Thus, one can write the source term $q(\vec{r}, E)$ for WIMP dark matter as
 
 \begin{equation}\label{eq:DM_source_term}
-    q(\vec{r}, E) = \frac{1}{2} \left( \frac{\rho_{\chi}(\vec{r})}{m_\chi}\right)^2 <\sigma v > (1+\epsilon) \frac{dN}{dE}
+    q(\vec{r}, E) = \frac{1}{2} \left( \frac{\rho_{\chi}(\vec{r})}{m_\chi}\right)^2 <\sigma v > (1+\epsilon) \frac{dN}{dE},
 \end{equation}
-
 where the factor $1/2$ comes from symmetry considerations for majorana dark matter\footnote{See section \ref{sec:IntroMajoranaDiracDM} for a discussion on the difference between Majorana and Dirac dark matter.}, the term $\left( \frac{\rho_{\chi}(\vec{r})}{m_\chi}\right)^2$ is the square of the number density of the WIMP dark matter, which is then multiplied by the velocity averaged dark matter annihilation cross section $<\sigma v>$, giving the rate of dark matter annihilations for a given point in space. The term 1+$\epsilon$ accounts for contributions from other particles which are produced and subsequently decay into the antinucleus in question, at timescales longer than the consideration of the MC event generator. The value of $\epsilon$ is 0 for antideuterons and 1 for for \ahe, to account for \atrit\ . The final term of equation \ref{eq:DM_source_term} is the spectrum of produced antinuclei normalised to a single dark matter annihilation. The terms of equation \ref{eq:DM_source_term}, their contraints and degeneracies are discussed below.\\
 
 The dark matter density profile $\rho_\chi(\vec{r})$ affects both the total amount of antinuclei produced as well as their initial distribution. This parameter can be constrained from measurements of the Milky Way's rotation curve, similarly to how it is done for other galaxies. However, measuring the rotation curve of the Milky Way involves extra challenges, given that we are measuring from within. This is due to the fact that for other galaxies, measuring the difference in velocity through red/bluehisft at different positions is sufficient to measure the rotation curve, whereas for our own galaxies we need the measure both the 3d position and velocity of many stars. The most promising technique to do this is Very-Long-Baseline-Interferometry, which essentially uses telescope arrays spanning multiple continents as interferometers \cite{Charlot_2020}. A more detailed discussion of measuring rotation curves can be found in \cite{Sofue_2016, Sofue2020}. Our galaxy's rotation curve  has been reported in \cite{Sofue2020}, found by combining multiple existing measurements. It is reproduced in figure \ref{fig:MilkyWayRotationCurve}. \\
@@ -136,7 +135,7 @@ In order to fit such rotation curves, our galaxy is conventionally split into in
         \hline
         Buldge(s) & Spherical exponential & $<$1kpc & 10$^{11}$ M$\odot$ \\
         \hline
-        Flat disk & Constant flat disk & $<15$kpc & xx M$\odot$ \\
+        Flat disk & Constant flat disk & $<15$kpc & $\approx$10$^{10}$ M$\odot$ \\
         \hline
         Dark matter halo & vaires & 100s of kpc & 10$^{12}$ M$\odot$ \\
         \hline
@@ -165,7 +164,7 @@ with $r_s$=4.38kpc. The profiles are plotted in figure \ref{fig:DMProfiles}, usi
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{figures/DMProfiles_distributions_log.png}
-    \caption{Dark matter density profiles used in this work, as a function of the distance to the galactic centre. The best fit values for each profile are taken from \ref{Ibarra, IbarraSources}}
+    \caption{Dark matter density profiles used in this work, as a function of the distance to the galactic centre. The best fit values for each profile are taken from \cite{Ibarra:2012cc}.}
     \label{fig:DMProfiles}
 \end{figure}
 
@@ -174,7 +173,7 @@ It is important to ask why the stark differences towards the center of the galax
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/Felix_rot_curve_fit.png}
-    \caption{Fit of the rotation curve of the Milky Way, with a NFW profile. Figure is taken from \cite{Felix_thesis}, based on work in \cite{Baushev_2013}.}
+    \caption{Fit of the rotation curve of the Milky Way, with a NFW profile. Figure is taken from \cite{FelixThesis}, based on work in \cite{Baushev_2013}.}
     \label{fig:RotationCurveFit}
 \end{figure}
 To summarize: the dark matter density profile in our galaxy is constrained by measurements of the Milky Way's rotation curve. Measuring the rotation curve is a non-trivial process, which involves measuring the 3d position of stars within our own galaxy. The most modern method to achieve this is Very-Long-Baseline-Interferometry (VLBI), which uses telescope arrays spanning continents as a giant interferometer. Once the rotation curve is measured, the effect from luminous matter is accounted for, and the remainder is assigned to the dark matter component. Due to the experimental uncertainties involved in measuring the velocity of far away objects, this leaves a significant plausible parameter space for the shape of the dark matter profile towards the center of our galaxy. \\
@@ -233,7 +232,7 @@ where $M_\mathrm{spectrum}$ is the typical mass of the PBHs considered, and $\rh
 		\centering
 		\includegraphics[width=0.99\textwidth]{figures/pbh_source_spectrum_dbar.pdf}
 		\label{fig:pbh_source_spectrum}
-		\caption{Spectrum of produced antideuterons per second from a primordial black hole evaporation. Data from \cite{Ibarra:2012cc}, provided in private communication.}
+		\caption{Spectrum of produced antideuterons per second, as a function of kinetic energy per nucleon, from a primordial black hole evaporation. Data from \cite{Ibarra:2012cc}, provided in private communication.}
 \end{figure}
 
 
@@ -314,13 +313,13 @@ Galprop is configured by passing a set of parameters from an external text file.
     \caption{Two of the parameters for the tuning of Galprop, which show the degeneracy between them.}
     \label{tab:GalpropParameters}
 \end{table}
-/
+
 It is important to note that the main parameter which affects a lot of propagation is the so called grammage, which is the amount of matter of the interstellar medium which particles have to traverse. This is the product of the density of the interstellar medium and the path length of the particles, and can be constrained by the ratio of primary to secondary cosmic rays, according to equation \ref{eq:B_to_C_eq}\footnote{This is the simplified equation without losses, for more details see \cite{GALPROP_Expl_Supplement}, section 7.1.}
 \begin{equation}
-    \psi_s / \psi_p = \frac{n\Delta z \sigma \beta c z_h}{2D_{xx}}
+    \psi_s / \psi_p = \frac{n\Delta z \sigma \beta c z_h}{2D_{xx}},
     \label{eq:B_to_C_eq}
 \end{equation}
-, where $n$ is the density of matter in the interstellar medium, $\psi_p$ and $\psi_s$ are the primary and secondary fluxes, and $\sigma$ is the production cross section of the secondary particles when the primary cosmic rays interact with the interstellar medium. This means that this ratio is simply the amount of matter traversed $\times$ the production cross section $\times$ $\frac{z_h}{2D_{xx}}$, which shows the degeneracy for these parameters. The primary to secondary ratio is best constrained from the Boron-to-Carbon (B/C) ratio, since Carbon is expected to be produced mostly during stellar processes, while all Boron is produced in collisions of heavier nuclei with the ISM \cite{AMS_B_to_C}. This ratio has been measured by the AMS collaboration to very high accuracy \cite{AMS_B_to_C}, with errors less than 3\% up to rigidities of 100 GV.\\
+where $n$ is the density of matter in the interstellar medium, $\psi_p$ and $\psi_s$ are the primary and secondary fluxes, and $\sigma$ is the production cross section of the secondary particles when the primary cosmic rays interact with the interstellar medium. This means that this ratio is simply the amount of matter traversed $\times$ the production cross section $\times$ $\frac{z_h}{2D_{xx}}$, which shows the degeneracy for these parameters. The primary to secondary ratio is best constrained from the Boron-to-Carbon (B/C) ratio, since Carbon is expected to be produced mostly during stellar processes, while all Boron is produced in collisions of heavier nuclei with the ISM \cite{AMS_B_to_C}. This ratio has been measured by the AMS collaboration to very high accuracy \cite{AMS_B_to_C}, with errors less than 3\% up to rigidities of 100 GV.\\
 
 Antinuclei are not by default included in Galprop. Fortunately, the framework is capable of handling negative nuclei with antiprotons, therefore the extension was done by providing the mass of the antideuteron/antihelium, their inelastic cross sections on the interstellar medium, and their source functions. Separate entries were used for the secondary production from high-energy cosmic rays and from dark matter annihilations. The inelastic cross section had to be provided on a proton and helium target, which are significantly lighter than the average detector materials probed in the measurements shown in section \ref{sec:ResHe3SigmaInel}, therefore the results had to be extrapolated to these lighter targets. The exact methods of the extrapolations are explained in section \ref{sec:ResAnnInOurGalaxy}.\\
 
@@ -347,9 +346,8 @@ The resulting cross sections are shown for both antideuterons and \ahe\ in figur
 In this section the effects of different dark matter masses on antinuclei fluxes will be discussed. The fluxes are compared to a prediction for secondary antinuclei from high-energy cosmic ray collisions with the interstellar medium. In the lower panel on figure \ref{fig:Results_He3_fluxes_diff_DM_masses} and  on the right side of figure \ref{fig:different_DM_profiles_and_transparencies}, the transparency of the galaxy to antinuclei is shown. This is defined in equation \ref{eq:TransparencyDefinition} as the ratio of the obtained flux with a given non-zero inelastic cross section, to the flux obtained when all inelastic interactions are turned off. The dark matter self annihilation cross section used for the dark matter models shown in this chapter is $<\sigma v>=2.7 \times 10^{-26}$cm$^3 \mathrm{s}^-1$, unless otherwhise noted. This is compatible with the currently allowed limit, and also at the thermal value of the cross section, which is discussed in section \ref{sec:WIMPS}. 
 
 \begin{equation}\label{eq:TransparencyDefinition}
-    \mathrm{Transparency(\sigma_{inel})} = \frac{\mathrm{Flux(\sigma_{inel}})}{\mathrm{Flux(\sigma_{inel}=0})} 
+    \mathrm{Transparency(\sigma_{inel})} = \frac{\mathrm{Flux(\sigma_{inel}})}{\mathrm{Flux(\sigma_{inel}=0})} .
 \end{equation}
-
 Several parameterizations of the inelastic cross sections were considered and are shown for the fluxes in this section. The colored bands represent the results obtained using the inelastic cross sections measured by ALICE, and the associated experimental uncertainties from this measurement. The solid lines denote the results obtained using the default inelastic cross sections implemented in Geant4. 
 % shouldn't one add a short paragraph discussing various sigma_inel used in the plots? Describe that the lines are the results using sigma_inel from Geant4 and "bands" (with very small uncertainty of 10-15%) are from ALICE measurements of sigma_inel(antid). The uncertainties on the fluxes due to inelastic interactions are small, and this result is also part of your thesis, highlight it!
 
@@ -402,7 +400,7 @@ In this section the results for antihelium-3 fluxes using different dark matter 
 
 
 \subsection{Results for different dark matter profiles}\label{sec:ResDMProfiles}
-The effect of the different dark matter profiles is shown only on one channel and one dark matter mass, since it has similar effects on all channels/masses. The absolute normalization is degenerate with bounds from antiproton measurements, as was discussed in section \ref{sec:WIMPS}. However, more insight can be gained from the bottom panels of figure \ref{fig:different_DM_profiles_and_transparencies}, where the transparency is shown. The transparency of the Milky Way shows a significant shift between the three different profiles. This can be understood as the mean distance that antinuclei from dark matter have to traverse in order to get to earth. The more peaked the profile is towards the center, the longer the mean path. This in turn reduces the transparency. Thus, the transparency of the galaxy to antinuclei is lowest for the Einasto profile, which is the most peaked, as can be seen in figure \ref{fig:DM_profiles}. It is highest for the isothermal profile, which is relatively flat towards the centre of the Milky Way. 
+The effect of the different dark matter profiles is shown only on one channel and one dark matter mass, since it has similar effects on all channels/masses. The absolute normalization is degenerate with bounds from antiproton measurements, as was discussed in section \ref{sec:WIMPS}. However, more insight can be gained from the bottom panels of figure \ref{fig:different_DM_profiles_and_transparencies}, where the transparency is shown. The transparency of the Milky Way shows a significant shift between the three different profiles. This can be understood as the mean distance that antinuclei from dark matter have to traverse in order to get to earth. The more peaked the profile is towards the center, the longer the mean path. This in turn reduces the transparency. Thus, the transparency of the galaxy to antinuclei is lowest for the Einasto profile, which is the most peaked, as can be seen in figure \ref{fig:DMProfiles}. It is highest for the isothermal profile, which is relatively flat towards the centre of the Milky Way. 
 
 \begin{figure}
     \centering
